@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>AtCoder問題レコメンド</title>
+</head>
+<body>
+    <h1>AtCoder 問題レコメンド</h1>
+    <form method="post">
+        <label for="username">AtCoderユーザーネーム:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">レコメンド</button>
+    </form>
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+    {% if result %}
+        <h2>{{ username }} さんのレート: {{ rate }}</h2>
+        <h3>おすすめ問題</h3>
+        <ol>
+        {% for item in result %}
+            <li>
+                <a href="https://atcoder.jp/contests/{{ item.contest_id }}/tasks/{{ item.pid }}" target="_blank">
+                    {{ item.contest_id }} - {{ item.title }} (diff: {{ item.diff }})
+                </a>
+            </li>
+        {% endfor %}
+        </ol>
+    {% endif %}
+</body>
+</html> 
