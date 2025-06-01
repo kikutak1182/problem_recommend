@@ -6,11 +6,11 @@ DP
 幾何
 Union Find
 セグメント木
-BIT
+Binary Indexed Tree
 素数
 期待値
 累積和
-セグメント木
+尺取り法
 遅延セグ木
 平衡二分木
 DFS
@@ -21,7 +21,6 @@ BFS
 LCA
 木DP
 全方位木DP
-HLD
 SCC
 最小費用流
 FFT/NTT
@@ -33,7 +32,6 @@ FPS
 半分全列挙
 平方分割
 貪欲法
-Bitset
 クエリ先読み
 bitDP
 suffix array
@@ -41,19 +39,15 @@ Trie
 LCP
 ローリングハッシュ
 Z-algorithm
-鳩の巣原理
-最小シュタイナー木
 写像12相
 Grundy数
 ゲーム
 座標回転
 牛ゲー
-カタラン数
-分割統治法
 調和級数
 マンハッタン距離
-燃やす埋める
-
+構築
+括弧列
 
 
 
