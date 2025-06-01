@@ -49,4 +49,4 @@ def recommend(request: Request, username: str = Form(...)):
     return templates.TemplateResponse("index.html", {"request": request, "result": result, "username": username, "rate": current_rate})
 
 if __name__ == "__main__":
-    uvicorn.run("app:app", host="0.0.0.0", port=int(os.environ.get("PORT", 8000)), reload=True) 
+    uvicorn.run("app.main:app", host="0.0.0.0", port=int(os.environ.get("PORT", 8000)), reload=True) 

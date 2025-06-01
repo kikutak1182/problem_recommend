@@ -32,22 +32,33 @@ tag_examples_str = ", ".join(tag_examples)
 
 def get_tags_gpt(title, url, editorial_text):
     prompt = f"""
-次のAtCoder問題タイトル・URL・解説文から、考えられるアルゴリズムタグを日本語で最大5つまで挙げてください。
-タグの候補は以下の中から選んでください（必要に応じて複数選択可）：
-{tag_examples_str}
-タイトル: {title}
-URL: {url}
-解説: {editorial_text[:500]}
-タグはカンマ区切りのJSON配列で返してください（例: [\"DP\", \"二分探索\"]）
+あなたはAtCoderの問題にアルゴリズムタグを付与するAIです。
+問題タイトル・URL・解説文を参考に、最も適切なタグを日本語で3つ以内で出力してください。
+タグ例: {tag_examples_str}
+
+# 問題タイトル
+{title}
+# 問題URL
+{url}
+# 解説文
+{editorial_text}
+
+# 出力形式
+["タグ1", "タグ2", ...]
 """
-    response = client.chat.completions.create(
-        model="gpt-4o",
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": prompt}],
-        max_completion_tokens=100,
+        max_tokens=128,
         temperature=0.2,
     )
-    content = response.choices[0].message.content
-    return content.strip() if content else "(No response)"
+    text = response["choices"][0]["message"]["content"].strip()
+    # JSONとしてパース
+    try:
+        tags = json.loads(text)
+    except Exception:
+        tags = []
+    return tags
 
 # 既存のキャッシュを読み込む
 CACHE_FILE = "tags_sample.json"
