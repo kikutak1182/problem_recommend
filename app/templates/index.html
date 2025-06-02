@@ -7,7 +7,8 @@
 <body>
     <h1>AtCoder問題レコメンド</h1>
     <form method="post">
-        <input type="text" name="username" placeholder="AtCoderユーザー名" required>
+        <input type="text" name="username" placeholder="AtCoderユーザー名" required><br>
+        <textarea name="queries" placeholder="興味のあるアルゴリズムや単語・フレーズを1行ずつ入力" rows="5" style="width:300px;" required></textarea><br>
         <button type="submit">レコメンド</button>
     </form>
     {% if error %}
@@ -18,9 +19,8 @@
         <ul>
         {% for item in result %}
             <li>
-                <a href="https://atcoder.jp/contests/{{ item.contest_id }}/tasks/{{ item.pid }}" target="_blank">
-                    {{ item.title }} (diff: {{ item.diff }})
-                </a>
+                <a href="{{ item.url }}" target="_blank">{{ item.title }}</a>
+                (diff: {{ item.diff }}) [タグ: {{ item.tags|join(', ') }}]
             </li>
         {% endfor %}
         </ul>
