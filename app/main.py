@@ -8,6 +8,16 @@ import os
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+TAG_DIR = os.path.abspath(os.path.join(BASE_DIR, "../tag"))
+
+with open(os.path.join(TAG_DIR, "tag_vectors.pkl"), "rb") as f:
+    ...
+with open(os.path.join(TAG_DIR, "tags_sample1.json"), encoding="utf-8") as f:
+    ...
+with open(os.path.join(TAG_DIR, "problem-models.json"), encoding="utf-8") as f:
+    ...
+
 @app.get("/", response_class=HTMLResponse)
 def index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request, "result": None})

@@ -1,7 +1,8 @@
-requests
 fastapi
 uvicorn
-jinja2 
-python-multipart
+jinja2
+requests
 sentence-transformers
 torch
+numpy
+python-multipart
