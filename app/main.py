@@ -6,7 +6,7 @@ import uvicorn
 import os
 
 app = FastAPI()
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="app/templates")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TAG_DIR = os.path.abspath(os.path.join(BASE_DIR, "../tag"))
