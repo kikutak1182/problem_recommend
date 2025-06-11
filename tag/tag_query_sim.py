@@ -60,13 +60,16 @@ def recommend(request: Request, username: str = Form(...), queries: str = Form(.
         m = re.search(r"\[.*\]", tags_str, re.DOTALL)
         if m:
             try:
-                prob_tags = set(json.loads(m.group(0)))
+                # JSON文字列から余分な部分を削除
+                json_str = m.group(0).replace("```json\n", "").replace("\n```", "")
+                prob_tags = set(json.loads(json_str))
                 if prob_tags & set(top_tags):
                     diff = problem_models.get(pid, {}).get('difficulty')
                     if diff is not None:
                         diff_gap = abs(diff - current_rate)
                         recommend.append((diff_gap, v["title"], v["url"], list(prob_tags & set(top_tags)), diff))
-            except Exception:
+            except Exception as e:
+                print(f"Error parsing tags for {pid}: {e}")
                 pass
     recommend.sort()
     result = [
