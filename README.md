@@ -9,3 +9,4 @@ sentencetransformerで入力アルゴリズムとタグとのコサイン類似�
 複数のアルゴリズム/単語を組み合わせた検索が可能です。
 
 https://atcoder-problem-recommend.onrender.com/
+（立ち上げに恐ろしく時間がかかります。）
