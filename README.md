@@ -1,7 +1,7 @@
 Atcoderのユーザーネームと学びたいアルゴリズムを入力すると、関連した自分のレートに近いdifficultyの問題を提案してくれます。
 
-![image](https://github.com/user-attachments/assets/ae7f6455-2f07-47aa-b190-bd6d4e32f35f)
-![image](https://github.com/user-attachments/assets/302eae5d-8aaf-4748-9f86-44a2a24727e6)
+
+![スクリーンショット 2025-06-25 23 17 13](https://github.com/user-attachments/assets/730f19f4-c732-4229-918e-4d740d567440)
 (使用例の画像　関連タグが表示されていないので修正予定)
 
 
