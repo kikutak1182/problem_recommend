@@ -72,7 +72,7 @@ def recommend(request: Request, username: str = Form(...), queries: str = Form("
                         diff = tag_problem_models.get(pid, {}).get('difficulty')
                         if diff is not None:
                             diff_gap = abs(diff - current_rate)
-                            recommend.append((diff_gap, v["title"], v["url"], list(prob_tags & set(top_tags)), diff))
+                            recommend.append((diff_gap, v["title"], v["url"], list(prob_tags), diff))
                 except Exception as e:
                     print(f"Error parsing tags for {pid}: {e}")
                     pass
