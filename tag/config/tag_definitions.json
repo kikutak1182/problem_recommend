@@ -1,0 +1,614 @@
+{
+  "tags": [
+    {
+      "id": "DP",
+      "name": "DP",
+      "description": "状態を記録して効率的に計算する動的計画法 Dynamic Programming メモ化"
+    },
+    {
+      "id": "KDP",
+      "name": "桁DP",
+      "description": "各桁を状態に持つ動的計画法 digit DP 桁動的計画法"
+    },
+    {
+      "id": "MXF",
+      "name": "最大流",
+      "description": "ネットワークの最大流量を求めるアルゴリズム max flow maximum flow Ford-Fulkerson"
+    },
+    {
+      "id": "GRP",
+      "name": "グラフ",
+      "description": "頂点と辺からなるグラフ構造を扱う問題 graph vertex edge node"
+    },
+    {
+      "id": "TRE",
+      "name": "木",
+      "description": "閉路のない連結グラフである木構造を扱う問題 tree binary tree root leaf"
+    },
+    {
+      "id": "GEO",
+      "name": "幾何",
+      "description": "点・線・面などの幾何学的図形を扱う計算幾何"
+    },
+    {
+      "id": "UF",
+      "name": "Union Find",
+      "description": "集合の素早い併合と判定を行うデータ構造 Union-Find UnionFind DSU Disjoint Set 素集合"
+    },
+    {
+      "id": "SEG",
+      "name": "セグメント木",
+      "description": "区間に対する更新・取得を高速に行うデータ構造 セグ木 セグメント Segment Tree SegTree segtree range query"
+    },
+    {
+      "id": "BIT",
+      "name": "Fenwick Tree(BIT)",
+      "description": "累積和を効率的に更新・取得するデータ構造 Binary Indexed Tree BIT Fenwick fenwick tree"
+    },
+    {
+      "id": "PRM",
+      "name": "素数",
+      "description": "素数の判定・列挙・因数分解などの整数論"
+    },
+    {
+      "id": "EXP",
+      "name": "期待値",
+      "description": "確率・統計における期待値の計算"
+    },
+    {
+      "id": "CUM",
+      "name": "累積和",
+      "description": "配列の区間和を高速に計算する前処理技法 cumulative sum prefix sum range sum"
+    },
+    {
+      "id": "2PT",
+      "name": "尺取り法",
+      "description": "2つのポインターを使った効率的な探索手法 two pointers ツーポインター sliding window"
+    },
+    {
+      "id": "LSG",
+      "name": "遅延セグ木",
+      "description": "区間更新を遅延評価で効率化したセグメント木"
+    },
+    {
+      "id": "BBT",
+      "name": "平衡二分木",
+      "description": "自動的に高さを調整する平衡二分探索木"
+    },
+    {
+      "id": "DFS",
+      "name": "DFS",
+      "description": "グラフの深さ優先探索アルゴリズム depth-first search 深さ優先 dfs"
+    },
+    {
+      "id": "BFS",
+      "name": "BFS",
+      "description": "グラフの幅優先探索アルゴリズム breadth-first search 幅優先 bfs キュー queue"
+    },
+    {
+      "id": "DJK",
+      "name": "ダイクストラ",
+      "description": "正の重み付きグラフの最短路探索 Dijkstra dijkstra algorithm 単一始点最短路 shortest path"
+    },
+    {
+      "id": "WF",
+      "name": "ワーシャルフロイド",
+      "description": "全点対間最短路を求めるアルゴリズム Warshall-Floyd Floyd-Warshall all-pairs shortest path"
+    },
+    {
+      "id": "BF",
+      "name": "ベルマンフォード",
+      "description": "負の重みを持つグラフの最短路探索 Bellman-Ford bellman ford algorithm 負の重み"
+    },
+    {
+      "id": "LCA",
+      "name": "LCA",
+      "description": "木における2点の最小共通祖先を高速に求める"
+    },
+    {
+      "id": "TDP",
+      "name": "木DP",
+      "description": "木構造上での動的計画法"
+    },
+    {
+      "id": "RRT",
+      "name": "全方位木DP",
+      "description": "全ての頂点を根とした場合の木DPを効率的に計算"
+    },
+    {
+      "id": "SCC",
+      "name": "SCC",
+      "description": "有向グラフの強連結成分分解"
+    },
+    {
+      "id": "MCF",
+      "name": "最小費用流",
+      "description": "最小コストで最大流を流すアルゴリズム"
+    },
+    {
+      "id": "FFT",
+      "name": "FFT/NTT",
+      "description": "高速フーリエ変換による多項式演算の高速化"
+    },
+    {
+      "id": "FPS",
+      "name": "FPS",
+      "description": "形式的冪級数を用いた数学的解法"
+    },
+    {
+      "id": "EDP",
+      "name": "確率/期待値DP",
+      "description": "確率・期待値を状態に持つ動的計画法"
+    },
+    {
+      "id": "REV",
+      "name": "主客転倒",
+      "description": "問題の主体と客体を入れ替えて考える発想転換"
+    },
+    {
+      "id": "DBL",
+      "name": "ダブリング",
+      "description": "指数的にジャンプ幅を増やす高速化技法"
+    },
+    {
+      "id": "BIN",
+      "name": "二分探索",
+      "description": "ソート済み配列や単調性を利用した二分探索 binary search lower_bound upper_bound"
+    },
+    {
+      "id": "MIT",
+      "name": "半分全列挙",
+      "description": "全探索を2つに分けて計算量を削減する手法"
+    },
+    {
+      "id": "SQD",
+      "name": "平方分割",
+      "description": "データをsqrt(N)個のブロックに分けて処理する技法"
+    },
+    {
+      "id": "GRD",
+      "name": "貪欲法",
+      "description": "各段階で局所最適解を選ぶ近似アルゴリズム greedy algorithm グリーディー"
+    },
+    {
+      "id": "QAH",
+      "name": "クエリ先読み",
+      "description": "クエリを事前に読んで効率的に処理する技法"
+    },
+    {
+      "id": "BDP",
+      "name": "bitDP",
+      "description": "ビット演算を用いた集合の状態を持つ動的計画法"
+    },
+    {
+      "id": "SA",
+      "name": "suffix array",
+      "description": "文字列の全ての接尾辞をソートした配列"
+    },
+    {
+      "id": "TRI",
+      "name": "Trie",
+      "description": "文字列の集合を効率的に管理する木構造 トライ木"
+    },
+    {
+      "id": "LCP",
+      "name": "LCP",
+      "description": "文字列の最長共通接頭辞を求める問題"
+    },
+    {
+      "id": "RH",
+      "name": "ローリングハッシュ",
+      "description": "文字列の高速比較を可能にするハッシュ技法 rolling hash hash string hashing"
+    },
+    {
+      "id": "Z",
+      "name": "Z-algorithm",
+      "description": "文字列のZ配列を線形時間で構築するアルゴリズム Z algorithm z-algorithm string matching"
+    },
+    {
+      "id": "MAP",
+      "name": "写像12相",
+      "description": "集合から集合への写像の数え上げ問題"
+    },
+    {
+      "id": "GND",
+      "name": "Grundy数",
+      "description": "ゲーム理論におけるNim値の一般化"
+    },
+    {
+      "id": "GAM",
+      "name": "ゲーム",
+      "description": "ゲーム理論を用いた2人ゲームの勝敗判定"
+    },
+    {
+      "id": "ROT",
+      "name": "座標回転",
+      "description": "2次元平面上での座標の回転変換"
+    },
+    {
+      "id": "COW",
+      "name": "牛ゲー",
+      "description": "線型計画問題を最短経路問題に帰着 不等式制約" 
+    },
+    {
+      "id": "HAR",
+      "name": "調和級数",
+      "description": "調和級数の性質を利用した計算量解析"
+    },
+    {
+      "id": "MAN",
+      "name": "マンハッタン距離",
+      "description": "格子点間のL1距離を扱う問題 45度回転 座標系"
+    },
+    {
+      "id": "CON",
+      "name": "構築",
+      "description": "条件を満たす具体的な構造物を作る問題"
+    },
+    {
+      "id": "PAR",
+      "name": "括弧列",
+      "description": "括弧の対応関係を扱う文字列問題"
+    },
+    {
+      "id": "BS",
+      "name": "Bitset",
+      "description": "ビット集合を効率的に操作するデータ構造"
+    },
+    {
+      "id": "GCD",
+      "name": "GCD",
+      "description": "最大公約数の計算とその応用 greatest common divisor gcd 最大公約数 ユークリッド"
+    },
+    {
+      "id": "HLD",
+      "name": "HLD",
+      "description": "Heavy-Light分解による木上クエリの高速化"
+    },
+    {
+      "id": "XOR",
+      "name": "XOR",
+      "description": "排他的論理和の性質を利用した問題"
+    },
+    {
+      "id": "DAG",
+      "name": "DAG",
+      "description": "有向非循環グラフを扱う問題"
+    },
+    {
+      "id": "CAT",
+      "name": "カタラン数",
+      "description": "組み合わせ論におけるカタラン数の応用"
+    },
+    {
+      "id": "GRID",
+      "name": "グリッド",
+      "description": "2次元格子状の盤面を扱う問題 マス 碁盤"
+    },
+    {
+      "id": "SIM",
+      "name": "シミュレーション",
+      "description": "問題文の通りに処理を模擬実行する問題 simulation シミュ 実装"
+    },
+    {
+      "id": "STK",
+      "name": "スタック",
+      "description": "後入れ先出しのデータ構造を用いる問題"
+    },
+    {
+      "id": "SLD",
+      "name": "スライド",
+      "description": "区間を滑らせながら処理する問題"
+    },
+    {
+      "id": "SRT",
+      "name": "ソート",
+      "description": "データの並び替えとその応用"
+    },
+    {
+      "id": "CMP",
+      "name": "データ圧縮",
+      "description": "データサイズを削減する圧縮技術"
+    },
+    {
+      "id": "DS",
+      "name": "データ構造",
+      "description": "効率的なデータの格納・操作方法"
+    },
+    {
+      "id": "TOP",
+      "name": "トポロジカルソート",
+      "description": "有向非循環グラフの線形順序付け"
+    },
+    {
+      "id": "HAM",
+      "name": "ハミルトン路",
+      "description": "全ての頂点を一度ずつ通る経路問題"
+    },
+    {
+      "id": "BCK",
+      "name": "バックトラック",
+      "description": "探索空間を系統的に探索する手法"
+    },
+    {
+      "id": "BOP",
+      "name": "ビット演算",
+      "description": "ビット単位の演算を活用する問題"
+    },
+    {
+      "id": "MEM",
+      "name": "メモ化再帰",
+      "description": "再帰の結果を記録して高速化する手法"
+    },
+    {
+      "id": "EUC",
+      "name": "ユークリッドの互除法",
+      "description": "2つの整数の最大公約数を効率的に求める"
+    },
+    {
+      "id": "TER",
+      "name": "三分探索",
+      "description": "単峰性関数の極値を求める探索手法"
+    },
+    {
+      "id": "CRT",
+      "name": "中国剰余定理",
+      "description": "中国の剰余定理"
+    },
+    {
+      "id": "PQ",
+      "name": "優先度付きキュー",
+      "description": "優先度に基づいて要素を取り出すデータ構造"
+    },
+    {
+      "id": "ENM",
+      "name": "全列挙",
+      "description": "可能な全ての場合を列挙する手法"
+    },
+    {
+      "id": "BRT",
+      "name": "全探索",
+      "description": "可能な全ての解候補を調べる手法 brute force ブルートフォース exhaustive search"
+    },
+    {
+      "id": "REC",
+      "name": "再帰関数",
+      "description": "自分自身を呼び出す関数を用いた実装"
+    },
+    {
+      "id": "CVX",
+      "name": "凸包",
+      "description": "点集合を包む最小の凸多角形を求める問題"
+    },
+    {
+      "id": "DC",
+      "name": "分割統治法",
+      "description": "問題を分割して再帰的に解く手法"
+    },
+    {
+      "id": "SCH",
+      "name": "区間スケジューリング",
+      "description": "重複しない区間の最適選択問題"
+    },
+    {
+      "id": "DLL",
+      "name": "双方向リスト",
+      "description": "前後両方向にリンクを持つリスト構造"
+    },
+    {
+      "id": "PAL",
+      "name": "回文判定",
+      "description": "文字列が回文かどうかを判定する問題"
+    },
+    {
+      "id": "POL",
+      "name": "多項式",
+      "description": "多項式の演算や性質を扱う問題"
+    },
+    {
+      "id": "SEQ",
+      "name": "数列",
+      "description": "数の列とその性質を扱う問題"
+    },
+    {
+      "id": "MTH",
+      "name": "数学的考察",
+      "description": "数学的な性質や公式を用いた解法"
+    },
+    {
+      "id": "NT",
+      "name": "数論",
+      "description": "整数の性質を扱う数学分野"
+    },
+    {
+      "id": "INT",
+      "name": "整数",
+      "description": "整数の性質や演算を扱う問題"
+    },
+    {
+      "id": "STR",
+      "name": "文字列",
+      "description": "文字の列を扱う問題 string text substring pattern matching"
+    },
+    {
+      "id": "MGCD",
+      "name": "最大公約数",
+      "description": "複数の数の最大公約数を求める問題"
+    },
+    {
+      "id": "MST",
+      "name": "最小シュタイナー木",
+      "description": "指定された頂点を含む最小コストの木"
+    },
+    {
+      "id": "LCM",
+      "name": "最小公倍数",
+      "description": "複数の数の最小公倍数を求める問題 least common multiple lcm"
+    },
+    {
+      "id": "OPT",
+      "name": "最適化",
+      "description": "制約下で目的関数を最大化・最小化する問題"
+    },
+    {
+      "id": "JDG",
+      "name": "条件判定",
+      "description": "与えられた条件を満たすかの判定問題 conditional logic if else boolean"
+    },
+    {
+      "id": "PFT",
+      "name": "素因数分解",
+      "description": "整数を素数の積に分解する問題"
+    },
+    {
+      "id": "CMB",
+      "name": "組み合わせ",
+      "description": "組み合わせ論的な数え上げ問題 combinatorics combination permutation 順列 重複組合せ"
+    },
+    {
+      "id": "EDT",
+      "name": "編集距離",
+      "description": "2つの文字列間の最小編集回数"
+    },
+    {
+      "id": "MAT",
+      "name": "行列",
+      "description": "行列の演算や性質を扱う問題"
+    },
+    {
+      "id": "LEX",
+      "name": "辞書順",
+      "description": "辞書式順序に関する問題"
+    },
+    {
+      "id": "DLG",
+      "name": "離散対数",
+      "description": "離散対数問題とその応用"
+    },
+    {
+      "id": "PHP",
+      "name": "鳩の巣原理",
+      "description": "鳩の巣原理を用いた存在証明"
+    },
+    {
+      "id": "MNC",
+      "name": "Manacher",
+      "description": "文字列の回文を線形時間で見つけるアルゴリズム"
+    },
+    {
+      "id": "01B",
+      "name": "0-1 BFS",
+      "description": "重みが0と1のみのグラフでの最短路探索"
+    },
+    {
+      "id": "BPM",
+      "name": "二部マッチング",
+      "description": "二部グラフでの最大マッチング問題"
+    },
+    {
+      "id": "BCC",
+      "name": "橋・関節点",
+      "description": "グラフの橋と関節点の検出"
+    },
+    {
+      "id": "2CC",
+      "name": "二重連結成分",
+      "description": "グラフの二重連結成分分解"
+    },
+    {
+      "id": "ET",
+      "name": "オイラーツアー",
+      "description": "木を一次元配列に変換する技法"
+    },
+    {
+      "id": "FLW",
+      "name": "フロー",
+      "description": "ネットワークフローの一般的な問題"
+    },
+    {
+      "id": "MNC2",
+      "name": "最小カット",
+      "description": "グラフの最小カット問題"
+    },
+    {
+      "id": "MON",
+      "name": "Monge",
+      "description": "Monge性を満たす問題の高速化"
+    },
+    {
+      "id": "ZT",
+      "name": "ゼータ変換",
+      "description": "高次元累積和による高速化技法"
+    },
+    {
+      "id": "ADP",
+      "name": "Alien DP",
+      "description": "制約を緩和してDPを高速化する技法"
+    },
+    {
+      "id": "PIE",
+      "name": "包除原理",
+      "description": "集合の大きさを求める組み合わせ論的手法 包除原理"
+    },
+    {
+      "id": "DIV",
+      "name": "約数列挙",
+      "description": "整数の約数を効率的に列挙する問題"
+    },
+    {
+      "id": "LAT",
+      "name": "格子点",
+      "description": "整数座標上の点を扱う幾何問題"
+    },
+    {
+      "id": "WM",
+      "name": "Wavelet Matrix",
+      "description": "多次元範囲クエリを効率化するデータ構造"
+    },
+    {
+      "id": "PSG",
+      "name": "永続セグ木",
+      "description": "過去の状態を保持するセグメント木"
+    },
+    {
+      "id": "MOS",
+      "name": "Mo's algorithm",
+      "description": "区間クエリを効率的に処理するアルゴリズム 計算量O((N + Q)√N)"
+    },
+    {
+      "id": "OFQ",
+      "name": "オフラインクエリ",
+      "description": "クエリを事前に読んで効率化する手法"
+    },
+    {
+      "id": "IMO",
+      "name": "Imos法",
+      "description": "区間加算を差分配列で効率化する技法 いもす法"
+    },
+    {
+      "id": "CCP",
+      "name": "座標圧縮",
+      "description": "大きな座標値を小さな値に圧縮する技法 座圧"
+    },
+    {
+      "id": "2ST",
+      "name": "2-SAT",
+      "description": "2-充足可能性問題の解法"
+    },
+    {
+      "id": "LIS",
+      "name": "LIS",
+      "description": "最長増加部分列を求める問題 Longest Increasing Subsequence LIS"
+    },
+    {
+      "id": "TSP",
+      "name": "巡回セールスマン問題",
+      "description": "全ての頂点を一度ずつ訪れる最短経路を求める問題 Traveling Salesman Problem TSP"
+    },
+    {
+      "id": "OES",
+      "name": "OEIS",
+      "description": "オンライン整数列大辞典 データベース 数列 エスパー The On-Line Encyclopedia of Integer Sequences"
+    }
+  ]
+}

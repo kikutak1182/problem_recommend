@@ -1,0 +1,8 @@
+{
+  "batch_id": "batch_68a180e67b408190819d0a339a8a1822",
+  "status": "validating",
+  "created_at": "2025-08-17T16:12:39.085424",
+  "request_count": 20,
+  "file_id": "file-5wh9oRbG2tHCXzGqyFBDfU",
+  "local_file": "/Users/kikutakyouhei/local/claude/problem_recommend/tag/data/batch_requests_20250817_161237.jsonl"
+}
