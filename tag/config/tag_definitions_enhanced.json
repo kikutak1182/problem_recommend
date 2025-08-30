@@ -376,7 +376,7 @@
     {
       "id": "BOP",
       "name": "ビット演算",
-      "aliases": ["ビット演算", "bit operation", "bit manipulation", "AND", "OR", "XOR"],
+      "aliases": ["ビット演算", "bit operation", "bit manipulation"],
       "description": "AND・OR・XOR・シフト等のビット演算を活用する問題。集合をビットで表現し、演算で集合操作を高速化。ビット数に比例した計算量。2の累乗判定、最下位ビット抽出、ポップカウントなどが基本操作。競プロではbit全探索、フラグ管理、高速化テクニックで頻出する低レベル最適化手法。"
     },
     {

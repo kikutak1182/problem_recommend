@@ -218,17 +218,21 @@ def recommend(request: Request, username: str = Form(...), queries: str = Form("
                     
                     diff_gap = abs(diff - current_rate)
                     
-                    # Get title from external API or use problem_url if title is empty
-                    original_title = v.get("title", "")
-                    if not original_title:
-                        # Find title from external problems data
-                        problem_info = next((p for p in problems if p['id'] == pid), None)
-                        original_title = problem_info['title'] if problem_info else pid
+                    # Always get title and URL from external API for accuracy
+                    problem_info = next((p for p in problems if p['id'] == pid), None)
+                    if problem_info:
+                        original_title = problem_info['title']
+                        contest_id = problem_info['contest_id'] 
+                        url = f"https://atcoder.jp/contests/{contest_id}/tasks/{pid}"
+                    else:
+                        # Fallback to internal data
+                        original_title = v.get("title", "")
+                        if not original_title or original_title == pid:
+                            original_title = pid  # Use problem ID as last resort
+                        url = v.get("problem_url", v.get("url", ""))
                     
-                    # Format title to unified format (abc322 F. Problem Name)
+                    # Format title to unified format (ABC322 F. Problem Name)
                     title = format_problem_title(pid, original_title)
-                    
-                    url = v.get("problem_url", v.get("url", ""))
                     
                     # Sort by relevance first, then by difficulty gap
                     recommend.append((relevance_score, diff_gap, title, url, all_matched_tags, diff))

@@ -1,0 +1,5515 @@
+{
+  "abc175_a": {
+    "title": "ABC175 A",
+    "problem_url": "https://atcoder.jp/contests/abc175/tasks/a_/tasks/abc175_a",
+    "editorial_url": "https://atcoder.jp/contests/abc175/editorial",
+    "tags": [
+      "ビット演算",
+      "回文",
+      "最長増加部分列"
+    ],
+    "tag_ids": [
+      "BOP",
+      "PAL",
+      "LIS"
+    ],
+    "confidence_scores": [
+      1.0411912002884922,
+      0.5941343849229345,
+      0.4999421709151787
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.2529780007212303,
+        "rule_based_score": 1.0
+      },
+      "PAL": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.36033596230733617,
+        "rule_based_score": 0.0
+      },
+      "LIS": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.34985542728794655,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc175_b": {
+    "title": "ABC175 B",
+    "problem_url": "https://atcoder.jp/contests/abc175/tasks/b_/tasks/abc175_b",
+    "editorial_url": "https://atcoder.jp/contests/abc175/editorial",
+    "tags": [
+      "ビット演算",
+      "二部マッチング",
+      "最長増加部分列"
+    ],
+    "tag_ids": [
+      "BOP",
+      "BPM",
+      "LIS"
+    ],
+    "confidence_scores": [
+      1.059614115772463,
+      0.6255372649627425,
+      0.5331018583729471
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.2990352894311576,
+        "rule_based_score": 1.0
+      },
+      "BPM": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.4388431624068565,
+        "rule_based_score": 0.0
+      },
+      "LIS": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4327546459323677,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc175_c": {
+    "title": "ABC175 C",
+    "problem_url": "https://atcoder.jp/contests/abc175/tasks/c_/tasks/abc175_c",
+    "editorial_url": "https://atcoder.jp/contests/abc175/editorial",
+    "tags": [
+      "ビット演算",
+      "ダイクストラ法",
+      "動的計画法"
+    ],
+    "tag_ids": [
+      "BOP",
+      "DJK",
+      "DP"
+    ],
+    "confidence_scores": [
+      1.0946091725693234,
+      0.6501744992558238,
+      0.551316465416666
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3865229314233085,
+        "rule_based_score": 1.0
+      },
+      "DJK": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.5004362481395597,
+        "rule_based_score": 0.0
+      },
+      "DP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.478291163541665,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc175_d": {
+    "title": "ABC175 D",
+    "problem_url": "https://atcoder.jp/contests/abc175/tasks/d_/tasks/abc175_d",
+    "editorial_url": "https://atcoder.jp/contests/abc175/editorial",
+    "tags": [
+      "グラフ",
+      "組み合わせ論",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "GRP",
+      "CMB",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.1127360970068356,
+      1.0114939187923402,
+      0.9187250586885742
+    ],
+    "detailed_scores": {
+      "GRP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4318402425170889,
+        "rule_based_score": 1.0
+      },
+      "CMB": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4037347969808507,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3968126467214357,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc175_e": {
+    "title": "ABC175 E",
+    "problem_url": "https://atcoder.jp/contests/abc175/tasks/e_/tasks/abc175_e",
+    "editorial_url": "https://atcoder.jp/contests/abc175/editorial",
+    "tags": [
+      "動的計画法",
+      "ビット演算",
+      "巡回セールスマン問題"
+    ],
+    "tag_ids": [
+      "DP",
+      "BOP",
+      "TSP"
+    ],
+    "confidence_scores": [
+      1.1811254859747362,
+      1.0353943454909487,
+      0.5827018167712631
+    ],
+    "detailed_scores": {
+      "DP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.60281371493684,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4634858637273718,
+        "rule_based_score": 1.0
+      },
+      "TSP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5567545419281577,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc175_f": {
+    "title": "ABC175 F",
+    "problem_url": "https://atcoder.jp/contests/abc175/tasks/f_/tasks/abc175_f",
+    "editorial_url": "https://atcoder.jp/contests/abc175/editorial",
+    "tags": [
+      "回文",
+      "最長増加部分列",
+      "ダイクストラ法"
+    ],
+    "tag_ids": [
+      "PAL",
+      "LIS",
+      "DJK"
+    ],
+    "confidence_scores": [
+      1.2029317128888637,
+      1.0249413672417371,
+      0.9276533282726622
+    ],
+    "detailed_scores": {
+      "PAL": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.657329282222159,
+        "rule_based_score": 1.0
+      },
+      "LIS": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.437353418104343,
+        "rule_based_score": 1.0
+      },
+      "DJK": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.4191333206816554,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc176_a": {
+    "title": "ABC176 A",
+    "problem_url": "https://atcoder.jp/contests/abc176/tasks/a_/tasks/abc176_a",
+    "editorial_url": "https://atcoder.jp/contests/abc176/editorial",
+    "tags": [
+      "ビット演算",
+      "約数列挙",
+      "素因数分解"
+    ],
+    "tag_ids": [
+      "BOP",
+      "DIV",
+      "PFT"
+    ],
+    "confidence_scores": [
+      1.084679083083755,
+      0.6236046596683703,
+      0.5271652487198073
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.361697707709387,
+        "rule_based_score": 1.0
+      },
+      "DIV": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.43401164917092594,
+        "rule_based_score": 0.0
+      },
+      "PFT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.417913121799518,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc176_b": {
+    "title": "ABC176 B",
+    "problem_url": "https://atcoder.jp/contests/abc176/tasks/b_/tasks/abc176_b",
+    "editorial_url": "https://atcoder.jp/contests/abc176/editorial",
+    "tags": [
+      "ビット演算",
+      "素因数分解",
+      "約数列挙"
+    ],
+    "tag_ids": [
+      "BOP",
+      "PFT",
+      "DIV"
+    ],
+    "confidence_scores": [
+      1.0998823914794,
+      0.6403274315071515,
+      0.5466192685886941
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3997059786985002,
+        "rule_based_score": 1.0
+      },
+      "PFT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.47581857876787903,
+        "rule_based_score": 0.0
+      },
+      "DIV": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.46654817147173533,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc176_c": {
+    "title": "ABC176 C",
+    "problem_url": "https://atcoder.jp/contests/abc176/tasks/c_/tasks/abc176_c",
+    "editorial_url": "https://atcoder.jp/contests/abc176/editorial",
+    "tags": [
+      "ビット演算",
+      "Fenwick Tree",
+      "最長増加部分列"
+    ],
+    "tag_ids": [
+      "BOP",
+      "BIT",
+      "LIS"
+    ],
+    "confidence_scores": [
+      1.1239218259729973,
+      1.003790080277701,
+      0.583306062428984
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4598045649324929,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3844752006942525,
+        "rule_based_score": 1.0
+      },
+      "LIS": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5582651560724599,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc176_d": {
+    "title": "ABC176 D",
+    "problem_url": "https://atcoder.jp/contests/abc176/tasks/d_/tasks/abc176_d",
+    "editorial_url": "https://atcoder.jp/contests/abc176/editorial",
+    "tags": [
+      "幅優先探索",
+      "ビット演算",
+      "0-1 BFS"
+    ],
+    "tag_ids": [
+      "BFS",
+      "BOP",
+      "01B"
+    ],
+    "confidence_scores": [
+      1.1447512507556379,
+      1.014883462221547,
+      0.5820782948661023
+    ],
+    "detailed_scores": {
+      "BFS": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.5118781268890944,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4122086555538675,
+        "rule_based_score": 1.0
+      },
+      "01B": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5551957371652557,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc176_e": {
+    "title": "ABC176 E",
+    "problem_url": "https://atcoder.jp/contests/abc176/tasks/e_/tasks/abc176_e",
+    "editorial_url": "https://atcoder.jp/contests/abc176/editorial",
+    "tags": [
+      "全探索",
+      "ビット演算",
+      "組み合わせ論"
+    ],
+    "tag_ids": [
+      "BRT",
+      "BOP",
+      "CMB"
+    ],
+    "confidence_scores": [
+      1.125781993147566,
+      1.0067457139144627,
+      0.9108905521166508
+    ],
+    "detailed_scores": {
+      "BRT": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.464454982868915,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3918642847861566,
+        "rule_based_score": 1.0
+      },
+      "CMB": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.377226380291627,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc176_f": {
+    "title": "ABC176 F",
+    "problem_url": "https://atcoder.jp/contests/abc176/tasks/f_/tasks/abc176_f",
+    "editorial_url": "https://atcoder.jp/contests/abc176/editorial",
+    "tags": [
+      "動的計画法",
+      "ビット演算",
+      "桁DP"
+    ],
+    "tag_ids": [
+      "DP",
+      "BOP",
+      "KDP"
+    ],
+    "confidence_scores": [
+      1.1815636713092845,
+      1.0432087652873216,
+      0.6112989344812874
+    ],
+    "detailed_scores": {
+      "DP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.6039091782732111,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4830219132183042,
+        "rule_based_score": 1.0
+      },
+      "KDP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.6282473362032182,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc177_a": {
+    "title": "ABC177 A",
+    "problem_url": "https://atcoder.jp/contests/abc177/tasks/a_/tasks/abc177_a",
+    "editorial_url": "https://atcoder.jp/contests/abc177/editorial",
+    "tags": [
+      "ビット演算",
+      "動的計画法",
+      "期待値"
+    ],
+    "tag_ids": [
+      "BOP",
+      "DP",
+      "EXP"
+    ],
+    "confidence_scores": [
+      1.0749541811921297,
+      0.6275337281493215,
+      0.5326951014141775
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3373854529803242,
+        "rule_based_score": 1.0
+      },
+      "DP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.44383432037330395,
+        "rule_based_score": 0.0
+      },
+      "EXP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.43173775353544375,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc177_b": {
+    "title": "ABC177 B",
+    "problem_url": "https://atcoder.jp/contests/abc177/tasks/b_/tasks/abc177_b",
+    "editorial_url": "https://atcoder.jp/contests/abc177/editorial",
+    "tags": [
+      "最長増加部分列",
+      "全探索",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "LIS",
+      "BRT",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.1008617947041186,
+      1.0102304625657088,
+      0.8952247893684706
+    ],
+    "detailed_scores": {
+      "LIS": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.402154486760296,
+        "rule_based_score": 1.0
+      },
+      "BRT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4005761564142718,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3380619734211765,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc177_c": {
+    "title": "ABC177 C",
+    "problem_url": "https://atcoder.jp/contests/abc177/tasks/c_/tasks/abc177_c",
+    "editorial_url": "https://atcoder.jp/contests/abc177/editorial",
+    "tags": [
+      "累積和",
+      "全探索",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "CUM",
+      "BRT",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.1718202756726122,
+      1.0267067783922688,
+      0.9341651418171615
+    ],
+    "detailed_scores": {
+      "CUM": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.5795506891815305,
+        "rule_based_score": 1.0
+      },
+      "BRT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4417669459806721,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.4354128545429035,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc177_d": {
+    "title": "ABC177 D",
+    "problem_url": "https://atcoder.jp/contests/abc177/tasks/d_/tasks/abc177_d",
+    "editorial_url": "https://atcoder.jp/contests/abc177/editorial",
+    "tags": [
+      "Union-Find",
+      "グラフ",
+      "幅優先探索"
+    ],
+    "tag_ids": [
+      "UF",
+      "GRP",
+      "BFS"
+    ],
+    "confidence_scores": [
+      1.162719070422538,
+      1.0090979032921954,
+      0.9146342635305285
+    ],
+    "detailed_scores": {
+      "UF": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.5567976760563451,
+        "rule_based_score": 1.0
+      },
+      "GRP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3977447582304885,
+        "rule_based_score": 1.0
+      },
+      "BFS": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3865856588263212,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc177_e": {
+    "title": "ABC177 E",
+    "problem_url": "https://atcoder.jp/contests/abc177/tasks/e_/tasks/abc177_e",
+    "editorial_url": "https://atcoder.jp/contests/abc177/editorial",
+    "tags": [
+      "素数",
+      "素因数分解",
+      "最大公約数"
+    ],
+    "tag_ids": [
+      "PRM",
+      "PFT",
+      "GCD"
+    ],
+    "confidence_scores": [
+      1.1959186025183057,
+      1.0912790052867103,
+      0.9707127152458159
+    ],
+    "detailed_scores": {
+      "PRM": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.6397965062957645,
+        "rule_based_score": 1.0
+      },
+      "PFT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.603197513216776,
+        "rule_based_score": 1.0
+      },
+      "GCD": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.5267817881145398,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc177_f": {
+    "title": "ABC177 F",
+    "problem_url": "https://atcoder.jp/contests/abc177/tasks/f_/tasks/abc177_f",
+    "editorial_url": "https://atcoder.jp/contests/abc177/editorial",
+    "tags": [
+      "セグメント木",
+      "ビット演算",
+      "ダイクストラ法"
+    ],
+    "tag_ids": [
+      "SEG",
+      "BOP",
+      "DJK"
+    ],
+    "confidence_scores": [
+      1.1152621764355233,
+      1.0088541695248037,
+      0.5826181513304112
+    ],
+    "detailed_scores": {
+      "SEG": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.438155441088808,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3971354238120093,
+        "rule_based_score": 1.0
+      },
+      "DJK": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5565453783260277,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc178_a": {
+    "title": "ABC178 A",
+    "problem_url": "https://atcoder.jp/contests/abc178/tasks/a_/tasks/abc178_a",
+    "editorial_url": "https://atcoder.jp/contests/abc178/editorial",
+    "tags": [
+      "XOR演算",
+      "ビット演算",
+      "中国剰余定理"
+    ],
+    "tag_ids": [
+      "XOR",
+      "BOP",
+      "CRT"
+    ],
+    "confidence_scores": [
+      1.1503998747610935,
+      1.0379714747252737,
+      0.538075878112968
+    ],
+    "detailed_scores": {
+      "XOR": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.525999686902734,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4699286868131844,
+        "rule_based_score": 1.0
+      },
+      "CRT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4451896952824198,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc178_b": {
+    "title": "ABC178 B",
+    "problem_url": "https://atcoder.jp/contests/abc178/tasks/b_/tasks/abc178_b",
+    "editorial_url": "https://atcoder.jp/contests/abc178/editorial",
+    "tags": [
+      "ビット演算",
+      "グラフ",
+      "Fenwick Tree"
+    ],
+    "tag_ids": [
+      "BOP",
+      "GRP",
+      "BIT"
+    ],
+    "confidence_scores": [
+      1.1102904737150325,
+      0.9732541850794811,
+      0.8621016546941782
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4257261842875808,
+        "rule_based_score": 1.0
+      },
+      "GRP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.308135462698703,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.2552541367354453,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc178_c": {
+    "title": "ABC178 C",
+    "problem_url": "https://atcoder.jp/contests/abc178/tasks/c_/tasks/abc178_c",
+    "editorial_url": "https://atcoder.jp/contests/abc178/editorial",
+    "tags": [
+      "包除原理",
+      "ビット演算",
+      "Fenwick Tree"
+    ],
+    "tag_ids": [
+      "PIE",
+      "BOP",
+      "BIT"
+    ],
+    "confidence_scores": [
+      1.1156069525200003,
+      1.0193262184111982,
+      0.871094679054311
+    ],
+    "detailed_scores": {
+      "PIE": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4390173813000002,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4233155460279956,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.2777366976357776,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc178_d": {
+    "title": "ABC178 D",
+    "problem_url": "https://atcoder.jp/contests/abc178/tasks/d_/tasks/abc178_d",
+    "editorial_url": "https://atcoder.jp/contests/abc178/editorial",
+    "tags": [
+      "動的計画法",
+      "ビット演算",
+      "累積和"
+    ],
+    "tag_ids": [
+      "DP",
+      "BOP",
+      "CUM"
+    ],
+    "confidence_scores": [
+      1.1491623522243284,
+      1.0092765168248046,
+      0.5621228893910464
+    ],
+    "detailed_scores": {
+      "DP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.522905880560821,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3981912920620119,
+        "rule_based_score": 1.0
+      },
+      "CUM": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5053072234776157,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc178_f": {
+    "title": "ABC178 F",
+    "problem_url": "https://atcoder.jp/contests/abc178/tasks/f_/tasks/abc178_f",
+    "editorial_url": "https://atcoder.jp/contests/abc178/editorial",
+    "tags": [
+      "鳩の巣原理",
+      "ビット演算",
+      "貪欲法"
+    ],
+    "tag_ids": [
+      "PHP",
+      "BOP",
+      "GRD"
+    ],
+    "confidence_scores": [
+      1.1516772020386927,
+      1.0246274687207388,
+      0.9277298945692192
+    ],
+    "detailed_scores": {
+      "PHP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.529193005096732,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4365686718018469,
+        "rule_based_score": 1.0
+      },
+      "GRD": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.419324736423048,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc179_a": {
+    "title": "ABC179 A",
+    "problem_url": "https://atcoder.jp/contests/abc179/tasks/a_/tasks/abc179_a",
+    "editorial_url": "https://atcoder.jp/contests/abc179/editorial",
+    "tags": [
+      "最長増加部分列",
+      "ビット演算",
+      "Z-algorithm"
+    ],
+    "tag_ids": [
+      "LIS",
+      "BOP",
+      "Z"
+    ],
+    "confidence_scores": [
+      1.06323993704072,
+      0.9611282291858891,
+      0.5423376023987194
+    ],
+    "detailed_scores": {
+      "LIS": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3080998426017993,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.277820572964723,
+        "rule_based_score": 1.0
+      },
+      "Z": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4558440059967986,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc179_b": {
+    "title": "ABC179 B",
+    "problem_url": "https://atcoder.jp/contests/abc179/tasks/b_/tasks/abc179_b",
+    "editorial_url": "https://atcoder.jp/contests/abc179/editorial",
+    "tags": [
+      "ビット演算",
+      "回文",
+      "半分全列挙"
+    ],
+    "tag_ids": [
+      "BOP",
+      "PAL",
+      "MIT"
+    ],
+    "confidence_scores": [
+      1.0954691966243542,
+      0.6418765132746845,
+      0.544057650335375
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3886729915608855,
+        "rule_based_score": 1.0
+      },
+      "PAL": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.4796912831867115,
+        "rule_based_score": 0.0
+      },
+      "MIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.46014412583843745,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc179_c": {
+    "title": "ABC179 C",
+    "problem_url": "https://atcoder.jp/contests/abc179/tasks/c_/tasks/abc179_c",
+    "editorial_url": "https://atcoder.jp/contests/abc179/editorial",
+    "tags": [
+      "ビット演算",
+      "全探索",
+      "約数列挙"
+    ],
+    "tag_ids": [
+      "BOP",
+      "BRT",
+      "DIV"
+    ],
+    "confidence_scores": [
+      1.0950007711907106,
+      1.002101043009218,
+      0.5550267048518229
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3875019279767766,
+        "rule_based_score": 1.0
+      },
+      "BRT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3802526075230455,
+        "rule_based_score": 1.0
+      },
+      "DIV": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4875667621295572,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc179_d": {
+    "title": "ABC179 D",
+    "problem_url": "https://atcoder.jp/contests/abc179/tasks/d_/tasks/abc179_d",
+    "editorial_url": "https://atcoder.jp/contests/abc179/editorial",
+    "tags": [
+      "動的計画法",
+      "ビット演算",
+      "桁DP"
+    ],
+    "tag_ids": [
+      "DP",
+      "BOP",
+      "KDP"
+    ],
+    "confidence_scores": [
+      1.1817696262696975,
+      1.0137921549995272,
+      0.5828111247372398
+    ],
+    "detailed_scores": {
+      "DP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.604424065674244,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4094803874988182,
+        "rule_based_score": 1.0
+      },
+      "KDP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5570278118430994,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc179_e": {
+    "title": "ABC179 E",
+    "problem_url": "https://atcoder.jp/contests/abc179/tasks/e_/tasks/abc179_e",
+    "editorial_url": "https://atcoder.jp/contests/abc179/editorial",
+    "tags": [
+      "ビット演算",
+      "包除原理",
+      "半分全列挙"
+    ],
+    "tag_ids": [
+      "BOP",
+      "PIE",
+      "MIT"
+    ],
+    "confidence_scores": [
+      1.0963459341018185,
+      0.6547027425823958,
+      0.5589659108307568
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3908648352545456,
+        "rule_based_score": 1.0
+      },
+      "PIE": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.5117568564559896,
+        "rule_based_score": 0.0
+      },
+      "MIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.49741477707689175,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc179_f": {
+    "title": "ABC179 F",
+    "problem_url": "https://atcoder.jp/contests/abc179/tasks/f_/tasks/abc179_f",
+    "editorial_url": "https://atcoder.jp/contests/abc179/editorial",
+    "tags": [
+      "ビット演算",
+      "Mo's algorithm",
+      "半分全列挙"
+    ],
+    "tag_ids": [
+      "BOP",
+      "MOS",
+      "MIT"
+    ],
+    "confidence_scores": [
+      1.109517469952522,
+      0.6520719872971991,
+      0.5613101133919443
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.423793674881305,
+        "rule_based_score": 1.0
+      },
+      "MOS": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.5051799682429978,
+        "rule_based_score": 0.0
+      },
+      "MIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5032752834798604,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc180_a": {
+    "title": "ABC180 A",
+    "problem_url": "https://atcoder.jp/contests/abc180/tasks/a_/tasks/abc180_a",
+    "editorial_url": "https://atcoder.jp/contests/abc180/editorial",
+    "tags": [
+      "ビット演算",
+      "半分全列挙",
+      "包除原理"
+    ],
+    "tag_ids": [
+      "BOP",
+      "MIT",
+      "PIE"
+    ],
+    "confidence_scores": [
+      1.0990416990891096,
+      0.6416819645199151,
+      0.548839471686559
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.397604247722774,
+        "rule_based_score": 1.0
+      },
+      "MIT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.4792049112997878,
+        "rule_based_score": 0.0
+      },
+      "PIE": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4720986792163973,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc180_b": {
+    "title": "ABC180 B",
+    "problem_url": "https://atcoder.jp/contests/abc180/tasks/b_/tasks/abc180_b",
+    "editorial_url": "https://atcoder.jp/contests/abc180/editorial",
+    "tags": [
+      "マンハッタン距離",
+      "ビット演算",
+      "Fenwick Tree"
+    ],
+    "tag_ids": [
+      "MAN",
+      "BOP",
+      "BIT"
+    ],
+    "confidence_scores": [
+      1.1279518090389957,
+      1.0259882534630442,
+      0.8973647939898202
+    ],
+    "detailed_scores": {
+      "MAN": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4698795225974894,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.439970633657611,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3434119849745505,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc180_c": {
+    "title": "ABC180 C",
+    "problem_url": "https://atcoder.jp/contests/abc180/tasks/c_/tasks/abc180_c",
+    "editorial_url": "https://atcoder.jp/contests/abc180/editorial",
+    "tags": [
+      "全探索",
+      "ビット演算",
+      "Fenwick Tree"
+    ],
+    "tag_ids": [
+      "BRT",
+      "BOP",
+      "BIT"
+    ],
+    "confidence_scores": [
+      1.0933755301296477,
+      0.9923428219236456,
+      0.8779564556708288
+    ],
+    "detailed_scores": {
+      "BRT": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3834388253241192,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3558570548091142,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.2948911391770719,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc180_d": {
+    "title": "ABC180 D",
+    "problem_url": "https://atcoder.jp/contests/abc180/tasks/d_/tasks/abc180_d",
+    "editorial_url": "https://atcoder.jp/contests/abc180/editorial",
+    "tags": [
+      "ビット演算",
+      "ゲーム理論",
+      "シミュレーション"
+    ],
+    "tag_ids": [
+      "BOP",
+      "GAM",
+      "SIM"
+    ],
+    "confidence_scores": [
+      1.115385194419359,
+      1.008727387178566,
+      0.9101370103005224
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.438462986048397,
+        "rule_based_score": 1.0
+      },
+      "GAM": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.396818467946415,
+        "rule_based_score": 1.0
+      },
+      "SIM": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3753425257513059,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc180_e": {
+    "title": "ABC180 E",
+    "problem_url": "https://atcoder.jp/contests/abc180/tasks/e_/tasks/abc180_e",
+    "editorial_url": "https://atcoder.jp/contests/abc180/editorial",
+    "tags": [
+      "動的計画法",
+      "bitDP",
+      "Fenwick Tree"
+    ],
+    "tag_ids": [
+      "DP",
+      "BDP",
+      "BIT"
+    ],
+    "confidence_scores": [
+      1.15210064986173,
+      1.0474776536943993,
+      0.9063451724126772
+    ],
+    "detailed_scores": {
+      "DP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.5302516246543247,
+        "rule_based_score": 1.0
+      },
+      "BDP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.493694134235998,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.365862931031693,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc180_f": {
+    "title": "ABC180 F",
+    "problem_url": "https://atcoder.jp/contests/abc180/tasks/f_/tasks/abc180_f",
+    "editorial_url": "https://atcoder.jp/contests/abc180/editorial",
+    "tags": [
+      "グラフ",
+      "動的計画法",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "GRP",
+      "DP",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.1747756037011867,
+      1.0703385221250183,
+      0.9057421763743212
+    ],
+    "detailed_scores": {
+      "GRP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.5869390092529665,
+        "rule_based_score": 1.0
+      },
+      "DP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.5508463053125459,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.364355440935803,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc181_a": {
+    "title": "ABC181 A",
+    "problem_url": "https://atcoder.jp/contests/abc181/tasks/a_/tasks/abc181_a",
+    "editorial_url": "https://atcoder.jp/contests/abc181/editorial",
+    "tags": [
+      "ビット演算",
+      "括弧列",
+      "回文"
+    ],
+    "tag_ids": [
+      "BOP",
+      "PAR",
+      "PAL"
+    ],
+    "confidence_scores": [
+      1.0805074604568703,
+      0.6143291676979991,
+      0.5201107202500239
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3512686511421759,
+        "rule_based_score": 1.0
+      },
+      "PAR": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.4108229192449977,
+        "rule_based_score": 0.0
+      },
+      "PAL": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.40027680062505966,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc181_b": {
+    "title": "ABC181 B",
+    "problem_url": "https://atcoder.jp/contests/abc181/tasks/b_/tasks/abc181_b",
+    "editorial_url": "https://atcoder.jp/contests/abc181/editorial",
+    "tags": [
+      "ビット演算",
+      "いもす法",
+      "Fenwick Tree"
+    ],
+    "tag_ids": [
+      "BOP",
+      "IMO",
+      "BIT"
+    ],
+    "confidence_scores": [
+      1.1282091776801595,
+      1.031584796360645,
+      0.8990224800148015
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4705229442003986,
+        "rule_based_score": 1.0
+      },
+      "IMO": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4539619909016128,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3475562000370034,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc181_c": {
+    "title": "ABC181 C",
+    "problem_url": "https://atcoder.jp/contests/abc181/tasks/c_/tasks/abc181_c",
+    "editorial_url": "https://atcoder.jp/contests/abc181/editorial",
+    "tags": [
+      "Fenwick Tree",
+      "ビット演算",
+      "幾何"
+    ],
+    "tag_ids": [
+      "BIT",
+      "BOP",
+      "GEO"
+    ],
+    "confidence_scores": [
+      1.0674066507565165,
+      0.9755318922814825,
+      0.5725743546542128
+    ],
+    "detailed_scores": {
+      "BIT": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3185166268912911,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3138297307037063,
+        "rule_based_score": 1.0
+      },
+      "GEO": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.531435886635532,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc181_d": {
+    "title": "ABC181 D",
+    "problem_url": "https://atcoder.jp/contests/abc181/tasks/d_/tasks/abc181_d",
+    "editorial_url": "https://atcoder.jp/contests/abc181/editorial",
+    "tags": [
+      "ビット演算",
+      "Fenwick Tree",
+      "半分全列挙"
+    ],
+    "tag_ids": [
+      "BOP",
+      "BIT",
+      "MIT"
+    ],
+    "confidence_scores": [
+      1.1220237064449656,
+      0.958587726272521,
+      0.5322965008406607
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4550592661124138,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.2714693156813026,
+        "rule_based_score": 1.0
+      },
+      "MIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4307412521016517,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc181_e": {
+    "title": "ABC181 E",
+    "problem_url": "https://atcoder.jp/contests/abc181/tasks/e_/tasks/abc181_e",
+    "editorial_url": "https://atcoder.jp/contests/abc181/editorial",
+    "tags": [
+      "尺取り法",
+      "累積和",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "2PT",
+      "CUM",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.1227092083448877,
+      0.9933178378155382,
+      0.8823847076940667
+    ],
+    "detailed_scores": {
+      "2PT": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4567730208622192,
+        "rule_based_score": 1.0
+      },
+      "CUM": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3582945945388456,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3059617692351666,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc181_f": {
+    "title": "ABC181 F",
+    "problem_url": "https://atcoder.jp/contests/abc181/tasks/f_/tasks/abc181_f",
+    "editorial_url": "https://atcoder.jp/contests/abc181/editorial",
+    "tags": [
+      "グラフ",
+      "ビット演算",
+      "幾何"
+    ],
+    "tag_ids": [
+      "GRP",
+      "BOP",
+      "GEO"
+    ],
+    "confidence_scores": [
+      1.1130416737918847,
+      0.9856740646940656,
+      0.5770102206116933
+    ],
+    "detailed_scores": {
+      "GRP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4326041844797115,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.339185161735164,
+        "rule_based_score": 1.0
+      },
+      "GEO": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5425255515292331,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc182_a": {
+    "title": "ABC182 A",
+    "problem_url": "https://atcoder.jp/contests/abc182/tasks/a_/tasks/abc182_a",
+    "editorial_url": "https://atcoder.jp/contests/abc182/editorial",
+    "tags": [
+      "ビット演算",
+      "包除原理",
+      "最小公倍数"
+    ],
+    "tag_ids": [
+      "BOP",
+      "PIE",
+      "LCM"
+    ],
+    "confidence_scores": [
+      1.0905090391940835,
+      0.6262892220431161,
+      0.5233740323377445
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3762725979852082,
+        "rule_based_score": 1.0
+      },
+      "PIE": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.44072305510779036,
+        "rule_based_score": 0.0
+      },
+      "LCM": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.408435080844361,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc182_b": {
+    "title": "ABC182 B",
+    "problem_url": "https://atcoder.jp/contests/abc182/tasks/b_/tasks/abc182_b",
+    "editorial_url": "https://atcoder.jp/contests/abc182/editorial",
+    "tags": [
+      "最大公約数",
+      "最長増加部分列",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "GCD",
+      "LIS",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.1627695980854922,
+      1.024378825831575,
+      0.9041890514418089
+    ],
+    "detailed_scores": {
+      "GCD": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.5569239952137301,
+        "rule_based_score": 1.0
+      },
+      "LIS": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4359470645789374,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3604726286045223,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc182_c": {
+    "title": "ABC182 C",
+    "problem_url": "https://atcoder.jp/contests/abc182/tasks/c_/tasks/abc182_c",
+    "editorial_url": "https://atcoder.jp/contests/abc182/editorial",
+    "tags": [
+      "高速フーリエ変換",
+      "ビット演算",
+      "全探索"
+    ],
+    "tag_ids": [
+      "FFT",
+      "BOP",
+      "BRT"
+    ],
+    "confidence_scores": [
+      1.1092532124693224,
+      1.0008849580165502,
+      0.9054415280800296
+    ],
+    "detailed_scores": {
+      "FFT": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4231330311733057,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3772123950413753,
+        "rule_based_score": 1.0
+      },
+      "BRT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.363603820200074,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc182_d": {
+    "title": "ABC182 D",
+    "problem_url": "https://atcoder.jp/contests/abc182/tasks/d_/tasks/abc182_d",
+    "editorial_url": "https://atcoder.jp/contests/abc182/editorial",
+    "tags": [
+      "ビット演算",
+      "最長増加部分列",
+      "動的計画法"
+    ],
+    "tag_ids": [
+      "BOP",
+      "LIS",
+      "DP"
+    ],
+    "confidence_scores": [
+      1.1083988390794381,
+      0.6627347276267921,
+      0.5645575125143782
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4209970976985953,
+        "rule_based_score": 1.0
+      },
+      "LIS": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.5318368190669802,
+        "rule_based_score": 0.0
+      },
+      "DP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5113937812859455,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc182_e": {
+    "title": "ABC182 E",
+    "problem_url": "https://atcoder.jp/contests/abc182/tasks/e_/tasks/abc182_e",
+    "editorial_url": "https://atcoder.jp/contests/abc182/editorial",
+    "tags": [
+      "ビット演算",
+      "平方分割",
+      "Mo's algorithm"
+    ],
+    "tag_ids": [
+      "BOP",
+      "SQD",
+      "MOS"
+    ],
+    "confidence_scores": [
+      1.0688552022366413,
+      0.6239756416558209,
+      0.5312259792568657
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3221380055916032,
+        "rule_based_score": 1.0
+      },
+      "SQD": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.4349391041395523,
+        "rule_based_score": 0.0
+      },
+      "MOS": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.42806494814216417,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc182_f": {
+    "title": "ABC182 F",
+    "problem_url": "https://atcoder.jp/contests/abc182/tasks/f_/tasks/abc182_f",
+    "editorial_url": "https://atcoder.jp/contests/abc182/editorial",
+    "tags": [
+      "動的計画法",
+      "ビット演算",
+      "組み合わせ論"
+    ],
+    "tag_ids": [
+      "DP",
+      "BOP",
+      "CMB"
+    ],
+    "confidence_scores": [
+      1.1404154002620417,
+      1.0209402471364801,
+      0.916780210873841
+    ],
+    "detailed_scores": {
+      "DP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.5010385006551037,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4273506178412008,
+        "rule_based_score": 1.0
+      },
+      "CMB": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3919505271846022,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc183_a": {
+    "title": "ABC183 A",
+    "problem_url": "https://atcoder.jp/contests/abc183/tasks/a_/tasks/abc183_a",
+    "editorial_url": "https://atcoder.jp/contests/abc183/editorial",
+    "tags": [
+      "ビット演算",
+      "XOR演算",
+      "最適化問題"
+    ],
+    "tag_ids": [
+      "BOP",
+      "XOR",
+      "OPT"
+    ],
+    "confidence_scores": [
+      1.1042935057054781,
+      0.6394576058440956,
+      0.5331100488722803
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.410733764263695,
+        "rule_based_score": 1.0
+      },
+      "XOR": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.4736440146102391,
+        "rule_based_score": 0.0
+      },
+      "OPT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4327751221807007,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc183_b": {
+    "title": "ABC183 B",
+    "problem_url": "https://atcoder.jp/contests/abc183/tasks/b_/tasks/abc183_b",
+    "editorial_url": "https://atcoder.jp/contests/abc183/editorial",
+    "tags": [
+      "ビット演算",
+      "幾何",
+      "座標回転"
+    ],
+    "tag_ids": [
+      "BOP",
+      "GEO",
+      "ROT"
+    ],
+    "confidence_scores": [
+      1.0654909730859465,
+      0.6407359742577108,
+      0.5415630299844103
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.313727432714866,
+        "rule_based_score": 1.0
+      },
+      "GEO": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.4768399356442771,
+        "rule_based_score": 0.0
+      },
+      "ROT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4539075749610255,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc183_c": {
+    "title": "ABC183 C",
+    "problem_url": "https://atcoder.jp/contests/abc183/tasks/c_/tasks/abc183_c",
+    "editorial_url": "https://atcoder.jp/contests/abc183/editorial",
+    "tags": [
+      "全探索",
+      "組み合わせ論",
+      "全列挙"
+    ],
+    "tag_ids": [
+      "BRT",
+      "CMB",
+      "ENM"
+    ],
+    "confidence_scores": [
+      1.0892457196133396,
+      0.9901908841967136,
+      0.8986546171909366
+    ],
+    "detailed_scores": {
+      "BRT": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3731142990333491,
+        "rule_based_score": 1.0
+      },
+      "CMB": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3504772104917842,
+        "rule_based_score": 1.0
+      },
+      "ENM": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3466365429773417,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc183_d": {
+    "title": "ABC183 D",
+    "problem_url": "https://atcoder.jp/contests/abc183/tasks/d_/tasks/abc183_d",
+    "editorial_url": "https://atcoder.jp/contests/abc183/editorial",
+    "tags": [
+      "いもす法",
+      "累積和",
+      "シミュレーション"
+    ],
+    "tag_ids": [
+      "IMO",
+      "CUM",
+      "SIM"
+    ],
+    "confidence_scores": [
+      1.092077630551171,
+      0.9799671551619946,
+      0.8842984533077343
+    ],
+    "detailed_scores": {
+      "IMO": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3801940763779275,
+        "rule_based_score": 1.0
+      },
+      "CUM": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3249178879049865,
+        "rule_based_score": 1.0
+      },
+      "SIM": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3107461332693353,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc183_e": {
+    "title": "ABC183 E",
+    "problem_url": "https://atcoder.jp/contests/abc183/tasks/e_/tasks/abc183_e",
+    "editorial_url": "https://atcoder.jp/contests/abc183/editorial",
+    "tags": [
+      "動的計画法",
+      "累積和",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "DP",
+      "CUM",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.1563390262542566,
+      1.0304185979410962,
+      0.9210148471756254
+    ],
+    "detailed_scores": {
+      "DP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.5408475656356413,
+        "rule_based_score": 1.0
+      },
+      "CUM": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4510464948527408,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.4025371179390635,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc183_f": {
+    "title": "ABC183 F",
+    "problem_url": "https://atcoder.jp/contests/abc183/tasks/f_/tasks/abc183_f",
+    "editorial_url": "https://atcoder.jp/contests/abc183/editorial",
+    "tags": [
+      "Union-Find",
+      "ビット演算",
+      "半分全列挙"
+    ],
+    "tag_ids": [
+      "UF",
+      "BOP",
+      "MIT"
+    ],
+    "confidence_scores": [
+      1.1182074791618581,
+      1.0075822781584498,
+      0.5630247116117761
+    ],
+    "detailed_scores": {
+      "UF": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4455186979046448,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3939556953961247,
+        "rule_based_score": 1.0
+      },
+      "MIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5075617790294403,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc184_a": {
+    "title": "ABC184 A",
+    "problem_url": "https://atcoder.jp/contests/abc184/tasks/a_/tasks/abc184_a",
+    "editorial_url": "https://atcoder.jp/contests/abc184/editorial",
+    "tags": [
+      "ビット演算",
+      "行列",
+      "編集距離"
+    ],
+    "tag_ids": [
+      "BOP",
+      "MAT",
+      "EDT"
+    ],
+    "confidence_scores": [
+      1.074949243306543,
+      0.6164216020031006,
+      0.5246328775958584
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3373731082663576,
+        "rule_based_score": 1.0
+      },
+      "MAT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.4160540050077515,
+        "rule_based_score": 0.0
+      },
+      "EDT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.411582193989646,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc184_b": {
+    "title": "ABC184 B",
+    "problem_url": "https://atcoder.jp/contests/abc184/tasks/b_/tasks/abc184_b",
+    "editorial_url": "https://atcoder.jp/contests/abc184/editorial",
+    "tags": [
+      "ビット演算",
+      "半分全列挙",
+      "主客転倒"
+    ],
+    "tag_ids": [
+      "BOP",
+      "MIT",
+      "REV"
+    ],
+    "confidence_scores": [
+      1.0850348402030419,
+      0.6382952809908591,
+      0.5343799835318829
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3625871005076045,
+        "rule_based_score": 1.0
+      },
+      "MIT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.47073820247714787,
+        "rule_based_score": 0.0
+      },
+      "REV": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.43594995882970705,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc184_c": {
+    "title": "ABC184 C",
+    "problem_url": "https://atcoder.jp/contests/abc184/tasks/c_/tasks/abc184_c",
+    "editorial_url": "https://atcoder.jp/contests/abc184/editorial",
+    "tags": [
+      "マンハッタン距離",
+      "ビット演算",
+      "Fenwick Tree"
+    ],
+    "tag_ids": [
+      "MAN",
+      "BOP",
+      "BIT"
+    ],
+    "confidence_scores": [
+      1.0847126321533143,
+      0.9825719232200169,
+      0.8754750573490693
+    ],
+    "detailed_scores": {
+      "MAN": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3617815803832856,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3314298080500422,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.2886876433726733,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc184_d": {
+    "title": "ABC184 D",
+    "problem_url": "https://atcoder.jp/contests/abc184/tasks/d_/tasks/abc184_d",
+    "editorial_url": "https://atcoder.jp/contests/abc184/editorial",
+    "tags": [
+      "期待値",
+      "確率・期待値DP",
+      "動的計画法"
+    ],
+    "tag_ids": [
+      "EXP",
+      "EDP",
+      "DP"
+    ],
+    "confidence_scores": [
+      1.1321100960138317,
+      1.0355540481069658,
+      0.944397048006125
+    ],
+    "detailed_scores": {
+      "EXP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.480275240034579,
+        "rule_based_score": 1.0
+      },
+      "EDP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.463885120267415,
+        "rule_based_score": 1.0
+      },
+      "DP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.4609926200153125,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc184_e": {
+    "title": "ABC184 E",
+    "problem_url": "https://atcoder.jp/contests/abc184/tasks/e_/tasks/abc184_e",
+    "editorial_url": "https://atcoder.jp/contests/abc184/editorial",
+    "tags": [
+      "幅優先探索",
+      "最長増加部分列",
+      "0-1 BFS"
+    ],
+    "tag_ids": [
+      "BFS",
+      "LIS",
+      "01B"
+    ],
+    "confidence_scores": [
+      1.132212407142037,
+      1.022372164941784,
+      0.93101109154819
+    ],
+    "detailed_scores": {
+      "BFS": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.480531017855092,
+        "rule_based_score": 1.0
+      },
+      "LIS": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.43093041235446,
+        "rule_based_score": 1.0
+      },
+      "01B": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.4275277288704746,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc184_f": {
+    "title": "ABC184 F",
+    "problem_url": "https://atcoder.jp/contests/abc184/tasks/f_/tasks/abc184_f",
+    "editorial_url": "https://atcoder.jp/contests/abc184/editorial",
+    "tags": [
+      "半分全列挙",
+      "二分探索",
+      "尺取り法"
+    ],
+    "tag_ids": [
+      "MIT",
+      "BIN",
+      "2PT"
+    ],
+    "confidence_scores": [
+      1.1824938773070635,
+      1.0527634943253172,
+      0.962591397967983
+    ],
+    "detailed_scores": {
+      "MIT": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.606234693267658,
+        "rule_based_score": 1.0
+      },
+      "BIN": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.506908735813293,
+        "rule_based_score": 1.0
+      },
+      "2PT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.5064784949199572,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc185_a": {
+    "title": "ABC185 A",
+    "problem_url": "https://atcoder.jp/contests/abc185/tasks/a_/tasks/abc185_a",
+    "editorial_url": "https://atcoder.jp/contests/abc185/editorial",
+    "tags": [
+      "ビット演算",
+      "最適化問題",
+      "半分全列挙"
+    ],
+    "tag_ids": [
+      "BOP",
+      "OPT",
+      "MIT"
+    ],
+    "confidence_scores": [
+      1.1116278063812222,
+      0.6397236615884767,
+      0.543789693056129
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4290695159530549,
+        "rule_based_score": 1.0
+      },
+      "OPT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.4743091539711917,
+        "rule_based_score": 0.0
+      },
+      "MIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4594742326403222,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc185_b": {
+    "title": "ABC185 B",
+    "problem_url": "https://atcoder.jp/contests/abc185/tasks/b_/tasks/abc185_b",
+    "editorial_url": "https://atcoder.jp/contests/abc185/editorial",
+    "tags": [
+      "ビット演算",
+      "Fenwick Tree",
+      "巡回セールスマン問題"
+    ],
+    "tag_ids": [
+      "BOP",
+      "BIT",
+      "TSP"
+    ],
+    "confidence_scores": [
+      1.054218409304264,
+      0.92816039480243,
+      0.499055665225399
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.2855460232606597,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.195400987006075,
+        "rule_based_score": 1.0
+      },
+      "TSP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.34763916306349746,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc185_c": {
+    "title": "ABC185 C",
+    "problem_url": "https://atcoder.jp/contests/abc185/tasks/c_/tasks/abc185_c",
+    "editorial_url": "https://atcoder.jp/contests/abc185/editorial",
+    "tags": [
+      "ビット演算",
+      "全探索",
+      "フロー問題"
+    ],
+    "tag_ids": [
+      "BOP",
+      "BRT",
+      "FLW"
+    ],
+    "confidence_scores": [
+      1.1202594326882886,
+      1.024013845704361,
+      0.9163688549309139
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4506485817207218,
+        "rule_based_score": 1.0
+      },
+      "BRT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4350346142609027,
+        "rule_based_score": 1.0
+      },
+      "FLW": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3909221373272844,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc185_d": {
+    "title": "ABC185 D",
+    "problem_url": "https://atcoder.jp/contests/abc185/tasks/d_/tasks/abc185_d",
+    "editorial_url": "https://atcoder.jp/contests/abc185/editorial",
+    "tags": [
+      "ビット演算",
+      "半分全列挙",
+      "写像12相"
+    ],
+    "tag_ids": [
+      "BOP",
+      "MIT",
+      "MAP"
+    ],
+    "confidence_scores": [
+      1.0750579537666707,
+      0.6303967598305024,
+      0.5389837559143313
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3376448844166768,
+        "rule_based_score": 1.0
+      },
+      "MIT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.45099189957625596,
+        "rule_based_score": 0.0
+      },
+      "MAP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4474593897858281,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc185_e": {
+    "title": "ABC185 E",
+    "problem_url": "https://atcoder.jp/contests/abc185/tasks/e_/tasks/abc185_e",
+    "editorial_url": "https://atcoder.jp/contests/abc185/editorial",
+    "tags": [
+      "動的計画法",
+      "ビット演算",
+      "編集距離"
+    ],
+    "tag_ids": [
+      "DP",
+      "BOP",
+      "EDT"
+    ],
+    "confidence_scores": [
+      1.1329129716142767,
+      1.0068105777984666,
+      0.5726982935070651
+    ],
+    "detailed_scores": {
+      "DP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4822824290356915,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.392026444496167,
+        "rule_based_score": 1.0
+      },
+      "EDT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5317457337676627,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc185_f": {
+    "title": "ABC185 F",
+    "problem_url": "https://atcoder.jp/contests/abc185/tasks/f_/tasks/abc185_f",
+    "editorial_url": "https://atcoder.jp/contests/abc185/editorial",
+    "tags": [
+      "XOR演算",
+      "ビット演算",
+      "Fenwick Tree"
+    ],
+    "tag_ids": [
+      "XOR",
+      "BOP",
+      "BIT"
+    ],
+    "confidence_scores": [
+      1.1899613872386796,
+      1.072251924041001,
+      0.9464725122871438
+    ],
+    "detailed_scores": {
+      "XOR": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.624903468096699,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.5556298101025021,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.4661812807178596,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc186_a": {
+    "title": "ABC186 A",
+    "problem_url": "https://atcoder.jp/contests/abc186/tasks/a_/tasks/abc186_a",
+    "editorial_url": "https://atcoder.jp/contests/abc186/editorial",
+    "tags": [
+      "ビット演算",
+      "約数列挙",
+      "半分全列挙"
+    ],
+    "tag_ids": [
+      "BOP",
+      "DIV",
+      "MIT"
+    ],
+    "confidence_scores": [
+      1.1079362264748658,
+      0.6382851022610664,
+      0.5443276264993849
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4198405661871643,
+        "rule_based_score": 1.0
+      },
+      "DIV": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.47071275565266596,
+        "rule_based_score": 0.0
+      },
+      "MIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.46081906624846214,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc186_b": {
+    "title": "ABC186 B",
+    "problem_url": "https://atcoder.jp/contests/abc186/tasks/b_/tasks/abc186_b",
+    "editorial_url": "https://atcoder.jp/contests/abc186/editorial",
+    "tags": [
+      "最長増加部分列",
+      "ビット演算",
+      "平方分割"
+    ],
+    "tag_ids": [
+      "LIS",
+      "BOP",
+      "SQD"
+    ],
+    "confidence_scores": [
+      1.1007227256535341,
+      0.9936034073805953,
+      0.5513788955229892
+    ],
+    "detailed_scores": {
+      "LIS": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4018068141338351,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3590085184514882,
+        "rule_based_score": 1.0
+      },
+      "SQD": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4784472388074728,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc186_c": {
+    "title": "ABC186 C",
+    "problem_url": "https://atcoder.jp/contests/abc186/tasks/c_/tasks/abc186_c",
+    "editorial_url": "https://atcoder.jp/contests/abc186/editorial",
+    "tags": [
+      "ビット演算",
+      "約数列挙",
+      "素因数分解"
+    ],
+    "tag_ids": [
+      "BOP",
+      "DIV",
+      "PFT"
+    ],
+    "confidence_scores": [
+      1.1205379940671625,
+      0.6490224256510991,
+      0.5565572839512091
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4513449851679057,
+        "rule_based_score": 1.0
+      },
+      "DIV": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.4975560641277479,
+        "rule_based_score": 0.0
+      },
+      "PFT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4913932098780225,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc186_d": {
+    "title": "ABC186 D",
+    "problem_url": "https://atcoder.jp/contests/abc186/tasks/d_/tasks/abc186_d",
+    "editorial_url": "https://atcoder.jp/contests/abc186/editorial",
+    "tags": [
+      "累積和",
+      "ビット演算",
+      "約数列挙"
+    ],
+    "tag_ids": [
+      "CUM",
+      "BOP",
+      "DIV"
+    ],
+    "confidence_scores": [
+      1.1340320041220666,
+      0.9928903861815598,
+      0.5742572111792785
+    ],
+    "detailed_scores": {
+      "CUM": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4850800103051667,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3572259654538996,
+        "rule_based_score": 1.0
+      },
+      "DIV": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5356430279481963,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc186_e": {
+    "title": "ABC186 E",
+    "problem_url": "https://atcoder.jp/contests/abc186/tasks/e_/tasks/abc186_e",
+    "editorial_url": "https://atcoder.jp/contests/abc186/editorial",
+    "tags": [
+      "最大公約数",
+      "ユークリッドの互除法",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "GCD",
+      "EUC",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.1028008964574707,
+      1.0049188132278717,
+      0.8916282320269304
+    ],
+    "detailed_scores": {
+      "GCD": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4070022411436767,
+        "rule_based_score": 1.0
+      },
+      "EUC": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3872970330696794,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.329070580067326,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc186_f": {
+    "title": "ABC186 F",
+    "problem_url": "https://atcoder.jp/contests/abc186/tasks/f_/tasks/abc186_f",
+    "editorial_url": "https://atcoder.jp/contests/abc186/editorial",
+    "tags": [
+      "Fenwick Tree",
+      "ビット演算",
+      "二部マッチング"
+    ],
+    "tag_ids": [
+      "BIT",
+      "BOP",
+      "BPM"
+    ],
+    "confidence_scores": [
+      1.075969577389654,
+      0.9837811283547556,
+      0.5433735268961325
+    ],
+    "detailed_scores": {
+      "BIT": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.339923943474135,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.334452820886889,
+        "rule_based_score": 1.0
+      },
+      "BPM": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4584338172403311,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc187_a": {
+    "title": "ABC187 A",
+    "problem_url": "https://atcoder.jp/contests/abc187/tasks/a_/tasks/abc187_a",
+    "editorial_url": "https://atcoder.jp/contests/abc187/editorial",
+    "tags": [
+      "ビット演算",
+      "包除原理",
+      "最大公約数"
+    ],
+    "tag_ids": [
+      "BOP",
+      "PIE",
+      "GCD"
+    ],
+    "confidence_scores": [
+      1.0950144044485346,
+      0.6320060991692904,
+      0.5406905609046362
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3875360111213366,
+        "rule_based_score": 1.0
+      },
+      "PIE": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.455015247923226,
+        "rule_based_score": 0.0
+      },
+      "GCD": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.45172640226159033,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc187_b": {
+    "title": "ABC187 B",
+    "problem_url": "https://atcoder.jp/contests/abc187/tasks/b_/tasks/abc187_b",
+    "editorial_url": "https://atcoder.jp/contests/abc187/editorial",
+    "tags": [
+      "ビット演算",
+      "幾何",
+      "二部マッチング"
+    ],
+    "tag_ids": [
+      "BOP",
+      "GEO",
+      "BPM"
+    ],
+    "confidence_scores": [
+      1.0712009407364707,
+      0.6719038835687606,
+      0.5494793751570276
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3280023518411768,
+        "rule_based_score": 1.0
+      },
+      "GEO": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.5547597089219016,
+        "rule_based_score": 0.0
+      },
+      "BPM": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4736984378925689,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc187_c": {
+    "title": "ABC187 C",
+    "problem_url": "https://atcoder.jp/contests/abc187/tasks/c_/tasks/abc187_c",
+    "editorial_url": "https://atcoder.jp/contests/abc187/editorial",
+    "tags": [
+      "最長増加部分列",
+      "ビット演算",
+      "2-SAT"
+    ],
+    "tag_ids": [
+      "LIS",
+      "BOP",
+      "2ST"
+    ],
+    "confidence_scores": [
+      1.082843533049724,
+      0.9497332634129683,
+      0.5564620880465205
+    ],
+    "detailed_scores": {
+      "LIS": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3571088326243097,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.2493331585324206,
+        "rule_based_score": 1.0
+      },
+      "2ST": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.49115522011630103,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc187_d": {
+    "title": "ABC187 D",
+    "problem_url": "https://atcoder.jp/contests/abc187/tasks/d_/tasks/abc187_d",
+    "editorial_url": "https://atcoder.jp/contests/abc187/editorial",
+    "tags": [
+      "ビット演算",
+      "区間スケジューリング",
+      "動的計画法"
+    ],
+    "tag_ids": [
+      "BOP",
+      "SCH",
+      "DP"
+    ],
+    "confidence_scores": [
+      1.0841881356584262,
+      0.6266154581253076,
+      0.5331987876929734
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3604703391460653,
+        "rule_based_score": 1.0
+      },
+      "SCH": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.44153864531326925,
+        "rule_based_score": 0.0
+      },
+      "DP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.43299696923243325,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc187_e": {
+    "title": "ABC187 E",
+    "problem_url": "https://atcoder.jp/contests/abc187/tasks/e_/tasks/abc187_e",
+    "editorial_url": "https://atcoder.jp/contests/abc187/editorial",
+    "tags": [
+      "グラフ",
+      "いもす法",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "GRP",
+      "IMO",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.1350054249881296,
+      1.0200043305945068,
+      0.9135332965032186
+    ],
+    "detailed_scores": {
+      "GRP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4875135624703242,
+        "rule_based_score": 1.0
+      },
+      "IMO": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.425010826486267,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3838332412580463,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc187_f": {
+    "title": "ABC187 F",
+    "problem_url": "https://atcoder.jp/contests/abc187/tasks/f_/tasks/abc187_f",
+    "editorial_url": "https://atcoder.jp/contests/abc187/editorial",
+    "tags": [
+      "グラフ",
+      "ビット演算",
+      "二部マッチング"
+    ],
+    "tag_ids": [
+      "GRP",
+      "BOP",
+      "BPM"
+    ],
+    "confidence_scores": [
+      1.1599494330874323,
+      0.9766220424515245,
+      0.6015324493022822
+    ],
+    "detailed_scores": {
+      "GRP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.5498735827185803,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3165551061288112,
+        "rule_based_score": 1.0
+      },
+      "BPM": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.6038311232557055,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc188_a": {
+    "title": "ABC188 A",
+    "problem_url": "https://atcoder.jp/contests/abc188/tasks/a_/tasks/abc188_a",
+    "editorial_url": "https://atcoder.jp/contests/abc188/editorial",
+    "tags": [
+      "ビット演算",
+      "最適化問題",
+      "ゲーム理論"
+    ],
+    "tag_ids": [
+      "BOP",
+      "OPT",
+      "GAM"
+    ],
+    "confidence_scores": [
+      1.1011756651053815,
+      0.6330262893501166,
+      0.534399759391878
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4029391627634538,
+        "rule_based_score": 1.0
+      },
+      "OPT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.4575657233752916,
+        "rule_based_score": 0.0
+      },
+      "GAM": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.43599939847969493,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc188_b": {
+    "title": "ABC188 B",
+    "problem_url": "https://atcoder.jp/contests/abc188/tasks/b_/tasks/abc188_b",
+    "editorial_url": "https://atcoder.jp/contests/abc188/editorial",
+    "tags": [
+      "最長増加部分列",
+      "ビット演算",
+      "累積和"
+    ],
+    "tag_ids": [
+      "LIS",
+      "BOP",
+      "CUM"
+    ],
+    "confidence_scores": [
+      1.1106104082229264,
+      0.9925111360634138,
+      0.5552859927798872
+    ],
+    "detailed_scores": {
+      "LIS": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4265260205573156,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3562778401585345,
+        "rule_based_score": 1.0
+      },
+      "CUM": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4882149819497178,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc188_c": {
+    "title": "ABC188 C",
+    "problem_url": "https://atcoder.jp/contests/abc188/tasks/c_/tasks/abc188_c",
+    "editorial_url": "https://atcoder.jp/contests/abc188/editorial",
+    "tags": [
+      "ビット演算",
+      "半分全列挙",
+      "ゲーム理論"
+    ],
+    "tag_ids": [
+      "BOP",
+      "MIT",
+      "GAM"
+    ],
+    "confidence_scores": [
+      1.1001376136466403,
+      0.6400729522554114,
+      0.5471445306393282
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4003440341166007,
+        "rule_based_score": 1.0
+      },
+      "MIT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.4751823806385286,
+        "rule_based_score": 0.0
+      },
+      "GAM": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.46786132659832047,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc188_d": {
+    "title": "ABC188 D",
+    "problem_url": "https://atcoder.jp/contests/abc188/tasks/d_/tasks/abc188_d",
+    "editorial_url": "https://atcoder.jp/contests/abc188/editorial",
+    "tags": [
+      "ビット演算",
+      "いもす法",
+      "素数"
+    ],
+    "tag_ids": [
+      "BOP",
+      "IMO",
+      "PRM"
+    ],
+    "confidence_scores": [
+      1.0936366070676002,
+      1.0002311790823608,
+      0.8883596142582868
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3840915176690007,
+        "rule_based_score": 1.0
+      },
+      "IMO": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3755779477059025,
+        "rule_based_score": 1.0
+      },
+      "PRM": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3208990356457169,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc188_e": {
+    "title": "ABC188 E",
+    "problem_url": "https://atcoder.jp/contests/abc188/tasks/e_/tasks/abc188_e",
+    "editorial_url": "https://atcoder.jp/contests/abc188/editorial",
+    "tags": [
+      "動的計画法",
+      "DAG",
+      "幅優先探索"
+    ],
+    "tag_ids": [
+      "DP",
+      "DAG",
+      "BFS"
+    ],
+    "confidence_scores": [
+      1.1518399818647007,
+      1.054685094133566,
+      0.9470403977860746
+    ],
+    "detailed_scores": {
+      "DP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.5295999546617516,
+        "rule_based_score": 1.0
+      },
+      "DAG": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.5117127353339148,
+        "rule_based_score": 1.0
+      },
+      "BFS": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.4676009944651862,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc188_f": {
+    "title": "ABC188 F",
+    "problem_url": "https://atcoder.jp/contests/abc188/tasks/f_/tasks/abc188_f",
+    "editorial_url": "https://atcoder.jp/contests/abc188/editorial",
+    "tags": [
+      "動的計画法",
+      "再帰関数",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "DP",
+      "REC",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.1293671574826902,
+      1.033763638866739,
+      0.9396611032125546
+    ],
+    "detailed_scores": {
+      "DP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4734178937067253,
+        "rule_based_score": 1.0
+      },
+      "REC": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4594090971668476,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.4491527580313865,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc189_a": {
+    "title": "ABC189 A",
+    "problem_url": "https://atcoder.jp/contests/abc189/tasks/a_/tasks/abc189_a",
+    "editorial_url": "https://atcoder.jp/contests/abc189/editorial",
+    "tags": [
+      "ビット演算",
+      "最長増加部分列",
+      "回文"
+    ],
+    "tag_ids": [
+      "BOP",
+      "LIS",
+      "PAL"
+    ],
+    "confidence_scores": [
+      1.0905875299260632,
+      0.9721387027317121,
+      0.5374480611566551
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.376468824815158,
+        "rule_based_score": 1.0
+      },
+      "LIS": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3053467568292803,
+        "rule_based_score": 1.0
+      },
+      "PAL": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4436201528916377,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc189_b": {
+    "title": "ABC189 B",
+    "problem_url": "https://atcoder.jp/contests/abc189/tasks/b_/tasks/abc189_b",
+    "editorial_url": "https://atcoder.jp/contests/abc189/editorial",
+    "tags": [
+      "ビット演算",
+      "桁DP",
+      "約数列挙"
+    ],
+    "tag_ids": [
+      "BOP",
+      "KDP",
+      "DIV"
+    ],
+    "confidence_scores": [
+      1.0703494064230021,
+      0.6043845625984146,
+      0.5116597566589762
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3258735160575053,
+        "rule_based_score": 1.0
+      },
+      "KDP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.3859614064960365,
+        "rule_based_score": 0.0
+      },
+      "DIV": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.3791493916474405,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc189_c": {
+    "title": "ABC189 C",
+    "problem_url": "https://atcoder.jp/contests/abc189/tasks/c_/tasks/abc189_c",
+    "editorial_url": "https://atcoder.jp/contests/abc189/editorial",
+    "tags": [
+      "全探索",
+      "ビット演算",
+      "Fenwick Tree"
+    ],
+    "tag_ids": [
+      "BRT",
+      "BOP",
+      "BIT"
+    ],
+    "confidence_scores": [
+      1.1057962753691406,
+      1.003431349606533,
+      0.8934196362951567
+    ],
+    "detailed_scores": {
+      "BRT": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4144906884228516,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.383578374016333,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3335490907378915,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc189_d": {
+    "title": "ABC189 D",
+    "problem_url": "https://atcoder.jp/contests/abc189/tasks/d_/tasks/abc189_d",
+    "editorial_url": "https://atcoder.jp/contests/abc189/editorial",
+    "tags": [
+      "組み合わせ論",
+      "ビット演算",
+      "XOR演算"
+    ],
+    "tag_ids": [
+      "CMB",
+      "BOP",
+      "XOR"
+    ],
+    "confidence_scores": [
+      1.1025776778540184,
+      1.00854604418617,
+      0.5582485665880339
+    ],
+    "detailed_scores": {
+      "CMB": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4064441946350459,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.396365110465425,
+        "rule_based_score": 1.0
+      },
+      "XOR": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4956214164700846,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc189_e": {
+    "title": "ABC189 E",
+    "problem_url": "https://atcoder.jp/contests/abc189/tasks/e_/tasks/abc189_e",
+    "editorial_url": "https://atcoder.jp/contests/abc189/editorial",
+    "tags": [
+      "ビット演算",
+      "シミュレーション",
+      "Mo's algorithm"
+    ],
+    "tag_ids": [
+      "BOP",
+      "SIM",
+      "MOS"
+    ],
+    "confidence_scores": [
+      1.129619901002862,
+      1.001369469175693,
+      0.5778601921227042
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4740497525071552,
+        "rule_based_score": 1.0
+      },
+      "SIM": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3784236729392323,
+        "rule_based_score": 1.0
+      },
+      "MOS": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5446504803067604,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc189_f": {
+    "title": "ABC189 F",
+    "problem_url": "https://atcoder.jp/contests/abc189/tasks/f_/tasks/abc189_f",
+    "editorial_url": "https://atcoder.jp/contests/abc189/editorial",
+    "tags": [
+      "二分探索",
+      "期待値",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "BIN",
+      "EXP",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.1541461298678009,
+      1.0495552000202082,
+      0.9357059195703534
+    ],
+    "detailed_scores": {
+      "BIN": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.5353653246695016,
+        "rule_based_score": 1.0
+      },
+      "EXP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4988880000505203,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.4392647989258833,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc190_a": {
+    "title": "ABC190 A",
+    "problem_url": "https://atcoder.jp/contests/abc190/tasks/a_/tasks/abc190_a",
+    "editorial_url": "https://atcoder.jp/contests/abc190/editorial",
+    "tags": [
+      "ゲーム理論",
+      "ビット演算",
+      "Grundy数"
+    ],
+    "tag_ids": [
+      "GAM",
+      "BOP",
+      "GND"
+    ],
+    "confidence_scores": [
+      1.1244087601264443,
+      1.011144120712785,
+      0.5321380400335012
+    ],
+    "detailed_scores": {
+      "GAM": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4610219003161102,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.402860301781962,
+        "rule_based_score": 1.0
+      },
+      "GND": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.43034510008375293,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc190_b": {
+    "title": "ABC190 B",
+    "problem_url": "https://atcoder.jp/contests/abc190/tasks/b_/tasks/abc190_b",
+    "editorial_url": "https://atcoder.jp/contests/abc190/editorial",
+    "tags": [
+      "ビット演算",
+      "回文",
+      "半分全列挙"
+    ],
+    "tag_ids": [
+      "BOP",
+      "PAL",
+      "MIT"
+    ],
+    "confidence_scores": [
+      1.0646178004611775,
+      0.5950814315516858,
+      0.5016816024464332
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3115445011529436,
+        "rule_based_score": 1.0
+      },
+      "PAL": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.36270357887921467,
+        "rule_based_score": 0.0
+      },
+      "MIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.3542040061160828,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc190_c": {
+    "title": "ABC190 C",
+    "problem_url": "https://atcoder.jp/contests/abc190/tasks/c_/tasks/abc190_c",
+    "editorial_url": "https://atcoder.jp/contests/abc190/editorial",
+    "tags": [
+      "全探索",
+      "ビット演算",
+      "Fenwick Tree"
+    ],
+    "tag_ids": [
+      "BRT",
+      "BOP",
+      "BIT"
+    ],
+    "confidence_scores": [
+      1.0876567008166425,
+      0.9811718080812281,
+      0.8586865544118987
+    ],
+    "detailed_scores": {
+      "BRT": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3691417520416063,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.32792952020307,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.2467163860297465,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc190_d": {
+    "title": "ABC190 D",
+    "problem_url": "https://atcoder.jp/contests/abc190/tasks/d_/tasks/abc190_d",
+    "editorial_url": "https://atcoder.jp/contests/abc190/editorial",
+    "tags": [
+      "約数列挙",
+      "ビット演算",
+      "素因数分解"
+    ],
+    "tag_ids": [
+      "DIV",
+      "BOP",
+      "PFT"
+    ],
+    "confidence_scores": [
+      1.1865730481259273,
+      1.0119598276355535,
+      0.5852933406457698
+    ],
+    "detailed_scores": {
+      "DIV": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.6164326203148178,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.404899569088884,
+        "rule_based_score": 1.0
+      },
+      "PFT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5632333516144243,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc190_e": {
+    "title": "ABC190 E",
+    "problem_url": "https://atcoder.jp/contests/abc190/tasks/e_/tasks/abc190_e",
+    "editorial_url": "https://atcoder.jp/contests/abc190/editorial",
+    "tags": [
+      "グラフ",
+      "動的計画法",
+      "幅優先探索"
+    ],
+    "tag_ids": [
+      "GRP",
+      "DP",
+      "BFS"
+    ],
+    "confidence_scores": [
+      1.1358873914465004,
+      1.0331278205412942,
+      0.9226598227274028
+    ],
+    "detailed_scores": {
+      "GRP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4897184786162505,
+        "rule_based_score": 1.0
+      },
+      "DP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4578195513532355,
+        "rule_based_score": 1.0
+      },
+      "BFS": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.4066495568185067,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc190_f": {
+    "title": "ABC190 F",
+    "problem_url": "https://atcoder.jp/contests/abc190/tasks/f_/tasks/abc190_f",
+    "editorial_url": "https://atcoder.jp/contests/abc190/editorial",
+    "tags": [
+      "組み合わせ論",
+      "ビット演算",
+      "Fenwick Tree"
+    ],
+    "tag_ids": [
+      "CMB",
+      "BOP",
+      "BIT"
+    ],
+    "confidence_scores": [
+      1.100259261513883,
+      1.0075170827149567,
+      0.8942045770772351
+    ],
+    "detailed_scores": {
+      "CMB": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4006481537847075,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.393792706787392,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3355114426930879,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc191_a": {
+    "title": "ABC191 A",
+    "problem_url": "https://atcoder.jp/contests/abc191/tasks/a_/tasks/abc191_a",
+    "editorial_url": "https://atcoder.jp/contests/abc191/editorial",
+    "tags": [
+      "ビット演算",
+      "Fenwick Tree",
+      "主客転倒"
+    ],
+    "tag_ids": [
+      "BOP",
+      "BIT",
+      "REV"
+    ],
+    "confidence_scores": [
+      1.0704103655429567,
+      0.9404495623092128,
+      0.5089404700730911
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3260259138573918,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.2261239057730322,
+        "rule_based_score": 1.0
+      },
+      "REV": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.37235117518272765,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc191_b": {
+    "title": "ABC191 B",
+    "problem_url": "https://atcoder.jp/contests/abc191/tasks/b_/tasks/abc191_b",
+    "editorial_url": "https://atcoder.jp/contests/abc191/editorial",
+    "tags": [
+      "最長増加部分列",
+      "ビット演算",
+      "Fenwick Tree"
+    ],
+    "tag_ids": [
+      "LIS",
+      "BOP",
+      "BIT"
+    ],
+    "confidence_scores": [
+      1.1220315441510644,
+      0.999258147011669,
+      0.8684266924543238
+    ],
+    "detailed_scores": {
+      "LIS": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4550788603776612,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3731453675291727,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.2710667311358095,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc191_c": {
+    "title": "ABC191 C",
+    "problem_url": "https://atcoder.jp/contests/abc191/tasks/c_/tasks/abc191_c",
+    "editorial_url": "https://atcoder.jp/contests/abc191/editorial",
+    "tags": [
+      "ビット演算",
+      "幾何",
+      "凸包"
+    ],
+    "tag_ids": [
+      "BOP",
+      "GEO",
+      "CVX"
+    ],
+    "confidence_scores": [
+      1.0723366499318856,
+      0.6496131145681362,
+      0.5486020664590736
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3308416248297137,
+        "rule_based_score": 1.0
+      },
+      "GEO": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.4990327864203406,
+        "rule_based_score": 0.0
+      },
+      "CVX": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4715051661476839,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc191_d": {
+    "title": "ABC191 D",
+    "problem_url": "https://atcoder.jp/contests/abc191/tasks/d_/tasks/abc191_d",
+    "editorial_url": "https://atcoder.jp/contests/abc191/editorial",
+    "tags": [
+      "ビット演算",
+      "幾何",
+      "約数列挙"
+    ],
+    "tag_ids": [
+      "BOP",
+      "GEO",
+      "DIV"
+    ],
+    "confidence_scores": [
+      1.090714271359238,
+      0.6592358442713755,
+      0.5466713072191264
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.376785678398095,
+        "rule_based_score": 1.0
+      },
+      "GEO": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.5230896106784388,
+        "rule_based_score": 0.0
+      },
+      "DIV": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4666782680478158,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc191_e": {
+    "title": "ABC191 E",
+    "problem_url": "https://atcoder.jp/contests/abc191/tasks/e_/tasks/abc191_e",
+    "editorial_url": "https://atcoder.jp/contests/abc191/editorial",
+    "tags": [
+      "ダイクストラ法",
+      "グラフ",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "DJK",
+      "GRP",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.1482090235820244,
+      1.0113293689427554,
+      0.8818566592098283
+    ],
+    "detailed_scores": {
+      "DJK": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.5205225589550608,
+        "rule_based_score": 1.0
+      },
+      "GRP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4033234223568885,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3046416480245704,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc191_f": {
+    "title": "ABC191 F",
+    "problem_url": "https://atcoder.jp/contests/abc191/tasks/f_/tasks/abc191_f",
+    "editorial_url": "https://atcoder.jp/contests/abc191/editorial",
+    "tags": [
+      "最大公約数",
+      "約数列挙",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "GCD",
+      "DIV",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.1802175043881404,
+      1.0770135813691575,
+      0.9241481417354251
+    ],
+    "detailed_scores": {
+      "GCD": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.6005437609703512,
+        "rule_based_score": 1.0
+      },
+      "DIV": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.5675339534228936,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.4103703543385628,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc192_a": {
+    "title": "ABC192 A",
+    "problem_url": "https://atcoder.jp/contests/abc192/tasks/a_/tasks/abc192_a",
+    "editorial_url": "https://atcoder.jp/contests/abc192/editorial",
+    "tags": [
+      "ビット演算",
+      "ゲーム理論",
+      "シミュレーション"
+    ],
+    "tag_ids": [
+      "BOP",
+      "GAM",
+      "SIM"
+    ],
+    "confidence_scores": [
+      1.1301699003740757,
+      1.0010948745849735,
+      0.9079919947379274
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.475424750935189,
+        "rule_based_score": 1.0
+      },
+      "GAM": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3777371864624341,
+        "rule_based_score": 1.0
+      },
+      "SIM": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3699799868448181,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc192_b": {
+    "title": "ABC192 B",
+    "problem_url": "https://atcoder.jp/contests/abc192/tasks/b_/tasks/abc192_b",
+    "editorial_url": "https://atcoder.jp/contests/abc192/editorial",
+    "tags": [
+      "ビット演算",
+      "最長増加部分列",
+      "Fenwick Tree"
+    ],
+    "tag_ids": [
+      "BOP",
+      "LIS",
+      "BIT"
+    ],
+    "confidence_scores": [
+      1.070423770190033,
+      0.9794651585918707,
+      0.8438125699977534
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3260594254750822,
+        "rule_based_score": 1.0
+      },
+      "LIS": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3236628964796768,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.2095314249943836,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc192_c": {
+    "title": "ABC192 C",
+    "problem_url": "https://atcoder.jp/contests/abc192/tasks/c_/tasks/abc192_c",
+    "editorial_url": "https://atcoder.jp/contests/abc192/editorial",
+    "tags": [
+      "ビット演算",
+      "約数列挙",
+      "高速フーリエ変換"
+    ],
+    "tag_ids": [
+      "BOP",
+      "DIV",
+      "FFT"
+    ],
+    "confidence_scores": [
+      1.107323993834552,
+      0.6462757871274141,
+      0.5520168492170623
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4183099845863796,
+        "rule_based_score": 1.0
+      },
+      "DIV": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.4906894678185353,
+        "rule_based_score": 0.0
+      },
+      "FFT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.48004212304265553,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc192_d": {
+    "title": "ABC192 D",
+    "problem_url": "https://atcoder.jp/contests/abc192/tasks/d_/tasks/abc192_d",
+    "editorial_url": "https://atcoder.jp/contests/abc192/editorial",
+    "tags": [
+      "ビット演算",
+      "二分探索",
+      "フロー問題"
+    ],
+    "tag_ids": [
+      "BOP",
+      "BIN",
+      "FLW"
+    ],
+    "confidence_scores": [
+      1.1112412624831234,
+      1.0189581896327704,
+      0.8869548195394372
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4281031562078081,
+        "rule_based_score": 1.0
+      },
+      "BIN": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4223954740819262,
+        "rule_based_score": 1.0
+      },
+      "FLW": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.317387048848593,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc192_e": {
+    "title": "ABC192 E",
+    "problem_url": "https://atcoder.jp/contests/abc192/tasks/e_/tasks/abc192_e",
+    "editorial_url": "https://atcoder.jp/contests/abc192/editorial",
+    "tags": [
+      "ダイクストラ法",
+      "ビット演算",
+      "巡回セールスマン問題"
+    ],
+    "tag_ids": [
+      "DJK",
+      "BOP",
+      "TSP"
+    ],
+    "confidence_scores": [
+      1.1289199550894424,
+      0.9589473856198365,
+      0.5622245798087047
+    ],
+    "detailed_scores": {
+      "DJK": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4722998877236058,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.2723684640495914,
+        "rule_based_score": 1.0
+      },
+      "TSP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5055614495217615,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc192_f": {
+    "title": "ABC192 F",
+    "problem_url": "https://atcoder.jp/contests/abc192/tasks/f_/tasks/abc192_f",
+    "editorial_url": "https://atcoder.jp/contests/abc192/editorial",
+    "tags": [
+      "動的計画法",
+      "全探索",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "DP",
+      "BRT",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.1358195267777433,
+      1.0343055842949684,
+      0.9144634334208375
+    ],
+    "detailed_scores": {
+      "DP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4895488169443583,
+        "rule_based_score": 1.0
+      },
+      "BRT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4607639607374212,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3861585835520933,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc193_a": {
+    "title": "ABC193 A",
+    "problem_url": "https://atcoder.jp/contests/abc193/tasks/a_/tasks/abc193_a",
+    "editorial_url": "https://atcoder.jp/contests/abc193/editorial",
+    "tags": [
+      "ビット演算",
+      "最小公倍数",
+      "主客転倒"
+    ],
+    "tag_ids": [
+      "BOP",
+      "LCM",
+      "REV"
+    ],
+    "confidence_scores": [
+      1.113478614607228,
+      0.6324940406069179,
+      0.538710606512788
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4336965365180696,
+        "rule_based_score": 1.0
+      },
+      "LCM": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.45623510151729496,
+        "rule_based_score": 0.0
+      },
+      "REV": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.44677651628197007,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc193_b": {
+    "title": "ABC193 B",
+    "problem_url": "https://atcoder.jp/contests/abc193/tasks/b_/tasks/abc193_b",
+    "editorial_url": "https://atcoder.jp/contests/abc193/editorial",
+    "tags": [
+      "ビット演算",
+      "ゲーム理論",
+      "巡回セールスマン問題"
+    ],
+    "tag_ids": [
+      "BOP",
+      "GAM",
+      "TSP"
+    ],
+    "confidence_scores": [
+      1.0869365564033546,
+      0.9935952777311632,
+      0.5289817935583419
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3673413910083863,
+        "rule_based_score": 1.0
+      },
+      "GAM": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.358988194327908,
+        "rule_based_score": 1.0
+      },
+      "TSP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4224544838958544,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc193_c": {
+    "title": "ABC193 C",
+    "problem_url": "https://atcoder.jp/contests/abc193/tasks/c_/tasks/abc193_c",
+    "editorial_url": "https://atcoder.jp/contests/abc193/editorial",
+    "tags": [
+      "ビット演算",
+      "全探索",
+      "約数列挙"
+    ],
+    "tag_ids": [
+      "BOP",
+      "BRT",
+      "DIV"
+    ],
+    "confidence_scores": [
+      1.0969043596262633,
+      1.0031481607084953,
+      0.5904693969232677
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3922608990656584,
+        "rule_based_score": 1.0
+      },
+      "BRT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3828704017712388,
+        "rule_based_score": 1.0
+      },
+      "DIV": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5761734923081693,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc193_d": {
+    "title": "ABC193 D",
+    "problem_url": "https://atcoder.jp/contests/abc193/tasks/d_/tasks/abc193_d",
+    "editorial_url": "https://atcoder.jp/contests/abc193/editorial",
+    "tags": [
+      "期待値",
+      "ビット演算",
+      "ゲーム理論"
+    ],
+    "tag_ids": [
+      "EXP",
+      "BOP",
+      "GAM"
+    ],
+    "confidence_scores": [
+      1.089801626580381,
+      0.9881588913137375,
+      0.5329690256555356
+    ],
+    "detailed_scores": {
+      "EXP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3745040664509518,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3453972282843436,
+        "rule_based_score": 1.0
+      },
+      "GAM": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4324225641388389,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc193_e": {
+    "title": "ABC193 E",
+    "problem_url": "https://atcoder.jp/contests/abc193/tasks/e_/tasks/abc193_e",
+    "editorial_url": "https://atcoder.jp/contests/abc193/editorial",
+    "tags": [
+      "ユークリッドの互除法",
+      "全探索",
+      "最小公倍数"
+    ],
+    "tag_ids": [
+      "EUC",
+      "BRT",
+      "LCM"
+    ],
+    "confidence_scores": [
+      1.1125369243415322,
+      1.018159585751812,
+      0.9181585498543265
+    ],
+    "detailed_scores": {
+      "EUC": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4313423108538306,
+        "rule_based_score": 1.0
+      },
+      "BRT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.42039896437953,
+        "rule_based_score": 1.0
+      },
+      "LCM": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3953963746358162,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc193_f": {
+    "title": "ABC193 F",
+    "problem_url": "https://atcoder.jp/contests/abc193/tasks/f_/tasks/abc193_f",
+    "editorial_url": "https://atcoder.jp/contests/abc193/editorial",
+    "tags": [
+      "最小カット",
+      "最大流",
+      "グラフ"
+    ],
+    "tag_ids": [
+      "MNC2",
+      "MXF",
+      "GRP"
+    ],
+    "confidence_scores": [
+      1.158502540084251,
+      1.0630726830237458,
+      0.9524412620366773
+    ],
+    "detailed_scores": {
+      "MNC2": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.546256350210627,
+        "rule_based_score": 1.0
+      },
+      "MXF": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.5326817075593646,
+        "rule_based_score": 1.0
+      },
+      "GRP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.4811031550916933,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc194_a": {
+    "title": "ABC194 A",
+    "problem_url": "https://atcoder.jp/contests/abc194/tasks/a_/tasks/abc194_a",
+    "editorial_url": "https://atcoder.jp/contests/abc194/editorial",
+    "tags": [
+      "ビット演算",
+      "包除原理",
+      "約数列挙"
+    ],
+    "tag_ids": [
+      "BOP",
+      "PIE",
+      "DIV"
+    ],
+    "confidence_scores": [
+      1.083329381786743,
+      0.6004931907726012,
+      0.5094099528368286
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3583234544668574,
+        "rule_based_score": 1.0
+      },
+      "PIE": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.37623297693150315,
+        "rule_based_score": 0.0
+      },
+      "DIV": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.37352488209207124,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc194_b": {
+    "title": "ABC194 B",
+    "problem_url": "https://atcoder.jp/contests/abc194/tasks/b_/tasks/abc194_b",
+    "editorial_url": "https://atcoder.jp/contests/abc194/editorial",
+    "tags": [
+      "全探索",
+      "ビット演算",
+      "Fenwick Tree"
+    ],
+    "tag_ids": [
+      "BRT",
+      "BOP",
+      "BIT"
+    ],
+    "confidence_scores": [
+      1.100329290035969,
+      1.0060689347839031,
+      0.8739843919976844
+    ],
+    "detailed_scores": {
+      "BRT": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4008232250899217,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3901723369597583,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.284960979994211,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc194_c": {
+    "title": "ABC194 C",
+    "problem_url": "https://atcoder.jp/contests/abc194/tasks/c_/tasks/abc194_c",
+    "editorial_url": "https://atcoder.jp/contests/abc194/editorial",
+    "tags": [
+      "Fenwick Tree",
+      "ビット演算",
+      "フロー問題"
+    ],
+    "tag_ids": [
+      "BIT",
+      "BOP",
+      "FLW"
+    ],
+    "confidence_scores": [
+      1.0930449766558725,
+      0.9929429425631181,
+      0.9005833619052017
+    ],
+    "detailed_scores": {
+      "BIT": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3826124416396808,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3573573564077954,
+        "rule_based_score": 1.0
+      },
+      "FLW": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3514584047630043,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc194_d": {
+    "title": "ABC194 D",
+    "problem_url": "https://atcoder.jp/contests/abc194/tasks/d_/tasks/abc194_d",
+    "editorial_url": "https://atcoder.jp/contests/abc194/editorial",
+    "tags": [
+      "グラフ",
+      "期待値",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "GRP",
+      "EXP",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.1385623856098182,
+      1.0353156064141302,
+      0.9225885663599294
+    ],
+    "detailed_scores": {
+      "GRP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4964059640245448,
+        "rule_based_score": 1.0
+      },
+      "EXP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4632890160353258,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.4064714158998235,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc194_e": {
+    "title": "ABC194 E",
+    "problem_url": "https://atcoder.jp/contests/abc194/tasks/e_/tasks/abc194_e",
+    "editorial_url": "https://atcoder.jp/contests/abc194/editorial",
+    "tags": [
+      "ビット演算",
+      "半分全列挙",
+      "中国剰余定理"
+    ],
+    "tag_ids": [
+      "BOP",
+      "MIT",
+      "CRT"
+    ],
+    "confidence_scores": [
+      1.0978286468345964,
+      0.6508015220619876,
+      0.5575074165936188
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.394571617086491,
+        "rule_based_score": 1.0
+      },
+      "MIT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.5020038051549691,
+        "rule_based_score": 0.0
+      },
+      "CRT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4937685414840469,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc194_f": {
+    "title": "ABC194 F",
+    "problem_url": "https://atcoder.jp/contests/abc194/tasks/f_/tasks/abc194_f",
+    "editorial_url": "https://atcoder.jp/contests/abc194/editorial",
+    "tags": [
+      "動的計画法",
+      "ビット演算",
+      "桁DP"
+    ],
+    "tag_ids": [
+      "DP",
+      "BOP",
+      "KDP"
+    ],
+    "confidence_scores": [
+      1.127929263003378,
+      1.015216150835462,
+      0.5941024063387951
+    ],
+    "detailed_scores": {
+      "DP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4698231575084446,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.413040377088655,
+        "rule_based_score": 1.0
+      },
+      "KDP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5852560158469876,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc195_a": {
+    "title": "ABC195 A",
+    "problem_url": "https://atcoder.jp/contests/abc195/tasks/a_/tasks/abc195_a",
+    "editorial_url": "https://atcoder.jp/contests/abc195/editorial",
+    "tags": [
+      "ビット演算",
+      "主客転倒",
+      "Grundy数"
+    ],
+    "tag_ids": [
+      "BOP",
+      "REV",
+      "GND"
+    ],
+    "confidence_scores": [
+      1.0865781665210092,
+      0.623825756362772,
+      0.5255900599105526
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3664454163025228,
+        "rule_based_score": 1.0
+      },
+      "REV": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.4345643909069301,
+        "rule_based_score": 0.0
+      },
+      "GND": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4139751497763815,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc195_b": {
+    "title": "ABC195 B",
+    "problem_url": "https://atcoder.jp/contests/abc195/tasks/b_/tasks/abc195_b",
+    "editorial_url": "https://atcoder.jp/contests/abc195/editorial",
+    "tags": [
+      "全探索",
+      "ビット演算",
+      "Fenwick Tree"
+    ],
+    "tag_ids": [
+      "BRT",
+      "BOP",
+      "BIT"
+    ],
+    "confidence_scores": [
+      1.099965218599222,
+      0.9998162256615105,
+      0.8740260023228825
+    ],
+    "detailed_scores": {
+      "BRT": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3999130464980545,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3745405641537762,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.2850650058072064,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc195_c": {
+    "title": "ABC195 C",
+    "problem_url": "https://atcoder.jp/contests/abc195/tasks/c_/tasks/abc195_c",
+    "editorial_url": "https://atcoder.jp/contests/abc195/editorial",
+    "tags": [
+      "ビット演算",
+      "約数列挙",
+      "素因数分解"
+    ],
+    "tag_ids": [
+      "BOP",
+      "DIV",
+      "PFT"
+    ],
+    "confidence_scores": [
+      1.0855246287252949,
+      0.6536148573363498,
+      0.5493149514136701
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3638115718132369,
+        "rule_based_score": 1.0
+      },
+      "DIV": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.5090371433408747,
+        "rule_based_score": 0.0
+      },
+      "PFT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4732873785341754,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc195_d": {
+    "title": "ABC195 D",
+    "problem_url": "https://atcoder.jp/contests/abc195/tasks/d_/tasks/abc195_d",
+    "editorial_url": "https://atcoder.jp/contests/abc195/editorial",
+    "tags": [
+      "ビット演算",
+      "区間スケジューリング",
+      "半分全列挙"
+    ],
+    "tag_ids": [
+      "BOP",
+      "SCH",
+      "MIT"
+    ],
+    "confidence_scores": [
+      1.0942403070057325,
+      0.6521558022649198,
+      0.5572499319013013
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3856007675143311,
+        "rule_based_score": 1.0
+      },
+      "SCH": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.5053895056622996,
+        "rule_based_score": 0.0
+      },
+      "MIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.49312482975325334,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc195_e": {
+    "title": "ABC195 E",
+    "problem_url": "https://atcoder.jp/contests/abc195/tasks/e_/tasks/abc195_e",
+    "editorial_url": "https://atcoder.jp/contests/abc195/editorial",
+    "tags": [
+      "ゲーム理論",
+      "動的計画法",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "GAM",
+      "DP",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.1426327515076324,
+      1.0341415311605218,
+      0.9099421815253923
+    ],
+    "detailed_scores": {
+      "GAM": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.506581878769081,
+        "rule_based_score": 1.0
+      },
+      "DP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4603538279013049,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3748554538134807,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc195_f": {
+    "title": "ABC195 F",
+    "problem_url": "https://atcoder.jp/contests/abc195/tasks/f_/tasks/abc195_f",
+    "editorial_url": "https://atcoder.jp/contests/abc195/editorial",
+    "tags": [
+      "最大公約数",
+      "素数",
+      "bitDP"
+    ],
+    "tag_ids": [
+      "GCD",
+      "PRM",
+      "BDP"
+    ],
+    "confidence_scores": [
+      1.1322735218346587,
+      1.0375249016299715,
+      0.9433655106399776
+    ],
+    "detailed_scores": {
+      "GCD": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4806838045866464,
+        "rule_based_score": 1.0
+      },
+      "PRM": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4688122540749284,
+        "rule_based_score": 1.0
+      },
+      "BDP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.4584137765999439,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc196_a": {
+    "title": "ABC196 A",
+    "problem_url": "https://atcoder.jp/contests/abc196/tasks/a_/tasks/abc196_a",
+    "editorial_url": "https://atcoder.jp/contests/abc196/editorial",
+    "tags": [
+      "ビット演算",
+      "全探索",
+      "最適化問題"
+    ],
+    "tag_ids": [
+      "BOP",
+      "BRT",
+      "OPT"
+    ],
+    "confidence_scores": [
+      1.103187499271347,
+      1.0120591766623135,
+      0.5618230223678604
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4079687481783671,
+        "rule_based_score": 1.0
+      },
+      "BRT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4051479416557835,
+        "rule_based_score": 1.0
+      },
+      "OPT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5045575559196509,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc196_b": {
+    "title": "ABC196 B",
+    "problem_url": "https://atcoder.jp/contests/abc196/tasks/b_/tasks/abc196_b",
+    "editorial_url": "https://atcoder.jp/contests/abc196/editorial",
+    "tags": [
+      "ビット演算",
+      "素因数分解",
+      "約数列挙"
+    ],
+    "tag_ids": [
+      "BOP",
+      "PFT",
+      "DIV"
+    ],
+    "confidence_scores": [
+      1.100355896547621,
+      0.6154263193811159,
+      0.5177589341177284
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4008897413690524,
+        "rule_based_score": 1.0
+      },
+      "PFT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.41356579845278985,
+        "rule_based_score": 0.0
+      },
+      "DIV": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.39439733529432097,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc196_c": {
+    "title": "ABC196 C",
+    "problem_url": "https://atcoder.jp/contests/abc196/tasks/c_/tasks/abc196_c",
+    "editorial_url": "https://atcoder.jp/contests/abc196/editorial",
+    "tags": [
+      "二分探索",
+      "ビット演算",
+      "全探索"
+    ],
+    "tag_ids": [
+      "BIN",
+      "BOP",
+      "BRT"
+    ],
+    "confidence_scores": [
+      1.1306449389609396,
+      1.0087028461568832,
+      0.9139891298199256
+    ],
+    "detailed_scores": {
+      "BIN": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.476612347402349,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3967571153922078,
+        "rule_based_score": 1.0
+      },
+      "BRT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.384972824549814,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc196_d": {
+    "title": "ABC196 D",
+    "problem_url": "https://atcoder.jp/contests/abc196/tasks/d_/tasks/abc196_d",
+    "editorial_url": "https://atcoder.jp/contests/abc196/editorial",
+    "tags": [
+      "全探索",
+      "ビット演算",
+      "Fenwick Tree"
+    ],
+    "tag_ids": [
+      "BRT",
+      "BOP",
+      "BIT"
+    ],
+    "confidence_scores": [
+      1.101827391802967,
+      0.9990319221976147,
+      0.9071688010161885
+    ],
+    "detailed_scores": {
+      "BRT": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4045684795074178,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3725798054940368,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3679220025404708,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc196_e": {
+    "title": "ABC196 E",
+    "problem_url": "https://atcoder.jp/contests/abc196/tasks/e_/tasks/abc196_e",
+    "editorial_url": "https://atcoder.jp/contests/abc196/editorial",
+    "tags": [
+      "ビット演算",
+      "組み合わせ論",
+      "グラフ"
+    ],
+    "tag_ids": [
+      "BOP",
+      "CMB",
+      "GRP"
+    ],
+    "confidence_scores": [
+      1.103571235318655,
+      1.0005090035589674,
+      0.887943528574803
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4089280882966375,
+        "rule_based_score": 1.0
+      },
+      "CMB": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3762725088974184,
+        "rule_based_score": 1.0
+      },
+      "GRP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3198588214370075,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc196_f": {
+    "title": "ABC196 F",
+    "problem_url": "https://atcoder.jp/contests/abc196/tasks/f_/tasks/abc196_f",
+    "editorial_url": "https://atcoder.jp/contests/abc196/editorial",
+    "tags": [
+      "高速フーリエ変換",
+      "最長増加部分列",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "FFT",
+      "LIS",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.1276407081990736,
+      1.0061690316262046,
+      0.9149662632713851
+    ],
+    "detailed_scores": {
+      "FFT": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4691017704976839,
+        "rule_based_score": 1.0
+      },
+      "LIS": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.390422579065512,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3874156581784625,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc197_a": {
+    "title": "ABC197 A",
+    "problem_url": "https://atcoder.jp/contests/abc197/tasks/a_/tasks/abc197_a",
+    "editorial_url": "https://atcoder.jp/contests/abc197/editorial",
+    "tags": [
+      "最長増加部分列",
+      "ビット演算",
+      "Fenwick Tree"
+    ],
+    "tag_ids": [
+      "LIS",
+      "BOP",
+      "BIT"
+    ],
+    "confidence_scores": [
+      1.0883595686967902,
+      0.9810932029259141,
+      0.8527854908055611
+    ],
+    "detailed_scores": {
+      "LIS": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.370898921741975,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3277330073147853,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.2319637270139026,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc197_b": {
+    "title": "ABC197 B",
+    "problem_url": "https://atcoder.jp/contests/abc197/tasks/b_/tasks/abc197_b",
+    "editorial_url": "https://atcoder.jp/contests/abc197/editorial",
+    "tags": [
+      "Fenwick Tree",
+      "ビット演算",
+      "幾何"
+    ],
+    "tag_ids": [
+      "BIT",
+      "BOP",
+      "GEO"
+    ],
+    "confidence_scores": [
+      1.0561808494252594,
+      0.9637656500962347,
+      0.5129608559242458
+    ],
+    "detailed_scores": {
+      "BIT": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.2904521235631483,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.284414125240587,
+        "rule_based_score": 1.0
+      },
+      "GEO": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.38240213981061427,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc197_c": {
+    "title": "ABC197 C",
+    "problem_url": "https://atcoder.jp/contests/abc197/tasks/c_/tasks/abc197_c",
+    "editorial_url": "https://atcoder.jp/contests/abc197/editorial",
+    "tags": [
+      "XOR演算",
+      "ビット演算",
+      "全探索"
+    ],
+    "tag_ids": [
+      "XOR",
+      "BOP",
+      "BRT"
+    ],
+    "confidence_scores": [
+      1.1802402955245541,
+      1.0610509787298428,
+      0.9362187137778828
+    ],
+    "detailed_scores": {
+      "XOR": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.6006007388113848,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.5276274468246067,
+        "rule_based_score": 1.0
+      },
+      "BRT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.440546784444707,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc197_d": {
+    "title": "ABC197 D",
+    "problem_url": "https://atcoder.jp/contests/abc197/tasks/d_/tasks/abc197_d",
+    "editorial_url": "https://atcoder.jp/contests/abc197/editorial",
+    "tags": [
+      "ビット演算",
+      "座標回転",
+      "幾何"
+    ],
+    "tag_ids": [
+      "BOP",
+      "ROT",
+      "GEO"
+    ],
+    "confidence_scores": [
+      1.0695616143850426,
+      0.6547630133265208,
+      0.5636592183102704
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.323904035962606,
+        "rule_based_score": 1.0
+      },
+      "ROT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.5119075333163019,
+        "rule_based_score": 0.0
+      },
+      "GEO": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5091480457756761,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc197_e": {
+    "title": "ABC197 E",
+    "problem_url": "https://atcoder.jp/contests/abc197/tasks/e_/tasks/abc197_e",
+    "editorial_url": "https://atcoder.jp/contests/abc197/editorial",
+    "tags": [
+      "動的計画法",
+      "ビット演算",
+      "bitDP"
+    ],
+    "tag_ids": [
+      "DP",
+      "BOP",
+      "BDP"
+    ],
+    "confidence_scores": [
+      1.1282481190222535,
+      0.9935481347603539,
+      0.5467854073389002
+    ],
+    "detailed_scores": {
+      "DP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4706202975556333,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3588703369008848,
+        "rule_based_score": 1.0
+      },
+      "BDP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.46696351834725053,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc197_f": {
+    "title": "ABC197 F",
+    "problem_url": "https://atcoder.jp/contests/abc197/tasks/f_/tasks/abc197_f",
+    "editorial_url": "https://atcoder.jp/contests/abc197/editorial",
+    "tags": [
+      "回文",
+      "グラフ",
+      "幅優先探索"
+    ],
+    "tag_ids": [
+      "PAL",
+      "GRP",
+      "BFS"
+    ],
+    "confidence_scores": [
+      1.1715395562612587,
+      1.034688759310382,
+      0.9301735460993987
+    ],
+    "detailed_scores": {
+      "PAL": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.5788488906531466,
+        "rule_based_score": 1.0
+      },
+      "GRP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.461721898275955,
+        "rule_based_score": 1.0
+      },
+      "BFS": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.4254338652484966,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc198_a": {
+    "title": "ABC198 A",
+    "problem_url": "https://atcoder.jp/contests/abc198/tasks/a_/tasks/abc198_a",
+    "editorial_url": "https://atcoder.jp/contests/abc198/editorial",
+    "tags": [
+      "ビット演算",
+      "約数列挙",
+      "半分全列挙"
+    ],
+    "tag_ids": [
+      "BOP",
+      "DIV",
+      "MIT"
+    ],
+    "confidence_scores": [
+      1.093579547388278,
+      0.6503073036024473,
+      0.5553690431702145
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3839488684706942,
+        "rule_based_score": 1.0
+      },
+      "DIV": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.5007682590061182,
+        "rule_based_score": 0.0
+      },
+      "MIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.4884226079255362,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc198_b": {
+    "title": "ABC198 B",
+    "problem_url": "https://atcoder.jp/contests/abc198/tasks/b_/tasks/abc198_b",
+    "editorial_url": "https://atcoder.jp/contests/abc198/editorial",
+    "tags": [
+      "回文",
+      "ビット演算",
+      "Manacher法"
+    ],
+    "tag_ids": [
+      "PAL",
+      "BOP",
+      "MNC"
+    ],
+    "confidence_scores": [
+      1.147660333135012,
+      0.9777662577605859,
+      0.5441469579685947
+    ],
+    "detailed_scores": {
+      "PAL": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.5191508328375296,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.3194156444014649,
+        "rule_based_score": 1.0
+      },
+      "MNC": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.46036739492148654,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc198_c": {
+    "title": "ABC198 C",
+    "problem_url": "https://atcoder.jp/contests/abc198/tasks/c_/tasks/abc198_c",
+    "editorial_url": "https://atcoder.jp/contests/abc198/editorial",
+    "tags": [
+      "ビット演算",
+      "ダイクストラ法",
+      "ワーシャルフロイド法"
+    ],
+    "tag_ids": [
+      "BOP",
+      "DJK",
+      "WF"
+    ],
+    "confidence_scores": [
+      1.0612012159754503,
+      0.6618975270323898,
+      0.5600247716678972
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3030030399386254,
+        "rule_based_score": 1.0
+      },
+      "DJK": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 0.5297438175809746,
+        "rule_based_score": 0.0
+      },
+      "WF": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5000619291697428,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc198_d": {
+    "title": "ABC198 D",
+    "problem_url": "https://atcoder.jp/contests/abc198/tasks/d_/tasks/abc198_d",
+    "editorial_url": "https://atcoder.jp/contests/abc198/editorial",
+    "tags": [
+      "全探索",
+      "最長増加部分列",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "BRT",
+      "LIS",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.1196413917021226,
+      1.0112627882001624,
+      0.9095501368877317
+    ],
+    "detailed_scores": {
+      "BRT": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4491034792553064,
+        "rule_based_score": 1.0
+      },
+      "LIS": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4031569705004059,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3738753422193288,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc198_e": {
+    "title": "ABC198 E",
+    "problem_url": "https://atcoder.jp/contests/abc198/tasks/e_/tasks/abc198_e",
+    "editorial_url": "https://atcoder.jp/contests/abc198/editorial",
+    "tags": [
+      "グラフ",
+      "深さ優先探索",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "GRP",
+      "DFS",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.154617879655538,
+      1.0178755829687298,
+      0.8936515541741006
+    ],
+    "detailed_scores": {
+      "GRP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.5365446991388447,
+        "rule_based_score": 1.0
+      },
+      "DFS": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4196889574218248,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.334128885435251,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc198_f": {
+    "title": "ABC198 F",
+    "problem_url": "https://atcoder.jp/contests/abc198/tasks/f_/tasks/abc198_f",
+    "editorial_url": "https://atcoder.jp/contests/abc198/editorial",
+    "tags": [
+      "桁DP",
+      "動的計画法",
+      "OEIS参照"
+    ],
+    "tag_ids": [
+      "KDP",
+      "DP",
+      "OES"
+    ],
+    "confidence_scores": [
+      1.1474972236267034,
+      1.0337349143937995,
+      0.9407173608815966
+    ],
+    "detailed_scores": {
+      "KDP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.5187430590667583,
+        "rule_based_score": 1.0
+      },
+      "DP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4593372859844989,
+        "rule_based_score": 1.0
+      },
+      "OES": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.4517934022039916,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc199_a": {
+    "title": "ABC199 A",
+    "problem_url": "https://atcoder.jp/contests/abc199/tasks/a_/tasks/abc199_a",
+    "editorial_url": "https://atcoder.jp/contests/abc199/editorial",
+    "tags": [
+      "ビット演算",
+      "Fenwick Tree",
+      "包除原理"
+    ],
+    "tag_ids": [
+      "BOP",
+      "BIT",
+      "PIE"
+    ],
+    "confidence_scores": [
+      1.0912824355464625,
+      0.9533323605466412,
+      0.5423121100603496
+    ],
+    "detailed_scores": {
+      "BOP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.3782060888661563,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.2583309013666029,
+        "rule_based_score": 1.0
+      },
+      "PIE": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.45578027515087394,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc199_b": {
+    "title": "ABC199 B",
+    "problem_url": "https://atcoder.jp/contests/abc199/tasks/b_/tasks/abc199_b",
+    "editorial_url": "https://atcoder.jp/contests/abc199/editorial",
+    "tags": [
+      "最長増加部分列",
+      "ビット演算",
+      "約数列挙"
+    ],
+    "tag_ids": [
+      "LIS",
+      "BOP",
+      "DIV"
+    ],
+    "confidence_scores": [
+      1.1419620692469898,
+      1.0161429621750244,
+      0.5680497095188746
+    ],
+    "detailed_scores": {
+      "LIS": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.5049051731174747,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.415357405437561,
+        "rule_based_score": 1.0
+      },
+      "DIV": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5201242737971863,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc199_c": {
+    "title": "ABC199 C",
+    "problem_url": "https://atcoder.jp/contests/abc199/tasks/c_/tasks/abc199_c",
+    "editorial_url": "https://atcoder.jp/contests/abc199/editorial",
+    "tags": [
+      "最長増加部分列",
+      "ビット演算",
+      "回文"
+    ],
+    "tag_ids": [
+      "LIS",
+      "BOP",
+      "PAL"
+    ],
+    "confidence_scores": [
+      1.1101774719524458,
+      1.0173654423153624,
+      0.5636386991349391
+    ],
+    "detailed_scores": {
+      "LIS": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.425443679881114,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4184136057884065,
+        "rule_based_score": 1.0
+      },
+      "PAL": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 0.5090967478373478,
+        "rule_based_score": 0.0
+      }
+    }
+  },
+  "abc199_d": {
+    "title": "ABC199 D",
+    "problem_url": "https://atcoder.jp/contests/abc199/tasks/d_/tasks/abc199_d",
+    "editorial_url": "https://atcoder.jp/contests/abc199/editorial",
+    "tags": [
+      "グラフ",
+      "深さ優先探索",
+      "Fenwick Tree"
+    ],
+    "tag_ids": [
+      "GRP",
+      "DFS",
+      "BIT"
+    ],
+    "confidence_scores": [
+      1.1366690864159827,
+      1.0282503807025725,
+      0.9098030160264057
+    ],
+    "detailed_scores": {
+      "GRP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.491672716039957,
+        "rule_based_score": 1.0
+      },
+      "DFS": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.445625951756431,
+        "rule_based_score": 1.0
+      },
+      "BIT": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3745075400660138,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc199_e": {
+    "title": "ABC199 E",
+    "problem_url": "https://atcoder.jp/contests/abc199/tasks/e_/tasks/abc199_e",
+    "editorial_url": "https://atcoder.jp/contests/abc199/editorial",
+    "tags": [
+      "動的計画法",
+      "bitDP",
+      "組み合わせ論"
+    ],
+    "tag_ids": [
+      "DP",
+      "BDP",
+      "CMB"
+    ],
+    "confidence_scores": [
+      1.1609661842100651,
+      1.0665312207209343,
+      0.9529168870996805
+    ],
+    "detailed_scores": {
+      "DP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.5524154605251628,
+        "rule_based_score": 1.0
+      },
+      "BDP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.5413280518023356,
+        "rule_based_score": 1.0
+      },
+      "CMB": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.4822922177492008,
+        "rule_based_score": 1.0
+      }
+    }
+  },
+  "abc199_f": {
+    "title": "ABC199 F",
+    "problem_url": "https://atcoder.jp/contests/abc199/tasks/f_/tasks/abc199_f",
+    "editorial_url": "https://atcoder.jp/contests/abc199/editorial",
+    "tags": [
+      "グラフ",
+      "期待値",
+      "ビット演算"
+    ],
+    "tag_ids": [
+      "GRP",
+      "EXP",
+      "BOP"
+    ],
+    "confidence_scores": [
+      1.1150039008809618,
+      1.0110491198246563,
+      0.9130950386583698
+    ],
+    "detailed_scores": {
+      "GRP": {
+        "self_confidence": 0.9,
+        "embedding_similarity": 1.4375097522024043,
+        "rule_based_score": 1.0
+      },
+      "EXP": {
+        "self_confidence": 0.75,
+        "embedding_similarity": 1.4026227995616405,
+        "rule_based_score": 1.0
+      },
+      "BOP": {
+        "self_confidence": 0.6000000000000001,
+        "embedding_similarity": 1.3827375966459245,
+        "rule_based_score": 1.0
+      }
+    }
+  }
+}
