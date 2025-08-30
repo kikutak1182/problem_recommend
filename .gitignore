@@ -17,6 +17,10 @@ __pycache__/
 .vscode/
 .idea/
 
+# 環境変数ファイル（API キー含む）
+.env
+*.env
+
 # タグ推定システム - 機密情報と大容量ファイル
 tag/data/batch_tag_results_*.jsonl
 tag/data/batch_tag_inference_*.json
