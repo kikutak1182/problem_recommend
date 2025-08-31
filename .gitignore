@@ -49,3 +49,8 @@ tag/data/abc*_rule_based_scores_*.json
 
 # 重要な最終結果ファイルは保持
 !tag/data/abc175_407_unified_results_*.json
+
+tag/*
+!tag/vectors/
+tag/vectors/*
+tag/vectors/tag_vectors.pkl
