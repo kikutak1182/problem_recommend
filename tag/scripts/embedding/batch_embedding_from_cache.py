@@ -19,7 +19,8 @@ import openai
 
 # Import configurations
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from scripts.tag_inference_config import inference_config
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+from config.tag_inference_config import inference_config
 
 class BatchEmbeddingFromCache:
     """Generate embeddings from cached text using Batch API"""

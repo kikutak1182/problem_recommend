@@ -21,6 +21,9 @@ __pycache__/
 .env
 *.env
 
+#てかタグ全部igonoreでよくね？
+tag/
+
 # タグ推定システム - 機密情報と大容量ファイル
 tag/data/batch_tag_results_*.jsonl
 tag/data/batch_tag_inference_*.json

@@ -80,26 +80,14 @@ python run_crawler.py --fix-issues
 ## 出力データ形式
 
 ```json
-{
-  "editorial_mappings": {
-    "abc175_c": {
-      "contest_id": "abc175",
-      "problem_index": "C",
-      "problem_url": "https://atcoder.jp/contests/abc175/tasks/abc175_c",
-      "editorial_url": "https://atcoder.jp/contests/abc175/editorial/123?editorialLang=ja",
-      "editorial_id": 123,
-      "extracted_at": "2025-01-15T10:00:00Z",
-      "status": "extracted"
-    }
-  },
-  "metadata": {
-    "created_at": "2025-01-15T10:00:00Z",
-    "last_updated": "2025-01-15T10:00:00Z",
-    "total_contests": 100,
-    "total_problems": 500,
-    "target_contests": {"abc": 175, "arc": 104, "agc": 48}
-  }
-}
+    {
+      "problem_id": "abc407_g",
+      "title": "",
+      "contest_id": "abc407",
+      "difficulty": 2190,
+      "problem_url": "https://atcoder.jp/contests/abc407/tasks/abc407_g",
+      "editorial_url": "https://atcoder.jp/contests/abc407/editorial/13077"
+    },
 ```
 
 ## 設定

@@ -17,8 +17,9 @@ import openai
 
 # Import configurations
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from scripts.tag_inference_config import inference_config
-from scripts.editorial_text_extractor import EditorialTextExtractor
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+from config.tag_inference_config import inference_config
+from scripts.cache.editorial_text_extractor import EditorialTextExtractor
 
 class ProblemEmbeddingBatcher:
     """Batch generate embeddings for all problems"""
@@ -35,6 +36,9 @@ class ProblemEmbeddingBatcher:
         self.mappings_path = os.path.join(
             inference_config.base_dir, "editorial_crawler", "data", "editorial_mappings.json"
         )
+        self.comprehensive_data_path = os.path.join(
+            inference_config.base_dir, "editorial_crawler", "data", "comprehensive_problem_data.json"
+        )
         
     def _setup_logger(self) -> logging.Logger:
         """Setup logger"""
@@ -50,6 +54,36 @@ class ProblemEmbeddingBatcher:
             logger.addHandler(handler)
         
         return logger
+    
+    def load_comprehensive_data(self) -> List[Dict]:
+        """Load comprehensive problem data"""
+        with open(self.comprehensive_data_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        return data['problems']
+    
+    def get_problems_by_difficulty(self, start_contest: int = None, end_contest: int = None) -> List[str]:
+        """Get problem IDs by difficulty threshold"""
+        if start_contest is None:
+            start_contest = inference_config.default_start_contest
+        if end_contest is None:
+            end_contest = inference_config.default_end_contest
+        
+        problems = self.load_comprehensive_data()
+        
+        target_problems = []
+        for problem in problems:
+            problem_id = problem['problem_id']
+            if problem_id.startswith('abc'):
+                try:
+                    contest_num = int(problem_id.split('_')[0][3:])
+                    # Filter by contest range and difficulty threshold
+                    if (start_contest <= contest_num <= end_contest and 
+                        problem.get('difficulty') is not None and problem.get('difficulty') >= inference_config.difficulty_threshold):
+                        target_problems.append(problem_id)
+                except:
+                    continue
+        
+        return sorted(target_problems)
     
     def load_existing_cache(self) -> Dict[str, np.ndarray]:
         """Load existing problem embeddings cache"""
@@ -196,13 +230,11 @@ if __name__ == "__main__":
     # Check existing cache
     batcher.verify_cache()
     
-    # Generate embeddings for ABC175-180
-    target_problems = []
-    for contest_num in range(175, 181):
-        for problem_char in ['c', 'd', 'e', 'f']:
-            target_problems.append(f'abc{contest_num}_{problem_char}')
+    # Generate embeddings for problems with difficulty >= 400
+    target_problems = batcher.get_problems_by_difficulty()
     
-    print(f"\\nGenerating embeddings for {len(target_problems)} problems...")
+    print(f"\\nFound {len(target_problems)} problems with difficulty >= {inference_config.difficulty_threshold}")
+    print(f"Generating embeddings...")
     cache = batcher.batch_generate_embeddings(target_problems)
     
     print("\\n" + "=" * 50)

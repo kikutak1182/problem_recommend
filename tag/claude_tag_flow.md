@@ -6,8 +6,7 @@
 **設定項目**:
 - `default_start_contest: int = 175` - 開始コンテスト番号
 - `default_end_contest: int = 407` - 終了コンテスト番号
-- `target_problems: List[str] = ['c', 'd', 'e', 'f']` - 対象問題（難易度400以上）
-- `difficulty_threshold: int = 400` - 難易度しきい値
+- `difficulty_threshold: int = 400` - 対象問題の難易度しきい値（この値以上の問題が自動選択される）
 - `use_concurrent: bool = False` - 並行処理使用するか
 - `concurrent_workers: int = 3` - 並行処理ワーカー数
 
@@ -28,7 +27,7 @@ scripts/
 python scripts/cache/editorial_text_cache_builder.py
 # → data/problem_combined_text_cache.json
 
-# configのデフォルト設定で実行（ABC175-407, C,D,E,F問題）
+# configのデフォルト設定で実行
 python scripts/cache/editorial_text_cache_builder.py
 
 # コマンドライン引数で範囲を指定
@@ -212,8 +211,8 @@ Final Score = rule_based_score(= 0 or 1) + (self_confidence * 0.5) + (embedding_
 python scripts/batch/convert_batch_to_standard_format.py --input data/batch_tag_results_20250830_143256.jsonl
 # → data/abc250_300_final_results_20250830_143500.json
 
-# 標準結果フォーマット生成（代替方法）
-python scripts/batch/standard_result_formatter.py --batch-results data/batch_tag_results_20250830_143256.jsonl --rule-scores data/abc250_300_rule_based_scores_20250830_143000.json
+# ルールベーススコアを含めた変換
+python scripts/batch/convert_batch_to_standard_format.py --input data/batch_tag_results_20250830_143256.jsonl --rule-scores data/abc250_300_rule_based_scores_20250830_143000.json
 ```
 
 **入力ファイル:**
@@ -222,9 +221,7 @@ python scripts/batch/standard_result_formatter.py --batch-results data/batch_tag
 
 **使用スクリプト:**
 - `scripts/filtering/confidence_system.py` - スコア正規化・統合処理
-- `scripts/batch/convert_batch_to_standard_format.py` - 最終フォーマット変換
-- `scripts/batch/standard_result_formatter.py` - 標準結果フォーマット生成
-- `scripts/batch/fix_batch_results.py` - バッチ結果修正（必要に応じて）
+- `scripts/batch/convert_batch_to_standard_format.py` - 最終フォーマット変換（ルールベーススコア統合、複合スコア計算、URL修正を含む）
 
 **最終出力ファイル:**
 - `data/abc250_300_final_results_20250830_143500.json` - 標準タグ推定結果
@@ -276,14 +273,11 @@ python scripts/batch/standard_result_formatter.py --batch-results data/batch_tag
 ### バッチジョブ・結果変換関連（scripts/batch/）
 - `create_batch_requests.py` - タグ推定バッチリクエスト生成
 - `submit_batch_job.py` - バッチジョブ送信
-- `check_batch_status.py` - バッチ状態監視
-- `batch_tag_inference.py` - タグ推定バッチ結果取得・処理
-- `fix_batch_results.py` - バッチ結果修正
-- `convert_batch_to_standard_format.py` - 結果フォーマット変換
-- `standard_result_formatter.py` - 標準結果フォーマット生成
+- `check_batch_status.py` - バッチ状態監視・結果ダウンロード
+- `convert_batch_to_standard_format.py` - バッチ結果の標準フォーマット変換（複合スコア計算・URL修正含む）
 
 ## タグ推定バッチ処理の特徴
-- **難易度フィルタ**: A, B問題（難易度400未満）は除外し、C, D, E, F問題のみを対象
+- **難易度フィルタ**: 難易度400未満の問題は自動除外
 - **ハイブリッド候補絞り込み**: 312キーワードのルールベース + エンベディング類似度で12候補に絞り込み
 - **構造化出力**: JSON Schemaで出力形式を制約
 - **複合信頼度スコア**: Rule-based(0/1) + Self-confidence(0-0.5) + Embedding similarity(0-0.5) = 最大2.0

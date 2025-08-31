@@ -75,8 +75,9 @@ class BatchRequestCreator:
                     contest_num = int(problem_id.split('_')[0][3:])
                     problem_level = problem_id.split('_')[1]
                     
-                    # Filter by contest range and problem level
-                    if start_contest <= contest_num <= end_contest and problem_level in target_problems:
+                    # Filter by contest range and difficulty threshold
+                    if (start_contest <= contest_num <= end_contest and 
+                        problem.get('difficulty') is not None and problem.get('difficulty') >= inference_config.difficulty_threshold):
                         filtered_problems.append(problem)
                 except:
                     continue

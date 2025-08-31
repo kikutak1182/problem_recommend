@@ -15,13 +15,14 @@ templates = Jinja2Templates(directory="app/templates")
 
 import sys
 import re
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-TAG_DIR = os.path.abspath(os.path.join(BASE_DIR, "../tag"))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TAG_DIR = os.path.abspath(os.path.join(BASE_DIR, "tag"))
 sys.path.append(TAG_DIR)
 
 # Define paths directly since config is not available
 tag_vectors_path = os.path.join(TAG_DIR, "vectors/tag_vectors.pkl")
-problems_with_tags_path = os.path.join(TAG_DIR, "data/problems_with_tags.json")
+# Use new unified results file
+unified_results_path = os.path.join(BASE_DIR, "app/data/abc175_407_unified_results_20250830_220519.json")
 sentence_transformer_model = "all-MiniLM-L6-v2"
 top_k_tags = 10
 
@@ -34,10 +35,9 @@ tag_vectors = np.array(data["vectors"])
 # Load sentence transformer model
 model = SentenceTransformer(sentence_transformer_model)
 
-# Load problem data
-with open(problems_with_tags_path, encoding="utf-8") as f:
-    problems_data = json.load(f)
-    tag_problems = problems_data.get("problems", {})
+# Load problem data from unified results (structure: problem_id -> problem_data)
+with open(unified_results_path, encoding="utf-8") as f:
+    tag_problems = json.load(f)
 
 def format_problem_title(problem_id: str, original_title: str) -> str:
     """Format problem title to 'ABC000 C. Problem Name' format"""
@@ -183,10 +183,14 @@ def recommend(request: Request, username: str = Form(...), queries: str = Form("
         else:
             query_tag_similarities = {}
         
-        # Enhanced tag matching with pre-calculated similarities
+        # Enhanced tag matching with confidence scores
         for pid, v in tag_problems.items():
             prob_tags = v.get("tags", [])
-            if isinstance(prob_tags, list) and prob_tags:
+            confidence_scores = v.get("confidence_scores", [])
+            if isinstance(prob_tags, list) and prob_tags and confidence_scores:
+                # Use average confidence score as base relevance
+                avg_confidence = sum(confidence_scores) / len(confidence_scores) if confidence_scores else 0.0
+                
                 prob_tags_set = set(prob_tags)
                 
                 # Method 1: Direct tag matching from top similar tags (based on tag vectors)
@@ -206,47 +210,69 @@ def recommend(request: Request, username: str = Form(...), queries: str = Form("
                         if prob_tag not in direct_matched_tags:
                             semantic_matched_tags.append(prob_tag)
                 
-                # Calculate total relevance score
-                all_matched_tags = list(direct_matched_tags) + semantic_matched_tags
-                relevance_score = direct_score + semantic_score
+                # Calculate cosine similarity between input queries and problem tags
+                if prob_tags:
+                    prob_tag_vecs = model.encode(prob_tags)
+                    query_vec = np.mean(query_vecs, axis=0)  # Average of all query vectors
+                    
+                    # Calculate cosine similarities for all tags
+                    similarities = []
+                    for tag_vec in prob_tag_vecs:
+                        sim = np.dot(tag_vec, query_vec) / (
+                            np.linalg.norm(tag_vec) * np.linalg.norm(query_vec) + 1e-8
+                        )
+                        similarities.append(max(0, sim))  # Only keep positive similarities
+                    
+                    # Use maximum similarity as relevance score
+                    relevance_score = max(similarities) if similarities else 0.0
+                else:
+                    relevance_score = 0.0
                 
-                if relevance_score > 0.1:  # At least some relevance
+                all_matched_tags = list(direct_matched_tags) + semantic_matched_tags
+                
+                if relevance_score > 0.5:  # Higher threshold for tag relevance
                     # Get difficulty from external API or use default
                     diff = problem_models.get(pid, {}).get('difficulty')
                     if diff is None:
-                        diff = current_rate  # Default to user's current rate
+                        continue  # Skip problems without difficulty data
                     
-                    diff_gap = abs(diff - current_rate)
-                    
-                    # Always get title and URL from external API for accuracy
-                    problem_info = next((p for p in problems if p['id'] == pid), None)
-                    if problem_info:
-                        original_title = problem_info['title']
-                        contest_id = problem_info['contest_id'] 
-                        url = f"https://atcoder.jp/contests/{contest_id}/tasks/{pid}"
-                    else:
-                        # Fallback to internal data
-                        original_title = v.get("title", "")
-                        if not original_title or original_title == pid:
-                            original_title = pid  # Use problem ID as last resort
-                        url = v.get("problem_url", v.get("url", ""))
-                    
-                    # Format title to unified format (ABC322 F. Problem Name)
-                    title = format_problem_title(pid, original_title)
-                    
-                    # Sort by relevance first, then by difficulty gap
-                    recommend.append((relevance_score, diff_gap, title, url, all_matched_tags, diff))
-        # Sort by relevance score (descending), then by difficulty gap (ascending)
-        recommend.sort(key=lambda x: (-x[0], x[1]))
+                    # Only show problems above user's current rating
+                    if diff > current_rate:
+                        # Always get title and URL from external API for accuracy
+                        problem_info = next((p for p in problems if p['id'] == pid), None)
+                        if problem_info:
+                            original_title = problem_info['title']
+                            contest_id = problem_info['contest_id'] 
+                            url = f"https://atcoder.jp/contests/{contest_id}/tasks/{pid}"
+                        else:
+                            # Fallback to internal data from unified results
+                            original_title = v.get("title", "")
+                            if not original_title or original_title == pid:
+                                original_title = pid  # Use problem ID as last resort
+                            url = v.get("problem_url", "")
+                        
+                        # Format title to unified format (ABC322 F. Problem Name)
+                        title = format_problem_title(pid, original_title)
+                        
+                        # Create tag info with confidence scores (truncated to 1 decimal)
+                        tag_info = []
+                        for i, tag in enumerate(prob_tags):
+                            conf = confidence_scores[i] if i < len(confidence_scores) else 0.0
+                            tag_info.append({"tag": tag, "confidence": int(conf * 10) / 10.0})  # Truncate to 1 decimal
+                        
+                        # Sort by difficulty (ascending) for problems above user's rating
+                        recommend.append((relevance_score, diff, title, url, tag_info, diff))
+        # Sort by difficulty (ascending), problems will be shown from easiest to hardest above user's rating
+        recommend.sort(key=lambda x: x[1])
         result = [
             {
                 "title": title,
                 "url": url,
-                "tags": matched_tags,
+                "tags": tag_info,
                 "diff": diff,
                 "relevance_score": round(relevance_score, 3)
             }
-            for relevance_score, _, title, url, matched_tags, diff in recommend[:10]
+            for relevance_score, _, title, url, tag_info, diff in recommend[:10]
         ]
         return templates.TemplateResponse("index.html", {"request": request, "result": result, "username": username, "rate": current_rate, "top_tags": top_tags, "queries": queries})
     
@@ -278,4 +304,4 @@ def recommend(request: Request, username: str = Form(...), queries: str = Form("
         return templates.TemplateResponse("index.html", {"request": request, "result": result, "username": username, "rate": current_rate, "queries": queries})
 
 if __name__ == "__main__":
-    uvicorn.run("app.main:app", host="0.0.0.0", port=int(os.environ.get("PORT", 8000)), reload=True) 
+    uvicorn.run("main:app", host="0.0.0.0", port=int(os.environ.get("PORT", 8000)), reload=True) 

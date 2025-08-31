@@ -577,8 +577,8 @@
 
                         {% if item.tags %}
                         <div class="problem-tags">
-                            {% for tag in item.tags %}
-                            <span class="problem-tag">{{ tag }}</span>
+                            {% for tag_info in item.tags %}
+                            <span class="problem-tag">{{ tag_info.tag }} (タグ信頼度: {{ tag_info.confidence }})</span>
                             {% endfor %}
                         </div>
                         {% endif %}

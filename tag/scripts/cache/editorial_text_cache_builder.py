@@ -297,12 +297,12 @@ class ProblemTextCacheBuilder:
         # Load comprehensive data
         problems = self.load_comprehensive_data()
         
-        # Filter ABC problems in range and by target problem types
+        # Filter ABC problems in range and by difficulty threshold (400+)
         abc_problems = [
             p for p in problems 
             if p['problem_id'].startswith('abc') and 
                start_contest <= int(p['problem_id'].split('_')[0][3:]) <= end_contest and
-               p['problem_id'].split('_')[1] in target_problems  # Filter by problem type (a,b,c,d,e,f)
+               (p.get('difficulty') is not None and p.get('difficulty') >= inference_config.difficulty_threshold)  # Filter by difficulty instead of problem type
         ]
         
         self.logger.info(f"Found {len(abc_problems)} ABC problems in range (filtered by difficulty)")

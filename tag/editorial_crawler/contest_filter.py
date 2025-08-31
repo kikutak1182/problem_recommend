@@ -5,9 +5,6 @@ import os
 from typing import List, Dict, Set
 from datetime import datetime
 
-# Add parent directory to path to import config
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from config.tag_config import config as tag_config
 from crawler_config import config as crawler_config
 
 class ContestFilter:
@@ -17,12 +14,14 @@ class ContestFilter:
         self.problems_data = self._load_problems_data()
     
     def _load_problems_data(self) -> List[Dict]:
-        """Load problems data from the main tag system"""
+        """Load problems data from comprehensive_problem_data.json"""
+        comprehensive_data_path = os.path.join(crawler_config.output_dir, "comprehensive_problem_data.json")
         try:
-            with open(tag_config.problems_data_path, encoding="utf-8") as f:
-                return json.load(f)
+            with open(comprehensive_data_path, encoding="utf-8") as f:
+                data = json.load(f)
+                return data.get("problems", [])
         except FileNotFoundError:
-            print(f"Problems data file not found: {tag_config.problems_data_path}")
+            print(f"Problems data file not found: {comprehensive_data_path}")
             return []
         except json.JSONDecodeError as e:
             print(f"Invalid JSON in problems data: {e}")
@@ -52,7 +51,7 @@ class ContestFilter:
                     problems_by_contest[contest_id] = []
                 
                 problems_by_contest[contest_id].append({
-                    'problem_id': problem.get('id', ''),
+                    'problem_id': problem.get('problem_id', ''),
                     'problem_index': problem.get('problem_index', ''),
                     'title': problem.get('title', ''),
                     'contest_id': contest_id

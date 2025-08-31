@@ -20,9 +20,9 @@ class TagInferenceConfig:
     
     # Problem range settings for cache building
     default_start_contest: int = 175  # ABC175から開始
-    default_end_contest: int = 200    # ABC200まで（テスト用）
+    default_end_contest: int = 420    # ABC200まで（テスト用）
     difficulty_threshold: int = 400   # 難易度400以上の問題のみ対象
-    target_problems: List[str] = None  # ['c', 'd', 'e', 'f'] など、対象問題を指定
+    target_problems: List[str] = None  # 【廃止予定】['c', 'd', 'e', 'f'] など、固定問題指定（現在は難易度フィルタを使用）
     
     # Batch processing settings
     batch_size: int = 5  # Process 5 problems at once for efficiency
@@ -40,7 +40,7 @@ class TagInferenceConfig:
     def __post_init__(self):
         """Initialize default values after object creation"""
         if self.target_problems is None:
-            # 難易度400以上の問題のみ（A, B問題を除外）
+            # 【廃止予定】現在は使用されない。難易度フィルタで動的に問題を取得
             self.target_problems = ['c', 'd', 'e', 'f']
     
     @property
@@ -65,44 +65,6 @@ class TagInferenceConfig:
             print(f"Warning: Tag list file not found at {self.tag_list_path}")
             return []
     
-    def create_tag_synonyms_mapping(self) -> Dict[str, List[str]]:
-        """Create mapping of tags to their synonyms for deduplication"""
-        synonyms = {
-            "DP": ["動的計画法", "動的プログラミング", "Dynamic Programming"],
-            "BFS": ["幅優先探索", "breadth-first search"],
-            "DFS": ["深さ優先探索", "depth-first search"],
-            "グラフ": ["Graph", "graph"],
-            "木": ["Tree", "tree"],
-            "数学": ["数学的考察", "Math", "mathematics"],
-            "貪欲法": ["greedy", "Greedy", "グリーディー"],
-            "二分探索": ["binary search", "Binary Search"],
-            "ソート": ["sort", "Sort", "sorting"],
-            "全探索": ["brute force", "Brute Force", "全列挙"],
-            "Union Find": ["UnionFind", "素集合", "DSU"],
-            "セグメント木": ["Segment Tree", "SegTree"],
-            "Binary Indexed Tree": ["BIT", "Fenwick Tree"],
-            "最大流": ["Max Flow", "maximum flow"],
-            "最小費用流": ["Min Cost Flow", "minimum cost flow"],
-            "LCA": ["Lowest Common Ancestor"],
-            "SCC": ["Strongly Connected Components", "強連結成分"],
-            "トポロジカルソート": ["Topological Sort", "topological sort"],
-            "ダイクストラ": ["Dijkstra", "dijkstra"],
-            "ワーシャルフロイド": ["Warshall Floyd", "Floyd Warshall"],
-            "ベルマンフォード": ["Bellman Ford", "bellman ford"],
-            "FFT": ["NTT", "Fast Fourier Transform"],
-            "確率": ["期待値", "probability", "expectation"],
-            "組み合わせ": ["combinatorics", "Combinatorics", "コンビネーション"],
-            "整数論": ["number theory", "Number Theory", "数論"],
-            "幾何": ["geometry", "Geometry", "計算幾何"],
-            "文字列": ["string", "String", "文字列処理"],
-            "ビット演算": ["bit manipulation", "Bit Manipulation", "bitwise"],
-            "累積和": ["cumulative sum", "prefix sum"],
-            "尺取り法": ["two pointers", "Two Pointers"],
-            "平方分割": ["square root decomposition", "sqrt decomposition"],
-            "ダブリング": ["doubling", "Doubling"],
-            "半分全列挙": ["meet in the middle", "Meet in the Middle"]
-        }
-        return synonyms
 
 # Global configuration instance
 inference_config = TagInferenceConfig()

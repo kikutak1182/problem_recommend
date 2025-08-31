@@ -19,8 +19,12 @@ from config.tag_inference_config import inference_config
 def convert_batch_results_to_standard(batch_file: str, output_file: str, rule_scores_file: str = None):
     """Convert batch results to standard test format"""
     
+    # Load JSONL format (multiple JSON objects per line)
+    batch_data = []
     with open(batch_file, 'r', encoding='utf-8') as f:
-        batch_data = json.load(f)
+        for line in f:
+            if line.strip():
+                batch_data.append(json.loads(line))
     
     # Load rule-based scores if provided
     rule_scores = {}
