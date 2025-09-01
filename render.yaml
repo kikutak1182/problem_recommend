@@ -1,1 +1,6 @@
-startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+services:
+  - type: web
+    name: atcoder-recommend
+    env: python
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    buildCommand: pip install -r requirements.txt
