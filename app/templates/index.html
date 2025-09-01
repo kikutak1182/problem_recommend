@@ -128,8 +128,9 @@
         .hero p {
             font-size: 1.125rem;
             color: var(--text-secondary);
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
+            white-space: nowrap;
         }
 
         /* Form Card */
@@ -462,6 +463,24 @@
                 <p>あなたのレベルと興味に合わせて、最適な競技プログラミング問題を推薦します</p>
             </section>
 
+            <!-- Usage Section -->
+            <section class="form-card" style="margin-bottom: 2rem;">
+                <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin-bottom: 1rem;">
+                    <i class="fas fa-info-circle" style="color: var(--accent-color);"></i>
+                    使い方
+                </h2>
+                <div style="color: var(--text-secondary); line-height: 1.6;">
+                    <ul style="margin: 0; padding-left: 1.5rem;">
+                        <li style="margin-bottom: 0.5rem;"><strong>ユーザー名入力あり</strong> → 自分のレート以上の問題を推薦</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>ユーザー名未入力</strong> → タグに関連する全難易度の問題をランダム表示</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>入力したアルゴリズムに関連した問題をレコメンド</strong></li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-muted);">
+                        例：「動的計画法」「グラフ」「フロー」「二分探索」などのアルゴリズム名を入力してください
+                    </p>
+                </div>
+            </section>
+
             <!-- Form -->
             <section class="form-card">
                 <form method="post" id="recommend-form">
@@ -474,9 +493,8 @@
                             id="username"
                             name="username" 
                             class="form-input"
-                            placeholder="例: tourist"
-                            value="{{ username or '' }}" 
-                            required
+                            placeholder="例: tourist（未入力でもOK）"
+                            value="{{ username or '' }}"
                         >
                     </div>
 

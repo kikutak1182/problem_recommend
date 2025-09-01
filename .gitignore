@@ -12,6 +12,7 @@ __pycache__/
 # ログや一時ファイル
 *.log
 *.tmp
+server.log
 
 # IDE/エディタの設定
 .vscode/
@@ -21,36 +22,18 @@ __pycache__/
 .env
 *.env
 
-#てかタグ全部igonoreでよくね？
+# 開発・実験用ファイル（アプリで使用されない）
 tag/
+scripts/
+rebuild_tag_vectors.py
+AGENTS.md
+render.yaml
 
-# タグ推定システム - 機密情報と大容量ファイル
-tag/data/batch_tag_results_*.jsonl
-tag/data/batch_tag_inference_*.json
-tag/data/embedding_batch_*.jsonl
-tag/vectors/problem_embeddings.pkl
-tag/vectors/tag_embeddings.pkl
-tag/vectors/tag_vectors.pkl
-tag/vectors/model_cache/
-tag/data/problem_combined_text_cache.json
-tag/archive/
-tag/test_batch_requests.jsonl
-tag/dir.md
-tag/claude_command.md
-tag/cache_build.log
-tag/tag_inference.log
-
-# バッチ処理の中間ファイル（大容量）
-tag/data/*_batch_requests_*.jsonl
-tag/data/batch_info_*.json
-tag/data/abc*_batch_results_*.json
-tag/data/abc*_standard_results_*.json
-tag/data/abc*_rule_based_scores_*.json
-
-# 重要な最終結果ファイルは保持
-!tag/data/abc175_407_unified_results_*.json
-
-tag/*
+# アプリで使用される最小限のファイルのみ保持
+!tag/config/
 !tag/vectors/
 tag/vectors/*
-tag/vectors/tag_vectors.pkl
+!tag/vectors/tag_vectors.pkl
+
+# アプリデータのコピーファイル（重複排除）
+app/data/*copy*.json

@@ -25258,43 +25258,16 @@
       "tags": [
         "ビット演算",
         "最長増加部分列",
-        "ローリングハッシュ",
-        "編集距離",
-        "回文",
-        "二部マッチング",
-        "尺取り法",
-        "半分全列挙",
-        "括弧列",
-        "優先度付きキュー",
-        "Manacher法",
-        "桁DP"
+        "ローリングハッシュ"
       ],
       "tag_ids": [
         "BOP",
         "LIS",
-        "RH",
-        "EDT",
-        "PAL",
-        "BPM",
-        "2PT",
-        "MIT",
-        "PAR",
-        "PQ",
-        "MNC",
-        "KDP"
+        "RH"
       ],
       "confidence_scores": [
         1.0,
         1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
         0.0
       ],
       "detailed_scores": {
@@ -25309,51 +25282,6 @@
           "rule_based_score": 1.0
         },
         "RH": {
-          "self_confidence": 0.0,
-          "embedding_similarity": 0.0,
-          "rule_based_score": 0.0
-        },
-        "EDT": {
-          "self_confidence": 0.0,
-          "embedding_similarity": 0.0,
-          "rule_based_score": 0.0
-        },
-        "PAL": {
-          "self_confidence": 0.0,
-          "embedding_similarity": 0.0,
-          "rule_based_score": 0.0
-        },
-        "BPM": {
-          "self_confidence": 0.0,
-          "embedding_similarity": 0.0,
-          "rule_based_score": 0.0
-        },
-        "2PT": {
-          "self_confidence": 0.0,
-          "embedding_similarity": 0.0,
-          "rule_based_score": 0.0
-        },
-        "MIT": {
-          "self_confidence": 0.0,
-          "embedding_similarity": 0.0,
-          "rule_based_score": 0.0
-        },
-        "PAR": {
-          "self_confidence": 0.0,
-          "embedding_similarity": 0.0,
-          "rule_based_score": 0.0
-        },
-        "PQ": {
-          "self_confidence": 0.0,
-          "embedding_similarity": 0.0,
-          "rule_based_score": 0.0
-        },
-        "MNC": {
-          "self_confidence": 0.0,
-          "embedding_similarity": 0.0,
-          "rule_based_score": 0.0
-        },
-        "KDP": {
           "self_confidence": 0.0,
           "embedding_similarity": 0.0,
           "rule_based_score": 0.0
