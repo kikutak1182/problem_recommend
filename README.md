@@ -1,7 +1,8 @@
 ~~Atcoderのユーザーネームと学びたいアルゴリズムを入力すると、関連した自分のレートに近いdifficultyの問題を提案してくれます。~~
 現在修正中... developブランチにて作業中　こんな感じのものが出来上がる予定
-<img width="1904" height="1064" alt="スクリーンショット 2025-09-02 0 28 09" src="https://github.com/user-attachments/<img width="1907" height="1069" alt="スクリーンショット 2025-09-02 0 28 58" src="https://github.com/user-attachments/assets/4c975f0b-8101-4226-8964-dbeec18a1448" />
-assets/61fb7afa-ac6b-45ea-a40a-77a37011dfed" />
+<img width="1904" height="1064" alt="スクリーンショット 2025-09-02 0 28 09" src="https://github.com/user-attachments/assets/61fb7afa-ac6b-45ea-a40a-77a37011dfed" />
+<img width="1907" height="1069" alt="スクリーンショット 2025-09-02 0 28 58" src="https://github.com/user-attachments/assets/4c975f0b-8101-4226-8964-dbeec18a1448" />
+
 
 
 
