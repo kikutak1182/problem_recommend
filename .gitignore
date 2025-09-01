@@ -12,7 +12,29 @@ __pycache__/
 # ログや一時ファイル
 *.log
 *.tmp
+server.log
 
 # IDE/エディタの設定
 .vscode/
 .idea/
+
+# 環境変数ファイル（API キー含む）
+.env
+*.env
+
+# 開発・実験用ファイル（アプリで使用されない）
+tag/
+scripts/
+rebuild_tag_vectors.py
+AGENTS.md
+Procfile
+runtime.txt
+
+# アプリで使用される最小限のファイルのみ保持
+!tag/config/
+!tag/vectors/
+tag/vectors/*
+!tag/vectors/tag_vectors.pkl
+
+# アプリデータのコピーファイル（重複排除）
+app/data/*copy*.json
