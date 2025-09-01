@@ -19,6 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TAG_DIR = os.path.abspath(os.path.join(BASE_DIR, "tag"))
 sys.path.append(TAG_DIR)
 
+
 """
 起動時設定
 - 環境変数で使用データ JSON を切り替え可能:
@@ -113,12 +114,16 @@ def format_problem_title(problem_id: str, original_title: str) -> str:
         # Fallback for non-standard format
         return f"{problem_id}. {original_title}"
 
+
 @app.get("/", response_class=HTMLResponse)
 def index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request, "result": None})
 
 @app.post("/", response_class=HTMLResponse)
+
 def recommend(request: Request, username: str = Form(""), queries: str = Form("")):
+
+ 
     # レート取得
     current_rate = None
     if username.strip():
@@ -132,9 +137,10 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
                 return templates.TemplateResponse("index.html", {"request": request, "error": "ユーザー情報が取得できませんでした。", "result": None, "username": username, "queries": queries})
         except Exception as e:
             return templates.TemplateResponse("index.html", {"request": request, "error": "ユーザー情報の取得中にエラーが発生しました。", "result": None, "username": username, "queries": queries})
-    else:
+
         # ユーザー名が未入力の場合はレート制限なし
         current_rate = None
+
 
     # Check if queries are provided for tag-based recommendation
     if queries.strip():
@@ -455,6 +461,7 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
                         recommend.append((direct_count, diff, final_relevance, title, url, tag_info))
         # Rank: 1) direct matches desc, 2) difficulty asc, 3) relevance desc
         recommend.sort(key=lambda x: (-x[0], x[1], -x[2]))
+
         result = [
             {
                 "title": title,
@@ -466,6 +473,7 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
             for direct_count, diff, relevance, title, url, tag_info in recommend[:10]
         ]
         return templates.TemplateResponse("index.html", {"request": request, "result": result, "username": username, "rate": current_rate, "top_tags": top_tags, "queries": queries})
+
     
     else:
         # Rate-based recommendation (fallback)
@@ -492,13 +500,16 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
         result = [
             {
                 "title": format_problem_title(pid, title),
+
                 "url": f"https://atcoder.jp/contests/{contest_id}/tasks/{pid}",
                 "tags": [],
                 "diff": diff
             }
             for _, contest_id, title, diff, pid in recommend[:10]
         ]
+
         return templates.TemplateResponse("index.html", {"request": request, "result": result, "username": username, "rate": current_rate, "queries": queries})
+
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=int(os.environ.get("PORT", 8000)), reload=True) 
