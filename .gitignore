@@ -27,7 +27,8 @@ tag/
 scripts/
 rebuild_tag_vectors.py
 AGENTS.md
-render.yaml
+Procfile
+runtime.txt
 
 # アプリで使用される最小限のファイルのみ保持
 !tag/config/

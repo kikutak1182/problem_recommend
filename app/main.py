@@ -33,7 +33,7 @@ tag_vectors_path = os.path.join(TAG_DIR, "vectors/tag_vectors.pkl")
 
 # Resolve data path from env or fallback
 default_data_path = os.path.join(
-    BASE_DIR, "app/data/abc175_420_final_results_20250831_164430.json"
+    BASE_DIR, "app/data/problems_data.json"
 )
 env_data_path = os.environ.get("DATA_PATH") or os.environ.get("RESULTS_PATH")
 env_basename = os.environ.get("DATA_BASENAME") or os.environ.get("RESULTS_BASENAME")
