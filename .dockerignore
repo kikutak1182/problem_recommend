@@ -1,0 +1,46 @@
+# Git files
+.git/
+.gitignore
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environment
+venv/
+env/
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+server.log
+
+# Environment variables
+.env
+*.env
+
+# Development files (already ignored by gitignore)
+scripts/
+rebuild_tag_vectors.py
+AGENTS.md
+Procfile
+runtime.txt
+
+# Documentation and config
+README.md
+.claude/
+
+# Render deployment config (not needed in container)
+render.yaml
