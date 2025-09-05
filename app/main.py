@@ -16,8 +16,7 @@ templates = Jinja2Templates(directory="app/templates")
 import sys
 import re
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TAG_DIR = os.path.abspath(os.path.join(BASE_DIR, "tag"))
-sys.path.append(TAG_DIR)
+# Remove tag directory dependency - use app/data instead
 
 
 """
@@ -29,8 +28,8 @@ sys.path.append(TAG_DIR)
   どちらも未指定なら既定ファイルを使用。
 """
 
-# Define paths directly since config is not available
-tag_vectors_path = os.path.join(TAG_DIR, "vectors/tag_vectors.pkl")
+# Define paths within app directory
+tag_vectors_path = os.path.join(BASE_DIR, "app/data/tag_vectors.pkl")
 
 # Resolve data path from env or fallback
 default_data_path = os.path.join(
@@ -52,7 +51,7 @@ elif env_basename:
 else:
     unified_results_path = default_data_path
 
-sentence_transformer_model = "all-MiniLM-L6-v2"
+sentence_transformer_model = "paraphrase-MiniLM-L3-v2"
 top_k_tags = 10
 
 # Load tag vectors and data
@@ -63,11 +62,14 @@ try:
     tag_vectors = np.array(data["vectors"])
 except FileNotFoundError:
     raise FileNotFoundError(
-        f"Tag vectors not found: {tag_vectors_path}. Ensure 'tag/vectors/tag_vectors.pkl' exists."
+        f"Tag vectors not found: {tag_vectors_path}. Ensure 'app/data/tag_vectors.pkl' exists."
     )
 
 # Load sentence transformer model
 model = SentenceTransformer(sentence_transformer_model)
+
+# Create tag-to-vector mapping for fast lookup
+tag_to_vector = {tag: tag_vectors[i] for i, tag in enumerate(tags)}
 
 # Load problem data (supports both unified and standard formats)
 try:
@@ -137,9 +139,7 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
                 return templates.TemplateResponse("index.html", {"request": request, "error": "ユーザー情報が取得できませんでした。", "result": None, "username": username, "queries": queries})
         except Exception as e:
             return templates.TemplateResponse("index.html", {"request": request, "error": "ユーザー情報の取得中にエラーが発生しました。", "result": None, "username": username, "queries": queries})
-
-        # ユーザー名が未入力の場合はレート制限なし
-        current_rate = None
+    # else: ユーザー名が未入力の場合はcurrent_rate = Noneのまま（レート制限なし）
 
 
     # Check if queries are provided for tag-based recommendation
@@ -330,29 +330,17 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
             problem_models = {}
             print("Warning: Could not fetch external data, using fallback")
         
-        # Pre-calculate query-to-all-tags similarity for efficiency
-        # Get all unique tags from problems
-        all_problem_tags = set()
-        for v in tag_problems.values():
-            prob_tags = v.get("tags", [])
-            if isinstance(prob_tags, list):
-                all_problem_tags.update(prob_tags)
-        
-        all_problem_tags = list(all_problem_tags)
-        
-        # Encode all problem tags at once
-        if all_problem_tags:
-            all_problem_tag_vecs = model.encode(all_problem_tags)
-            
-            # Calculate similarity matrix: queries vs all problem tags
-            query_tag_similarities = {}
-            for i, prob_tag in enumerate(all_problem_tags):
+        # Use pre-computed tag vectors for efficiency (major optimization)
+        query_tag_similarities = {}
+        for prob_tag in tags:  # Only iterate over known tags with pre-computed vectors
+            if prob_tag in tag_to_vector:
+                prob_tag_vec = tag_to_vector[prob_tag]
                 max_sim = 0.0
                 
                 # Check direct similarity with expanded queries
                 for query_vec in query_vecs:
-                    sim = np.dot(all_problem_tag_vecs[i], query_vec) / (
-                        np.linalg.norm(all_problem_tag_vecs[i]) * np.linalg.norm(query_vec) + 1e-8
+                    sim = np.dot(prob_tag_vec, query_vec) / (
+                        np.linalg.norm(prob_tag_vec) * np.linalg.norm(query_vec) + 1e-8
                     )
                     max_sim = max(max_sim, sim)
                 
@@ -368,8 +356,6 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
                         max_sim = max(max_sim, 0.95)
                 
                 query_tag_similarities[prob_tag] = max_sim
-        else:
-            query_tag_similarities = {}
         
         # Enhanced tag matching with confidence scores
         for pid, v in tag_problems.items():
@@ -398,18 +384,19 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
                         if prob_tag not in direct_matched_tags:
                             semantic_matched_tags.append(prob_tag)
                 
-                # Calculate cosine similarity between input queries and problem tags
+                # Calculate cosine similarity using pre-computed vectors
                 if prob_tags:
-                    prob_tag_vecs = model.encode(prob_tags)
                     query_vec = np.mean(query_vecs, axis=0)  # Average of all query vectors
                     
-                    # Calculate cosine similarities for all tags
+                    # Calculate cosine similarities for all tags (using pre-computed vectors when available)
                     similarities = []
-                    for tag_vec in prob_tag_vecs:
-                        sim = np.dot(tag_vec, query_vec) / (
-                            np.linalg.norm(tag_vec) * np.linalg.norm(query_vec) + 1e-8
-                        )
-                        similarities.append(max(0, sim))  # Only keep positive similarities
+                    for prob_tag in prob_tags:
+                        if prob_tag in tag_to_vector:
+                            tag_vec = tag_to_vector[prob_tag]
+                            sim = np.dot(tag_vec, query_vec) / (
+                                np.linalg.norm(tag_vec) * np.linalg.norm(query_vec) + 1e-8
+                            )
+                            similarities.append(max(0, sim))  # Only keep positive similarities
                     
                     # Use maximum similarity as relevance score
                     relevance_score = max(similarities) if similarities else 0.0
@@ -433,7 +420,7 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
                     if diff is None:
                         continue  # Skip problems without difficulty data
                     
-                    # ユーザー名が入力されている場合はレート制限、未入力の場合は全難易度
+                    # ユーザー名が入力されている場合はレート制限（自分のレートより上の問題）、未入力の場合は全難易度
                     if current_rate is None or diff > current_rate:
                         # Always get title and URL from external API for accuracy
                         problem_info = next((p for p in problems if p['id'] == pid), None)
@@ -467,8 +454,7 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
                 "title": title,
                 "url": url,
                 "tags": tag_info,
-                "diff": diff,
-                "relevance_score": round(relevance, 3)
+                "diff": diff
             }
             for direct_count, diff, relevance, title, url, tag_info in recommend[:10]
         ]
