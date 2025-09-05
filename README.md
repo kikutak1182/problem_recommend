@@ -32,7 +32,5 @@ sentencetransformerで入力アルゴリズムとタグとのコサイン類似�
 
 
 
-
-
 ~~https://atcoder-problem-recommend.onrender.com/~~
 （立ち上げに恐ろしく時間がかかります。）
