@@ -1,0 +1,12 @@
+# Runtime dependencies for ONNX-based embedding API
+# No PyTorch or Transformers - lightweight inference only
+
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+onnxruntime>=1.19.0
+tokenizers>=0.20.0
+numpy>=1.26.0
+pydantic>=2.8.0
+
+# Optional: for better performance
+orjson>=3.10.0

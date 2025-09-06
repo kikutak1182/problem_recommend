@@ -37,6 +37,7 @@ rebuild_tag_vectors.py
 AGENTS.md
 Procfile
 runtime.txt
+tag/
 
 # Documentation and config
 README.md

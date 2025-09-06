@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtCoder Problem Recommend</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-card: #ffffff;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --text-muted: #9ca3af;
+            --border-color: #e5e7eb;
+            --accent-color: #3b82f6;
+            --accent-hover: #2563eb;
+            --success-color: #059669;
+            --error-color: #dc2626;
+            --warning-color: #d97706;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-muted: #64748b;
+            --border-color: #334155;
+            --accent-color: #60a5fa;
+            --accent-hover: #3b82f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .header {
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .logo i {
+            color: var(--accent-color);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 0.5rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        /* Main Content */
+        .main {
+            padding: 3rem 0;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+            white-space: nowrap;
+        }
+
+        /* Form Card */
+        .form-card {
+            background-color: var(--bg-card);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgb(59 130 246 / 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            padding: 0.875rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Alert */
+        .alert {
+            padding: 1rem 1.25rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .alert-error {
+            background-color: rgb(254 242 242);
+            border-left-color: var(--error-color);
+            color: #991b1b;
+        }
+
+        [data-theme="dark"] .alert-error {
+            background-color: rgb(127 29 29 / 0.2);
+            color: #fca5a5;
+        }
+
+        /* Results */
+        .results-section {
+            margin-top: 2rem;
+        }
+
+        .results-header {
+            background-color: var(--bg-card);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .results-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .user-info {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .info-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.25rem 0.75rem;
+            background-color: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .tags-list {
+            margin-top: 0.75rem;
+        }
+
+        .tags-label {
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: var(--radius-md);
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin: 0.125rem;
+        }
+
+        /* Problem Cards */
+        .problems-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .problem-card {
+            background-color: var(--bg-card);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .problem-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .problem-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+
+        .problem-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            line-height: 1.4;
+        }
+
+        .problem-title:hover {
+            color: var(--accent-color);
+        }
+
+        .external-link {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            transition: color 0.2s ease;
+        }
+
+        .external-link:hover {
+            color: var(--accent-color);
+        }
+
+        .problem-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .difficulty-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-md);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .diff-easy { background-color: #dcfce7; color: #166534; }
+        .diff-medium { background-color: #fef3c7; color: #92400e; }
+        .diff-hard { background-color: #fee2e2; color: #991b1b; }
+        .diff-expert { background-color: #ede9fe; color: #7c2d12; }
+
+        [data-theme="dark"] .diff-easy { background-color: rgb(22 101 52 / 0.2); color: #86efac; }
+        [data-theme="dark"] .diff-medium { background-color: rgb(146 64 14 / 0.2); color: #fbbf24; }
+        [data-theme="dark"] .diff-hard { background-color: rgb(153 27 27 / 0.2); color: #fca5a5; }
+        [data-theme="dark"] .diff-expert { background-color: rgb(124 45 18 / 0.2); color: #c4b5fd; }
+
+        .problem-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+        }
+
+        .problem-tag {
+            padding: 0.125rem 0.5rem;
+            background-color: var(--bg-secondary);
+            color: var(--text-secondary);
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 0.75rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .form-card {
+                padding: 1.5rem;
+            }
+
+            .user-info {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .problem-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .problem-meta {
+                gap: 0.5rem;
+            }
+        }
+
+        /* Loading animation */
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            border: 2px solid transparent;
+            border-top: 2px solid currentColor;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <i class="fas fa-code"></i>
+                    AtCoder Recommend
+                </a>
+                <button class="theme-toggle" onclick="toggleTheme()" title="テーマを切り替え">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h1>AtCoder 問題レコメンド</h1>
+                <p>あなたのレベルと興味に合わせて、最適な競技プログラミング問題を推薦します</p>
+            </section>
+
+            <!-- Usage Section -->
+            <section class="form-card" style="margin-bottom: 2rem;">
+                <h2 style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin-bottom: 1rem;">
+                    <i class="fas fa-info-circle" style="color: var(--accent-color);"></i>
+                    使い方
+                </h2>
+                <div style="color: var(--text-secondary); line-height: 1.6;">
+                    <ul style="margin: 0; padding-left: 1.5rem;">
+                        <li style="margin-bottom: 0.5rem;"><strong>ユーザー名入力あり</strong> → 自分のレート以上の問題を推薦</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>ユーザー名未入力</strong> → タグに関連する全難易度の問題をランダム表示</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>入力したアルゴリズムに関連した問題をレコメンド</strong></li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-muted);">
+                        例：「動的計画法」「グラフ」「フロー」「二分探索」などのアルゴリズム名を入力してください
+                    </p>
+                </div>
+            </section>
+
+            <!-- Form -->
+            <section class="form-card">
+                <form method="post" id="recommend-form">
+                    <div class="form-group">
+                        <label for="username" class="form-label">
+                            <i class="fas fa-user"></i> AtCoderユーザー名
+                        </label>
+                        <input 
+                            type="text" 
+                            id="username"
+                            name="username" 
+                            class="form-input"
+                            placeholder="例: tourist（未入力でもOK）"
+                            value="{{ username or '' }}"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="queries" class="form-label">
+                            <i class="fas fa-tags"></i> 興味のあるアルゴリズム・分野
+                        </label>
+                        <textarea 
+                            id="queries"
+                            name="queries" 
+                            class="form-input form-textarea"
+                            placeholder="例：&#10;動的計画法&#10;グラフ理論&#10;二分探索"
+                            required
+                        >{{ queries or '' }}</textarea>
+                        <small class="text-muted">1行ずつ入力してください</small>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submit-btn">
+                        <i class="fas fa-search"></i>
+                        <span id="btn-text">問題を探す</span>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Error Alert -->
+            {% if error %}
+            <div class="alert alert-error">
+                <i class="fas fa-exclamation-triangle"></i>
+                {{ error }}
+            </div>
+            {% endif %}
+
+            <!-- Results -->
+            {% if result %}
+            <section class="results-section">
+                <!-- Results Header -->
+                <div class="results-header">
+                    <h2 class="results-title">
+                        <i class="fas fa-list"></i>
+                        おすすめ問題
+                    </h2>
+                    <div class="user-info">
+                        <span class="info-badge">
+                            <i class="fas fa-user"></i>
+                            {{ username }}
+                        </span>
+                        <span class="info-badge">
+                            <i class="fas fa-star"></i>
+                            レート: {{ rate }}
+                        </span>
+                        <span class="info-badge">
+                            <i class="fas fa-list-ol"></i>
+                            {{ result|length }}件見つかりました
+                        </span>
+                    </div>
+                    
+                    {% if top_tags %}
+                    <div class="tags-list">
+                        <div class="tags-label">関連度の高いタグ:</div>
+                        {% for tag in top_tags %}
+                        <span class="tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+
+                <!-- Problems Grid -->
+                <div class="problems-grid">
+                    {% for item in result %}
+                    <div class="problem-card" onclick="window.open('{{ item.url }}', '_blank')">
+                        <div class="problem-header">
+                            <a href="{{ item.url }}" target="_blank" class="problem-title">
+                                {{ item.title }}
+                            </a>
+                            <i class="fas fa-external-link-alt external-link"></i>
+                        </div>
+                        
+                        <div class="problem-meta">
+                            <span class="meta-item">
+                                <i class="fas fa-signal"></i>
+                                <span class="difficulty-badge 
+                                    {% if item.diff < 800 %}diff-easy
+                                    {% elif item.diff < 1600 %}diff-medium  
+                                    {% elif item.diff < 2400 %}diff-hard
+                                    {% else %}diff-expert
+                                    {% endif %}">
+                                    難易度 {{ item.diff }}
+                                </span>
+                            </span>
+                            
+                            {% if item.relevance_score %}
+                            <span class="meta-item">
+                                <i class="fas fa-bullseye"></i>
+                                関連度 {{ item.relevance_score }}
+                            </span>
+                            {% endif %}
+                        </div>
+
+                        {% if item.tags %}
+                        <div class="problem-tags">
+                            {% for tag_info in item.tags %}
+                            <span class="problem-tag">{{ tag_info.tag }} (タグ信頼度: {{ tag_info.confidence }})</span>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+            {% endif %}
+        </div>
+    </main>
+
+    <script>
+        // Theme management
+        function getTheme() {
+            return localStorage.getItem('theme') || 'light';
+        }
+
+        function setTheme(theme) {
+            localStorage.setItem('theme', theme);
+            document.documentElement.setAttribute('data-theme', theme);
+            
+            const icon = document.getElementById('theme-icon');
+            if (theme === 'dark') {
+                icon.className = 'fas fa-sun';
+            } else {
+                icon.className = 'fas fa-moon';
+            }
+        }
+
+        function toggleTheme() {
+            const currentTheme = getTheme();
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        }
+
+        // Initialize theme
+        setTheme(getTheme());
+
+        // Form submission handling
+        document.getElementById('recommend-form').addEventListener('submit', function() {
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            
+            submitBtn.classList.add('loading');
+            btnText.innerHTML = '<span class="spinner"></span> 検索中...';
+            submitBtn.disabled = true;
+        });
+
+        // Auto-resize textarea
+        function autoResize(textarea) {
+            textarea.style.height = 'auto';
+            textarea.style.height = Math.max(120, textarea.scrollHeight) + 'px';
+        }
+
+        const textarea = document.getElementById('queries');
+        textarea.addEventListener('input', function() {
+            autoResize(this);
+        });
+
+        // Initialize textarea height
+        autoResize(textarea);
+    </script>
+</body>
+</html>

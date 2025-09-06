@@ -1,0 +1,111 @@
+# Optimized ONNX Embedding API Dockerfile
+# Target: Reduce from 1.07GB to ~400-500MB
+
+# ============================================
+# Builder Stage: Install dependencies
+# ============================================
+FROM python:3.11-slim as builder
+
+WORKDIR /build
+
+# Install essential build tools and runtime libraries for numpy
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        gcc \
+        g++ \
+        gfortran \
+        libgfortran5 \
+        libopenblas-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements first for better caching
+COPY requirements.txt .
+
+# Install Python packages to /install directory
+# Key optimizations:
+# 1. --target for precise control
+# 2. --no-cache-dir to avoid pip cache
+# 3. --no-compile to skip .pyc files
+# 4. Specific versions to avoid dependency bloat
+RUN pip install --no-cache-dir --no-compile --target=/install \
+    fastapi==0.116.1 \
+    uvicorn==0.35.0 \
+    onnxruntime==1.22.1 \
+    tokenizers==0.22.0 \
+    numpy==2.3.2 \
+    pydantic==2.11.7 \
+    orjson==3.11.3
+
+# Clean up unnecessary files from installed packages
+RUN find /install -name "tests" -exec rm -rf {} + 2>/dev/null || true && \
+    find /install -name "test" -exec rm -rf {} + 2>/dev/null || true && \
+    find /install -name "*.dist-info" -exec rm -rf {} + 2>/dev/null || true && \
+    find /install -name "__pycache__" -exec rm -rf {} + && \
+    find /install -name "*.pyc" -delete && \
+    find /install -name "*.pyo" -delete && \
+    find /install -name "*.pyi" -delete && \
+    find /install -name "*.a" -delete && \
+    find /install -name "*.so.*" -delete 2>/dev/null || true
+
+# Remove specific heavy packages we don't need
+RUN rm -rf /install/sympy* 2>/dev/null || true && \
+    rm -rf /install/mpmath* 2>/dev/null || true && \
+    rm -rf /install/setuptools* 2>/dev/null || true && \
+    rm -rf /install/pip* 2>/dev/null || true
+
+# ============================================
+# Runtime Stage: Minimal production image
+# ============================================
+FROM python:3.11-slim as runtime
+
+# Install essential runtime dependencies including numpy runtime libraries
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        curl \
+        ca-certificates \
+        libgfortran5 \
+        libopenblas0 \
+    && rm -rf /var/lib/apt/lists/* \
+    && apt-get clean \
+    && rm -rf /var/cache/apt/*
+
+# Copy optimized Python packages from builder
+COPY --from=builder /install /usr/local/lib/python3.11/site-packages/
+
+# Set working directory
+WORKDIR /app
+
+# Copy application files
+COPY main.py .
+COPY model_int8.onnx .
+
+# Copy only essential tokenizer files
+COPY tokenizer/tokenizer.json ./tokenizer/
+COPY tokenizer/special_tokens_map.json ./tokenizer/
+COPY tokenizer/tokenizer_config.json ./tokenizer/
+
+# Create non-root user for security
+RUN useradd -m -u 1000 apiuser && \
+    chown -R apiuser:apiuser /app && \
+    # Clean up any remaining unnecessary files
+    find /usr/local/lib -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
+
+USER apiuser
+
+# Environment variables
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONPATH=/app
+ENV MODEL_PATH=model_int8.onnx
+ENV TOKENIZER_PATH=tokenizer/
+ENV MAX_LENGTH=256
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:${PORT:-8081}/healthz || exit 1
+
+# Expose port
+EXPOSE 8081
+
+# Run the application
+CMD ["python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8081", "--workers", "1", "--log-level", "info"]

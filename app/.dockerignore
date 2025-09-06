@@ -1,0 +1,30 @@
+# Development files
+export_onnx.py
+quantize.py
+*.py[cod]
+__pycache__/
+
+# Git and docs
+.git/
+.gitignore
+README.md
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+*.env
+
+# Build artifacts (keep only the models we need)
+# model_fp32.onnx  # Uncomment if you want to exclude FP32 model

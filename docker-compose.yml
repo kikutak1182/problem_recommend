@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  # ONNX Embedding API Service
+  onnx-embedding-api:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: onnx-embedding-api
+    environment:
+      - PORT=8081
+      - MODEL_PATH=model_int8.onnx
+      - TOKENIZER_PATH=tokenizer/
+      - MAX_LENGTH=256
+    ports:
+      - "8081:8081"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - app-network
+
+  # Problem Recommendation Service (Lightweight)
+  problem-recommend-app:
+    build:
+      context: .
+      dockerfile: Dockerfile_lightweight
+    container_name: problem-recommend-app
+    environment:
+      - PORT=8080
+      - ONNX_API_URL=http://onnx-embedding-api:8081
+      - MODEL=sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+    ports:
+      - "8080:8080"
+    depends_on:
+      onnx-embedding-api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

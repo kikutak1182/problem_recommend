@@ -1,0 +1,51 @@
+# Lightweight Problem Recommendation App
+# Uses ONNX API for embeddings instead of sentence-transformers
+# Target: <200MB (vs 1.7GB with PyTorch)
+
+FROM python:3.11-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install minimal system dependencies
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        curl \
+    && rm -rf /var/lib/apt/lists/* \
+    && apt-get clean
+
+# Copy requirements first for better Docker layer caching
+COPY requirements_lightweight.txt requirements.txt
+
+# Install Python dependencies
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
+
+# Copy application files
+COPY main_lightweight.py main.py
+
+# Copy templates and data explicitly
+COPY app/templates/ ./app/templates/
+COPY app/data/tag_vectors.pkl ./app/data/tag_vectors.pkl
+COPY app/data/problems_data.json ./app/data/problems_data.json
+COPY app/data/tag_definitions.json ./app/data/tag_definitions.json
+
+# Create non-root user for security
+RUN useradd -m -u 1000 appuser && \
+    chown -R appuser:appuser /app
+USER appuser
+
+# Environment variables
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONPATH=/app
+ENV ONNX_API_URL=http://onnx-embedding-api:8081
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:${PORT:-8080}/ || exit 1
+
+# Expose port
+EXPOSE 8080
+
+# Run the application
+CMD uvicorn main:app --host 0.0.0.0 --port ${PORT:-8080} --workers 1 --log-level info

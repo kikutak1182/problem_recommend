@@ -38,3 +38,7 @@ tag/vectors/*
 
 # アプリデータのコピーファイル（重複排除）
 app/data/*copy*.json
+
+# ONNX モデルファイル（サイズが大きいためGitHubにアップしない）
+app/model_fp32.onnx
+app/model_int8.onnx
