@@ -52,7 +52,7 @@ elif env_basename:
 else:
     unified_results_path = default_data_path
 
-sentence_transformer_model = "all-MiniLM-L6-v2"
+sentence_transformer_model = "intfloat/multilingual-e5-base"
 top_k_tags = 10
 
 # Load tag vectors and data
@@ -68,6 +68,17 @@ except FileNotFoundError:
 
 # Load sentence transformer model
 model = SentenceTransformer(sentence_transformer_model)
+
+# Load pre-computed tag embeddings
+all_tag_embeddings_path = os.path.join(BASE_DIR, "app/data/all_tag_embeddings.pkl")
+try:
+    with open(all_tag_embeddings_path, "rb") as f:
+        tag_embedding_data = pickle.load(f)
+    all_tag_embeddings = tag_embedding_data["tag_embeddings"]
+    print(f"Loaded {len(all_tag_embeddings)} pre-computed tag embeddings")
+except FileNotFoundError:
+    print(f"Warning: Pre-computed embeddings not found at {all_tag_embeddings_path}")
+    all_tag_embeddings = {}
 
 # Load problem data (supports both unified and standard formats)
 try:
@@ -137,9 +148,8 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
                 return templates.TemplateResponse("index.html", {"request": request, "error": "ユーザー情報が取得できませんでした。", "result": None, "username": username, "queries": queries})
         except Exception as e:
             return templates.TemplateResponse("index.html", {"request": request, "error": "ユーザー情報の取得中にエラーが発生しました。", "result": None, "username": username, "queries": queries})
-
-        # ユーザー名が未入力の場合はレート制限なし
-        current_rate = None
+    
+    # ユーザー名が未入力の場合は current_rate = None のまま（レート制限なし）
 
 
     # Check if queries are provided for tag-based recommendation
@@ -293,29 +303,8 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
         # 重複除去
         expanded_queries = list(dict.fromkeys(expanded_queries))
         
-        # クエリベクトル化＆類似度計算（拡張されたクエリを使用）
+        # クエリベクトル化（最適化済みシステムで使用）
         query_vecs = model.encode(expanded_queries)
-        interest_vec = np.mean(query_vecs, axis=0)
-        sims = tag_vectors @ interest_vec / (np.linalg.norm(tag_vectors, axis=1) * np.linalg.norm(interest_vec) + 1e-8)
-        
-        # エイリアス完全一致したタグに高いスコアを付与
-        for query in query_list:
-            # 正引きエイリアス
-            if query in tag_aliases:
-                for alias_tag in tag_aliases[query]:
-                    if alias_tag in tags:
-                        idx = tags.index(alias_tag)
-                        sims[idx] = max(sims[idx], 1.0)
-            
-            # 逆引きエイリアス
-            if query in alias_to_keys:
-                for canonical_tag in alias_to_keys[query]:
-                    if canonical_tag in tags:
-                        idx = tags.index(canonical_tag)
-                        sims[idx] = max(sims[idx], 1.0)
-        
-        top_idx = np.argsort(sims)[::-1][:top_k_tags]
-        top_tags = [tags[i] for i in top_idx]
 
         # 問題抽出（改良版タグマッチング）
         recommend = []
@@ -330,137 +319,116 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
             problem_models = {}
             print("Warning: Could not fetch external data, using fallback")
         
-        # Pre-calculate query-to-all-tags similarity for efficiency
-        # Get all unique tags from problems
-        all_problem_tags = set()
-        for v in tag_problems.values():
-            prob_tags = v.get("tags", [])
-            if isinstance(prob_tags, list):
-                all_problem_tags.update(prob_tags)
+        # Step 1: Find top 5 similar tags using pre-computed embeddings
+        similar_tags = []
+        weights = [1.0, 0.8, 0.6, 0.4, 0.2]
         
-        all_problem_tags = list(all_problem_tags)
-        
-        # Encode all problem tags at once
-        if all_problem_tags:
-            all_problem_tag_vecs = model.encode(all_problem_tags)
-            
-            # Calculate similarity matrix: queries vs all problem tags
-            query_tag_similarities = {}
-            for i, prob_tag in enumerate(all_problem_tags):
+        if all_tag_embeddings:
+            # Calculate similarities with all available tags
+            tag_similarities = []
+            for tag, tag_embedding in all_tag_embeddings.items():
                 max_sim = 0.0
                 
-                # Check direct similarity with expanded queries
+                # Check similarity with each query
                 for query_vec in query_vecs:
-                    sim = np.dot(all_problem_tag_vecs[i], query_vec) / (
-                        np.linalg.norm(all_problem_tag_vecs[i]) * np.linalg.norm(query_vec) + 1e-8
+                    sim = np.dot(tag_embedding, query_vec) / (
+                        np.linalg.norm(tag_embedding) * np.linalg.norm(query_vec) + 1e-8
                     )
                     max_sim = max(max_sim, sim)
                 
                 # Check exact matches with aliases (boost score for exact matches)
                 for original_query in query_list:
-                    if prob_tag == original_query:
+                    if tag == original_query:
                         max_sim = max(max_sim, 1.0)  # Exact match gets highest score
-                    # Forward alias: query is canonical name, prob_tag is its alias
-                    elif original_query in tag_aliases and prob_tag in tag_aliases[original_query]:
+                    elif original_query in tag_aliases and tag in tag_aliases[original_query]:
                         max_sim = max(max_sim, 0.95)  # Alias match gets very high score
-                    # Reverse alias: query is an alias of some canonical names, and prob_tag matches one of them
-                    elif original_query in alias_to_keys and prob_tag in alias_to_keys[original_query]:
+                    elif original_query in alias_to_keys and tag in alias_to_keys[original_query]:
                         max_sim = max(max_sim, 0.95)
                 
-                query_tag_similarities[prob_tag] = max_sim
-        else:
-            query_tag_similarities = {}
+                tag_similarities.append((tag, max_sim))
+            
+            # Sort by similarity and take top 5
+            tag_similarities.sort(key=lambda x: x[1], reverse=True)
+            similar_tags = [tag for tag, _ in tag_similarities[:5]]
         
-        # Enhanced tag matching with confidence scores
+        # Fallback to top_tags if no pre-computed embeddings
+        if not similar_tags:
+            similar_tags = top_tags[:5]
+        
+        # Ensure we have exactly 5 tags, pad with top_tags if needed
+        while len(similar_tags) < 5 and len(similar_tags) < len(top_tags):
+            for tag in top_tags:
+                if tag not in similar_tags:
+                    similar_tags.append(tag)
+                    break
+        
+        similar_tags = similar_tags[:5]  # Ensure exactly 5
+        
+        # Step 2: Calculate problem relevance scores efficiently
+        problem_scores = []
         for pid, v in tag_problems.items():
             prob_tags = v.get("tags", [])
             confidence_scores = v.get("confidence_scores", [])
             if isinstance(prob_tags, list) and prob_tags and confidence_scores:
-                # Use average confidence score as base relevance
-                avg_confidence = sum(confidence_scores) / len(confidence_scores) if confidence_scores else 0.0
-                
+                # Calculate relevance based on top 5 similar tags
+                relevance = 0.0
                 prob_tags_set = set(prob_tags)
                 
-                # Method 1: Direct tag matching from top similar tags (based on tag vectors)
-                direct_matched_tags = prob_tags_set & set(top_tags)
-                direct_count = len(direct_matched_tags)
+                for i, similar_tag in enumerate(similar_tags):
+                    if similar_tag in prob_tags_set:
+                        # Add weighted score for matching tags
+                        relevance += weights[i]
                 
-                # Method 2: Direct query-to-problem-tag similarity (handles notation variations)
-                semantic_matched_tags = []
-                semantic_score = 0.0
-                
-                for prob_tag in prob_tags:
-                    query_sim = query_tag_similarities.get(prob_tag, 0.0)
-                    
-                    # If similarity is high enough, consider it a semantic match
-                    if query_sim > 0.35:  # Threshold for direct query-tag similarity
-                        semantic_score += query_sim
-                        if prob_tag not in direct_matched_tags:
-                            semantic_matched_tags.append(prob_tag)
-                
-                # Calculate cosine similarity between input queries and problem tags
-                if prob_tags:
-                    prob_tag_vecs = model.encode(prob_tags)
-                    query_vec = np.mean(query_vecs, axis=0)  # Average of all query vectors
-                    
-                    # Calculate cosine similarities for all tags
-                    similarities = []
-                    for tag_vec in prob_tag_vecs:
-                        sim = np.dot(tag_vec, query_vec) / (
-                            np.linalg.norm(tag_vec) * np.linalg.norm(query_vec) + 1e-8
-                        )
-                        similarities.append(max(0, sim))  # Only keep positive similarities
-                    
-                    # Use maximum similarity as relevance score
-                    relevance_score = max(similarities) if similarities else 0.0
-                else:
-                    relevance_score = 0.0
-
-                # Alias/semantic match score from precomputed query_tag_similarities (includes exact/alias boosts)
-                alias_match = 0.0
-                for prob_tag in prob_tags:
-                    alias_match = max(alias_match, query_tag_similarities.get(prob_tag, 0.0))
-
-                # Blend cosine and alias/semantic match
-                final_relevance = 0.7 * relevance_score + 0.3 * alias_match
-                
-                all_matched_tags = list(direct_matched_tags) + semantic_matched_tags
-                
-                # 直接一致がある場合は閾値未満でも採用。閾値は合成関連度で判定。
-                if final_relevance > 0.5 or direct_count > 0:
-                    # Get difficulty from external API or use default
+                # Only consider problems with some relevance
+                if relevance > 0:
+                    # Get difficulty from external API
                     diff = problem_models.get(pid, {}).get('difficulty')
                     if diff is None:
                         continue  # Skip problems without difficulty data
                     
-                    # ユーザー名が入力されている場合はレート制限、未入力の場合は全難易度
+                    # Apply user rating filter
                     if current_rate is None or diff > current_rate:
-                        # Always get title and URL from external API for accuracy
-                        problem_info = next((p for p in problems if p['id'] == pid), None)
-                        if problem_info:
-                            original_title = problem_info['title']
-                            contest_id = problem_info['contest_id'] 
-                            url = f"https://atcoder.jp/contests/{contest_id}/tasks/{pid}"
-                        else:
-                            # Fallback to internal data from unified results
-                            original_title = v.get("title", "")
-                            if not original_title or original_title == pid:
-                                original_title = pid  # Use problem ID as last resort
-                            url = v.get("problem_url", "")
-                        
-                        # Format title to unified format (ABC322 F. Problem Name)
-                        title = format_problem_title(pid, original_title)
-                        
-                        # Create tag info with confidence scores (truncated to 1 decimal)
-                        tag_info = []
-                        for i, tag in enumerate(prob_tags):
-                            conf = confidence_scores[i] if i < len(confidence_scores) else 0.0
-                            tag_info.append({"tag": tag, "confidence": int(conf * 10) / 10.0})  # Truncate to 1 decimal
-                        
-                        # Collect ranking keys: prioritize direct tag matches, then ascending difficulty, then higher final relevance
-                        recommend.append((direct_count, diff, final_relevance, title, url, tag_info))
-        # Rank: 1) direct matches desc, 2) difficulty asc, 3) relevance desc
-        recommend.sort(key=lambda x: (-x[0], x[1], -x[2]))
+                        problem_scores.append((relevance, diff, pid, v))
+        
+        # Step 3: Sort by relevance (desc) then by difficulty (asc), take top 20
+        problem_scores.sort(key=lambda x: (-x[0], x[1]))
+        top_20_problems = problem_scores[:20]
+        
+        # Step 4: Randomly select 5 from top 20
+        import random
+        selected_problems = random.sample(top_20_problems, min(5, len(top_20_problems)))
+        
+        # Step 5: Format results
+        recommend = []
+        for relevance, diff, pid, v in selected_problems:
+            # Get title and URL from external API for accuracy
+            problem_info = next((p for p in problems if p['id'] == pid), None)
+            if problem_info:
+                original_title = problem_info['title']
+                contest_id = problem_info['contest_id'] 
+                url = f"https://atcoder.jp/contests/{contest_id}/tasks/{pid}"
+            else:
+                # Fallback to internal data
+                original_title = v.get("title", "")
+                if not original_title or original_title == pid:
+                    original_title = pid
+                url = v.get("problem_url", "")
+            
+            # Format title
+            title = format_problem_title(pid, original_title)
+            
+            # Create tag info with confidence scores
+            prob_tags = v.get("tags", [])
+            confidence_scores = v.get("confidence_scores", [])
+            tag_info = []
+            for i, tag in enumerate(prob_tags):
+                conf = confidence_scores[i] if i < len(confidence_scores) else 0.0
+                tag_info.append({"tag": tag, "confidence": int(conf * 10) / 10.0})
+            
+            recommend.append((0, diff, relevance, title, url, tag_info))
+        
+        # Sort final results by difficulty for display
+        recommend.sort(key=lambda x: x[1])
 
         result = [
             {
@@ -470,9 +438,9 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
                 "diff": diff,
                 "relevance_score": round(relevance, 3)
             }
-            for direct_count, diff, relevance, title, url, tag_info in recommend[:10]
+            for direct_count, diff, relevance, title, url, tag_info in recommend
         ]
-        return templates.TemplateResponse("index.html", {"request": request, "result": result, "username": username, "rate": current_rate, "top_tags": top_tags, "queries": queries})
+        return templates.TemplateResponse("index.html", {"request": request, "result": result, "username": username, "rate": current_rate, "top_tags": similar_tags, "queries": queries})
 
     
     else:
@@ -512,4 +480,4 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=int(os.environ.get("PORT", 8000)), reload=True) 
+    uvicorn.run("main:app", host="0.0.0.0", port=int(os.environ.get("PORT", 8000)), reload=False, workers=1) 
