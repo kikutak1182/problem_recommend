@@ -31,10 +31,6 @@ Procfile
 runtime.txt
 
 # アプリで使用される最小限のファイルのみ保持
-!tag/config/
-!tag/vectors/
-tag/vectors/*
-!tag/vectors/tag_vectors.pkl
 
 # アプリデータのコピーファイル（重複排除）
 app/data/*copy*.json

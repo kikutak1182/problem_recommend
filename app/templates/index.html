@@ -269,6 +269,17 @@
             color: var(--text-secondary);
         }
 
+        .similar-tag {
+            display: inline-block;
+            padding: 0.125rem 0.5rem;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin: 0 0.125rem;
+        }
+
         .tags-list {
             margin-top: 0.75rem;
         }
@@ -557,6 +568,16 @@
                             <i class="fas fa-list-ol"></i>
                             {{ result|length }}件見つかりました
                         </span>
+                        {% if similar_tags %}
+                        <span class="info-badge">
+                            <i class="fas fa-tags"></i>
+                            類似タグ: 
+                            {% for tag in similar_tags %}
+                                <span class="similar-tag">{{ tag }}</span>
+                                {% if not loop.last %}, {% endif %}
+                            {% endfor %}
+                        </span>
+                        {% endif %}
                     </div>
                     
                     {% if top_tags %}
