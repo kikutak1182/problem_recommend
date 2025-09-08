@@ -362,15 +362,23 @@
             font-weight: 600;
         }
 
-        .diff-easy { background-color: #dcfce7; color: #166534; }
-        .diff-medium { background-color: #fef3c7; color: #92400e; }
-        .diff-hard { background-color: #fee2e2; color: #991b1b; }
-        .diff-expert { background-color: #ede9fe; color: #7c2d12; }
+        .diff-gray { background-color: #f3f4f6; color: #374151; }
+        .diff-brown { background-color: #fef3c7; color: #92400e; }
+        .diff-green { background-color: #dcfce7; color: #166534; }
+        .diff-cyan { background-color: #cffafe; color: #0f766e; }
+        .diff-blue { background-color: #dbeafe; color: #1e40af; }
+        .diff-yellow { background-color: #fef9c3; color: #a16207; }
+        .diff-orange { background-color: #fed7aa; color: #c2410c; }
+        .diff-red { background-color: #fee2e2; color: #991b1b; }
 
-        [data-theme="dark"] .diff-easy { background-color: rgb(22 101 52 / 0.2); color: #86efac; }
-        [data-theme="dark"] .diff-medium { background-color: rgb(146 64 14 / 0.2); color: #fbbf24; }
-        [data-theme="dark"] .diff-hard { background-color: rgb(153 27 27 / 0.2); color: #fca5a5; }
-        [data-theme="dark"] .diff-expert { background-color: rgb(124 45 18 / 0.2); color: #c4b5fd; }
+        [data-theme="dark"] .diff-gray { background-color: rgb(55 65 81 / 0.2); color: #d1d5db; }
+        [data-theme="dark"] .diff-brown { background-color: rgb(146 64 14 / 0.2); color: #fbbf24; }
+        [data-theme="dark"] .diff-green { background-color: rgb(22 101 52 / 0.2); color: #86efac; }
+        [data-theme="dark"] .diff-cyan { background-color: rgb(15 118 110 / 0.2); color: #67e8f9; }
+        [data-theme="dark"] .diff-blue { background-color: rgb(30 64 175 / 0.2); color: #93c5fd; }
+        [data-theme="dark"] .diff-yellow { background-color: rgb(161 98 7 / 0.2); color: #fde047; }
+        [data-theme="dark"] .diff-orange { background-color: rgb(194 65 12 / 0.2); color: #fdba74; }
+        [data-theme="dark"] .diff-red { background-color: rgb(153 27 27 / 0.2); color: #fca5a5; }
 
         .problem-tags {
             display: flex;
@@ -576,10 +584,14 @@
                             <span class="meta-item">
                                 <i class="fas fa-signal"></i>
                                 <span class="difficulty-badge 
-                                    {% if item.diff < 800 %}diff-easy
-                                    {% elif item.diff < 1600 %}diff-medium  
-                                    {% elif item.diff < 2400 %}diff-hard
-                                    {% else %}diff-expert
+                                    {% if item.diff < 400 %}diff-gray
+                                    {% elif item.diff < 800 %}diff-brown
+                                    {% elif item.diff < 1200 %}diff-green
+                                    {% elif item.diff < 1600 %}diff-cyan
+                                    {% elif item.diff < 2000 %}diff-blue
+                                    {% elif item.diff < 2400 %}diff-yellow
+                                    {% elif item.diff < 2800 %}diff-orange
+                                    {% else %}diff-red
                                     {% endif %}">
                                     難易度 {{ item.diff }}
                                 </span>
