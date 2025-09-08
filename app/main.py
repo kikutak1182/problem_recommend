@@ -5,7 +5,6 @@ import requests
 import uvicorn
 import os
 import pickle
-from sentence_transformers import SentenceTransformer
 import numpy as np
 import json
 import re
@@ -27,9 +26,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     例: DATA_BASENAME=abc175_420_final_results_20250831_164430
   どちらも未指定なら既定ファイルを使用。
 """
-
-# Define paths within app directory
-tag_vectors_path = os.path.join(BASE_DIR, "app/data/tag_vectors.pkl")
 
 # Resolve data path from env or fallback
 default_data_path = os.path.join(
@@ -54,19 +50,15 @@ else:
 sentence_transformer_model = "intfloat/multilingual-e5-base"
 top_k_tags = 10
 
-# Load tag vectors and data
-try:
-    with open(tag_vectors_path, "rb") as f:
-        data = pickle.load(f)
-    tags = data["tags"]
-    tag_vectors = np.array(data["vectors"])
-except FileNotFoundError:
-    raise FileNotFoundError(
-        f"Tag vectors not found: {tag_vectors_path}. Ensure 'app/data/tag_vectors.pkl' exists."
-    )
-
-# Load sentence transformer model
-model = SentenceTransformer(sentence_transformer_model)
+# === Lazy load model ===
+_model = None
+def get_model():
+    global _model
+    if _model is None:
+        print(f"[Model] Loading {sentence_transformer_model}")
+        from sentence_transformers import SentenceTransformer
+        _model = SentenceTransformer(sentence_transformer_model)
+    return _model
 
 # Load pre-computed tag embeddings
 all_tag_embeddings_path = os.path.join(BASE_DIR, "app/data/all_tag_embeddings.pkl")
@@ -302,8 +294,8 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
         # 重複除去
         expanded_queries = list(dict.fromkeys(expanded_queries))
         
-        # クエリベクトル化（最適化済みシステムで使用）
-        query_vecs = model.encode(expanded_queries)
+        # クエリベクトル化（遅延ロードモデルを使用）
+        query_vecs = get_model().encode(expanded_queries)
 
         # 問題抽出（改良版タグマッチング）
         recommend = []
@@ -439,7 +431,14 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
             }
             for direct_count, diff, relevance, title, url, tag_info in recommend
         ]
-        return templates.TemplateResponse("index.html", {"request": request, "result": result, "username": username, "rate": current_rate, "queries": queries})
+        return templates.TemplateResponse("index.html", {
+            "request": request, 
+            "result": result, 
+            "username": username, 
+            "rate": current_rate, 
+            "queries": queries,
+            "similar_tags": similar_tags
+        })
 
     
     else:
@@ -475,7 +474,14 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
             for _, contest_id, title, diff, pid in recommend[:10]
         ]
 
-        return templates.TemplateResponse("index.html", {"request": request, "result": result, "username": username, "rate": current_rate, "queries": queries})
+        return templates.TemplateResponse("index.html", {
+            "request": request, 
+            "result": result, 
+            "username": username, 
+            "rate": current_rate, 
+            "queries": queries,
+            "similar_tags": []  # フォールバック時は空リスト
+        })
 
 
 @app.get("/health")
