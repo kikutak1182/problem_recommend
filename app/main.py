@@ -47,7 +47,7 @@ elif env_basename:
 else:
     unified_results_path = default_data_path
 
-sentence_transformer_model = "intfloat/multilingual-e5-base"
+sentence_transformer_model = "intfloat/multilingual-e5-small"
 top_k_tags = 10
 
 # === Lazy load model ===
