@@ -16,12 +16,7 @@ RUN pip install --upgrade pip
 # Copy requirements first for better Docker layer caching
 COPY requirements.txt .
 
-# Install PyTorch CPU-only version first (no torchvision needed for text processing)
-RUN pip install --no-cache-dir \
-    torch==2.8.0+cpu \
-    --extra-index-url https://download.pytorch.org/whl/cpu
-
-# Install other dependencies
+# Install dependencies (no PyTorch needed for lightweight implementation)
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code (self-contained in app/ directory)

@@ -1582,8 +1582,8 @@
       ],
       "tag_ids": [
         "DAG",
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)"
+        "DP",
+        "OPT"
       ],
       "confidence_scores": [
         1.855,
@@ -1596,12 +1596,12 @@
           "embedding_similarity": 0.76,
           "rule_based_score": 1.0
         },
-        "動的計画法 (DP)": {
+        "DP": {
           "self_confidence": 0.9,
           "embedding_similarity": 0.7200000000000001,
           "rule_based_score": 0.0
         },
-        "最適化問題 (OPT)": {
+        "OPT": {
           "self_confidence": 0.8,
           "embedding_similarity": 0.6400000000000001,
           "rule_based_score": 0.0
@@ -14643,7 +14643,7 @@
       ],
       "tag_ids": [
         "LIS",
-        "Fenwick Tree (BIT)",
+        "BIT",
         "DP"
       ],
       "confidence_scores": [
@@ -14657,7 +14657,7 @@
           "embedding_similarity": 0.7200000000000001,
           "rule_based_score": 0.0
         },
-        "Fenwick Tree (BIT)": {
+        "BIT": {
           "self_confidence": 0.85,
           "embedding_similarity": 0.68,
           "rule_based_score": 0.0
@@ -37693,9 +37693,9 @@
         "二分探索"
       ],
       "tag_ids": [
-        "Fenwick Tree (BIT)",
-        "セグメント木 (SEG)",
-        "二分探索 (BIN)"
+        "BIT",
+        "SEG",
+        "BIN"
       ],
       "confidence_scores": [
         0.81,
@@ -37703,17 +37703,17 @@
         0.6299999999999999
       ],
       "detailed_scores": {
-        "Fenwick Tree (BIT)": {
+        "BIT": {
           "self_confidence": 0.9,
           "embedding_similarity": 0.7200000000000001,
           "rule_based_score": 0.0
         },
-        "セグメント木 (SEG)": {
+        "SEG": {
           "self_confidence": 0.8,
           "embedding_similarity": 0.6400000000000001,
           "rule_based_score": 0.0
         },
-        "二分探索 (BIN)": {
+        "BIN": {
           "self_confidence": 0.7,
           "embedding_similarity": 0.5599999999999999,
           "rule_based_score": 0.0

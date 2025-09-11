@@ -47,29 +47,74 @@ elif env_basename:
 else:
     unified_results_path = default_data_path
 
-sentence_transformer_model = "intfloat/multilingual-e5-small"
 top_k_tags = 10
 
-# === Lazy load model ===
-_model = None
-def get_model():
-    global _model
-    if _model is None:
-        print(f"[Model] Loading {sentence_transformer_model}")
-        from sentence_transformers import SentenceTransformer
-        _model = SentenceTransformer(sentence_transformer_model)
-    return _model
+# === Lightweight Japanese text similarity with pre-computed tag vectors ===
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
 
-# Load pre-computed tag embeddings
-all_tag_embeddings_path = os.path.join(BASE_DIR, "app/data/all_tag_embeddings.pkl")
+# Global vectorizer and pre-computed tag vectors
+_vectorizer = None
+_tag_vectors = None
+
+def init_tag_vectorizer(all_tags):
+    """Initialize TF-IDF vectorizer with all tags"""
+    global _vectorizer, _tag_vectors
+    
+    if _vectorizer is None and all_tags:
+        print(f"[Vectorizer] Initializing with {len(all_tags)} tags")
+        _vectorizer = TfidfVectorizer(
+            analyzer='char',
+            ngram_range=(1, 3),  # Use 1-3 character n-grams
+            lowercase=False  # Keep original case for Japanese
+        )
+        
+        # Fit vectorizer on all tags and pre-compute their vectors
+        _tag_vectors = _vectorizer.fit_transform(all_tags)
+        print(f"[Vectorizer] Pre-computed vectors for {len(all_tags)} tags")
+
+def calculate_query_tag_similarities(query, all_tags_list):
+    """Calculate similarities between query and all pre-computed tag vectors"""
+    global _vectorizer, _tag_vectors
+    
+    if _vectorizer is None or _tag_vectors is None:
+        return [0.0] * len(all_tags_list)
+    
+    try:
+        # Transform query using the fitted vectorizer
+        query_vector = _vectorizer.transform([query])
+        
+        # Calculate cosine similarity with all tag vectors
+        similarities = cosine_similarity(query_vector, _tag_vectors)[0]
+        
+        return similarities.tolist()
+    except:
+        return [0.0] * len(all_tags_list)
+
+# Load all unique tags and pre-compute their vectors
+all_tags = set()
 try:
-    with open(all_tag_embeddings_path, "rb") as f:
-        tag_embedding_data = pickle.load(f)
-    all_tag_embeddings = tag_embedding_data["tag_embeddings"]
-    print(f"Loaded {len(all_tag_embeddings)} pre-computed tag embeddings")
-except FileNotFoundError:
-    print(f"Warning: Pre-computed embeddings not found at {all_tag_embeddings_path}")
-    all_tag_embeddings = {}
+    with open(unified_results_path, encoding="utf-8") as f:
+        loaded = json.load(f)
+        if isinstance(loaded, dict) and "results" in loaded and isinstance(loaded["results"], dict):
+            tag_problems_temp = loaded["results"]
+        else:
+            tag_problems_temp = loaded
+    
+    for problem in tag_problems_temp.values():
+        tags = problem.get('tags', [])
+        all_tags.update(tags)
+    
+    all_tags = list(all_tags)
+    print(f"Loaded {len(all_tags)} unique tags for lightweight processing")
+    
+    # Initialize vectorizer and pre-compute tag vectors
+    init_tag_vectorizer(all_tags)
+    
+except Exception as e:
+    print(f"Warning: Could not load tags: {e}")
+    all_tags = []
 
 # Load problem data (supports both unified and standard formats)
 try:
@@ -294,8 +339,7 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
         # 重複除去
         expanded_queries = list(dict.fromkeys(expanded_queries))
         
-        # クエリベクトル化（遅延ロードモデルを使用）
-        query_vecs = get_model().encode(expanded_queries)
+        # No vector computation needed for lightweight similarity
 
         # 問題抽出（改良版タグマッチング）
         recommend = []
@@ -310,22 +354,23 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
             problem_models = {}
             print("Warning: Could not fetch external data, using fallback")
         
-        # Step 1: Find top 5 similar tags using pre-computed embeddings
+        # Step 1: Find top 5 similar tags using lightweight text similarity
         similar_tags = []
         weights = [1.0, 0.8, 0.6, 0.4, 0.2]
         
-        if all_tag_embeddings:
-            # Calculate similarities with all available tags
+        if all_tags:
+            # Calculate similarities with all available tags using pre-computed vectors
             tag_similarities = []
-            for tag, tag_embedding in all_tag_embeddings.items():
+            
+            # Get maximum similarity for each tag across all queries
+            for i, tag in enumerate(all_tags):
                 max_sim = 0.0
                 
-                # Check similarity with each query
-                for query_vec in query_vecs:
-                    sim = np.dot(tag_embedding, query_vec) / (
-                        np.linalg.norm(tag_embedding) * np.linalg.norm(query_vec) + 1e-8
-                    )
-                    max_sim = max(max_sim, sim)
+                # Calculate vectorized similarity for each query
+                for query in expanded_queries:
+                    similarities = calculate_query_tag_similarities(query, all_tags)
+                    if i < len(similarities):
+                        max_sim = max(max_sim, similarities[i])
                 
                 # Check exact matches with aliases (boost score for exact matches)
                 for original_query in query_list:
@@ -342,14 +387,13 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
             tag_similarities.sort(key=lambda x: x[1], reverse=True)
             similar_tags = [tag for tag, _ in tag_similarities[:5]]
         
-        # Fallback to available tags if no pre-computed embeddings
-        available_tags = list(all_tag_embeddings.keys()) if all_tag_embeddings else []
-        if not similar_tags and available_tags:
-            similar_tags = available_tags[:5]
+        # Fallback to available tags if no similarities found
+        if not similar_tags and all_tags:
+            similar_tags = all_tags[:5]
         
         # Ensure we have exactly 5 tags, pad with available tags if needed
-        while len(similar_tags) < 5 and len(available_tags) > len(similar_tags):
-            for tag in available_tags:
+        while len(similar_tags) < 5 and len(all_tags) > len(similar_tags):
+            for tag in all_tags:
                 if tag not in similar_tags:
                     similar_tags.append(tag)
                     break
