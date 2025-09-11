@@ -10,6 +10,7 @@ __pycache__/
 
 # Virtual environment
 venv/
+venv_light/
 env/
 
 # IDE/Editor files
@@ -51,6 +52,11 @@ render.yaml
 app/data/problems_data_backup.json
 app/data/*.tmp
 app/data/*.bak
+
+# Large model files (not needed for lightweight implementation)
+*.bin
+app/data/cc.ja.300.bin
+cc.ja.300.bin
 
 # Local testing files
 test_*.py

@@ -30,6 +30,16 @@ AGENTS.md
 Procfile
 runtime.txt
 
+# 大きなモデルファイル（軽量版で不要）
+app/data/cc.ja.300.bin
+cc.ja.300.bin
+*.bin
+cc.ja.300.bin.gz
+
+# 開発用仮想環境
+venv_light/
+venv/
+
 # アプリで使用される最小限のファイルのみ保持
 
 # アプリデータのコピーファイル（重複排除）
