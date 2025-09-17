@@ -49,47 +49,138 @@ else:
 
 top_k_tags = 10
 
-# === Lightweight Japanese text similarity with pre-computed tag vectors ===
-from sklearn.feature_extraction.text import TfidfVectorizer
+# === Compressed FastText Japanese text similarity with pre-computed tag vectors ===
+try:
+    import compress_fasttext as cft
+    COMPRESS_FASTTEXT_AVAILABLE = True
+except ImportError:
+    print("Warning: compress-fasttext not available. Falling back to simple similarity.")
+    COMPRESS_FASTTEXT_AVAILABLE = False
+
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
-# Global vectorizer and pre-computed tag vectors
-_vectorizer = None
-_tag_vectors = None
+# Global compressed FastText model and pre-computed tag vectors
+_compressed_model = None
+_precomputed_tag_vectors = None
+_all_tags_list = None
 
-def init_tag_vectorizer(all_tags):
-    """Initialize TF-IDF vectorizer with all tags"""
-    global _vectorizer, _tag_vectors
+def load_precomputed_tag_vectors():
+    """Load precomputed tag vectors from pkl file (prioritize high-precision version)"""
+    # Try high-precision version first
+    high_precision_path = os.path.join(BASE_DIR, 'app', 'data', 'tag_vectors_high_precision.pkl')
+    if os.path.exists(high_precision_path):
+        try:
+            with open(high_precision_path, 'rb') as f:
+                vectors = pickle.load(f)
+                print(f"[CompressedFT] Using high-precision tag vectors ({len(vectors)} tags)")
+                return vectors
+        except Exception as e:
+            print(f"Warning: Could not load high-precision tag vectors: {e}")
     
-    if _vectorizer is None and all_tags:
-        print(f"[Vectorizer] Initializing with {len(all_tags)} tags")
-        _vectorizer = TfidfVectorizer(
-            analyzer='char',
-            ngram_range=(1, 3),  # Use 1-3 character n-grams
-            lowercase=False  # Keep original case for Japanese
-        )
+    # Fallback to standard version
+    try:
+        tag_vectors_path = os.path.join(BASE_DIR, 'app', 'data', 'tag_vectors_compressed.pkl')
+        with open(tag_vectors_path, 'rb') as f:
+            vectors = pickle.load(f)
+            print(f"[CompressedFT] Using standard tag vectors ({len(vectors)} tags)")
+            return vectors
+    except FileNotFoundError:
+        print("Warning: Precomputed tag vectors not found. Please run compute_tag_vectors.py first.")
+        return {}
+    except Exception as e:
+        print(f"Warning: Could not load precomputed tag vectors: {e}")
+        return {}
+
+def init_compressed_fasttext(all_tags):
+    """Initialize compressed FastText model and precomputed tag vectors"""
+    global _compressed_model, _precomputed_tag_vectors, _all_tags_list
+    
+    if _compressed_model is None:
+        if COMPRESS_FASTTEXT_AVAILABLE:
+            try:
+                # Load compressed FastText model (prioritize high-precision version)
+                high_precision_model_path = os.path.join(BASE_DIR, 'cc.ja.300.high_precision.bin')
+                compressed_model_path = os.path.join(BASE_DIR, 'cc.ja.300.compressed.bin')
+                
+                if os.path.exists(high_precision_model_path):
+                    print("[CompressedFT] Loading high-precision compressed FastText model...")
+                    _compressed_model = cft.models.CompressedFastTextKeyedVectors.load(high_precision_model_path)
+                    print(f"[CompressedFT] High-precision model loaded, vocab size: {len(_compressed_model.key_to_index)}")
+                elif os.path.exists(compressed_model_path):
+                    print("[CompressedFT] Loading standard compressed FastText model...")
+                    _compressed_model = cft.models.CompressedFastTextKeyedVectors.load(compressed_model_path)
+                    print(f"[CompressedFT] Standard model loaded, vocab size: {len(_compressed_model.key_to_index)}")
+                else:
+                    print("Warning: No compressed FastText model found. Using fallback similarity.")
+                    _compressed_model = None
+            except Exception as e:
+                print(f"Warning: Could not load compressed FastText model: {e}")
+                _compressed_model = None
         
-        # Fit vectorizer on all tags and pre-compute their vectors
-        _tag_vectors = _vectorizer.fit_transform(all_tags)
-        print(f"[Vectorizer] Pre-computed vectors for {len(all_tags)} tags")
+        # Load precomputed tag vectors
+        _precomputed_tag_vectors = load_precomputed_tag_vectors()
+        _all_tags_list = list(_precomputed_tag_vectors.keys()) if _precomputed_tag_vectors else all_tags
+        
+        if _precomputed_tag_vectors:
+            print(f"[CompressedFT] Loaded {len(_precomputed_tag_vectors)} precomputed tag vectors")
+        else:
+            print("[CompressedFT] No precomputed tag vectors available")
+
+def get_query_embedding(query):
+    """Get query embedding using compressed FastText model"""
+    if _compressed_model is None:
+        # Fallback: return random vector for basic functionality
+        return np.random.random(300)  # Default FastText dimension
+    
+    words = query.split()
+    vectors = []
+    
+    for word in words:
+        if word in _compressed_model:
+            vectors.append(_compressed_model[word])
+    
+    if vectors:
+        return np.mean(vectors, axis=0)
+    else:
+        return np.zeros(_compressed_model.vector_size)
+
+def calculate_compressed_similarity(query, tag):
+    """Calculate similarity between query and tag using compressed FastText"""
+    if not _precomputed_tag_vectors or tag not in _precomputed_tag_vectors:
+        return 0.0
+    
+    try:
+        query_vector = get_query_embedding(query)
+        tag_vector = _precomputed_tag_vectors[tag]
+        
+        # Calculate cosine similarity
+        similarity = cosine_similarity([query_vector], [tag_vector])[0][0]
+        return float(similarity)
+    except Exception as e:
+        print(f"Warning: Similarity calculation failed for query='{query}', tag='{tag}': {e}")
+        return 0.0
 
 def calculate_query_tag_similarities(query, all_tags_list):
-    """Calculate similarities between query and all pre-computed tag vectors"""
-    global _vectorizer, _tag_vectors
-    
-    if _vectorizer is None or _tag_vectors is None:
+    """Calculate similarities between query and all tags using compressed FastText"""
+    if not _precomputed_tag_vectors:
         return [0.0] * len(all_tags_list)
     
     try:
-        # Transform query using the fitted vectorizer
-        query_vector = _vectorizer.transform([query])
+        query_vector = get_query_embedding(query)
+        similarities = []
         
-        # Calculate cosine similarity with all tag vectors
-        similarities = cosine_similarity(query_vector, _tag_vectors)[0]
+        for tag in all_tags_list:
+            if tag in _precomputed_tag_vectors:
+                tag_vector = _precomputed_tag_vectors[tag]
+                similarity = cosine_similarity([query_vector], [tag_vector])[0][0]
+                similarities.append(float(similarity))
+            else:
+                similarities.append(0.0)
         
-        return similarities.tolist()
-    except:
+        return similarities
+    except Exception as e:
+        print(f"Warning: Batch similarity calculation failed: {e}")
         return [0.0] * len(all_tags_list)
 
 # Load all unique tags and pre-compute their vectors
@@ -107,10 +198,10 @@ try:
         all_tags.update(tags)
     
     all_tags = list(all_tags)
-    print(f"Loaded {len(all_tags)} unique tags for lightweight processing")
+    print(f"Loaded {len(all_tags)} unique tags for compressed FastText processing")
     
-    # Initialize vectorizer and pre-compute tag vectors
-    init_tag_vectorizer(all_tags)
+    # Initialize compressed FastText model and precomputed tag vectors
+    init_compressed_fasttext(all_tags)
     
 except Exception as e:
     print(f"Warning: Could not load tags: {e}")
@@ -354,23 +445,22 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
             problem_models = {}
             print("Warning: Could not fetch external data, using fallback")
         
-        # Step 1: Find top 5 similar tags using lightweight text similarity
+        # Step 1: Find top 5 similar tags using compressed FastText similarity
         similar_tags = []
         weights = [1.0, 0.8, 0.6, 0.4, 0.2]
         
         if all_tags:
-            # Calculate similarities with all available tags using pre-computed vectors
+            # Calculate similarities with all available tags using compressed FastText
             tag_similarities = []
             
             # Get maximum similarity for each tag across all queries
-            for i, tag in enumerate(all_tags):
+            for tag in all_tags:
                 max_sim = 0.0
                 
-                # Calculate vectorized similarity for each query
+                # Calculate compressed FastText similarity for each query
                 for query in expanded_queries:
-                    similarities = calculate_query_tag_similarities(query, all_tags)
-                    if i < len(similarities):
-                        max_sim = max(max_sim, similarities[i])
+                    sim = calculate_compressed_similarity(query, tag)
+                    max_sim = max(max_sim, sim)
                 
                 # Check exact matches with aliases (boost score for exact matches)
                 for original_query in query_list:

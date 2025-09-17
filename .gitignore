@@ -39,6 +39,7 @@ compress_test.py
 # 開発用仮想環境
 venv_light/
 venv/
+.venv311/
 
 # アプリで使用される最小限のファイルのみ保持
 
