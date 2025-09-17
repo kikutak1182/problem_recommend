@@ -33,6 +33,8 @@ runtime.txt
 # 大きなモデルファイル（軽量版で不要）
 app/data/cc.ja.300.bin
 cc.ja.300.bin
+cc.ja.300.compressed.bin
+cc.ja.300.high_precision.bin
 cc.ja.300.bin.gz
 compress_test.py
 
