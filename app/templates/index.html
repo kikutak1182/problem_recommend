@@ -269,17 +269,6 @@
             color: var(--text-secondary);
         }
 
-        .similar-tag {
-            display: inline-block;
-            padding: 0.125rem 0.5rem;
-            background-color: var(--accent-color);
-            color: white;
-            border-radius: var(--radius-sm);
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin: 0 0.125rem;
-        }
-
         .tags-list {
             margin-top: 0.75rem;
         }
@@ -491,11 +480,11 @@
                 <div style="color: var(--text-secondary); line-height: 1.6;">
                     <ul style="margin: 0; padding-left: 1.5rem;">
                         <li style="margin-bottom: 0.5rem;"><strong>ユーザー名入力あり</strong> → 自分のレート以上の問題を推薦</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>ユーザー名未入力</strong> → タグに関連する全難易度の問題をランダム表示</li>
-                        <li style="margin-bottom: 0.5rem;"><strong>入力したアルゴリズムに関連した問題をレコメンド</strong></li>
+                        <li style="margin-bottom: 0.5rem;"><strong>ユーザー名未入力</strong> → 選択タグに関連する全難易度の問題からランダム表示</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>チェックボックスで選んだ最大5タグ</strong>をもとに推薦</li>
                     </ul>
                     <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-muted);">
-                        例：「動的計画法」「グラフ」「フロー」「二分探索」などのアルゴリズム名を入力してください
+                        例：「動的計画法」「グラフ」「フロー」「二分探索」などのタグをチェックしてください（最大5つ）
                     </p>
                 </div>
             </section>
@@ -517,18 +506,30 @@
                         >
                     </div>
 
+                    
+
                     <div class="form-group">
-                        <label for="queries" class="form-label">
-                            <i class="fas fa-tags"></i> 興味のあるアルゴリズム・分野
+                        <label class="form-label">
+                            <i class="fas fa-check-square"></i> タグを選択（最大5つ）
                         </label>
-                        <textarea 
-                            id="queries"
-                            name="queries" 
-                            class="form-input form-textarea"
-                            placeholder="例：&#10;動的計画法&#10;グラフ理論&#10;二分探索"
-                            required
-                        >{{ queries or '' }}</textarea>
-                        <small class="text-muted">1行ずつ入力してください</small>
+                        <div id="tag-box" style="max-height: 240px; overflow: auto; border: 1px solid var(--border-color); padding: .5rem; border-radius: var(--radius-md); background: var(--bg-primary);">
+                            {% if all_tags %}
+                                {% for tag in all_tags %}
+                                    <label style="display: inline-block; margin: .25rem 1rem .25rem 0; white-space: nowrap;">
+                                        <input
+                                            type="checkbox"
+                                            name="selected_tags"
+                                            value="{{ tag }}"
+                                            {% if selected_tags and tag in selected_tags %}checked{% endif %}
+                                        />
+                                        {{ tag }}
+                                    </label>
+                                {% endfor %}
+                            {% else %}
+                                <div class="text-muted" style="font-size: .9em;">タグが読み込まれていません。</div>
+                            {% endif %}
+                        </div>
+                        <small class="text-muted">※ 最大5つまで選べます（それ以上は無効化されます）</small>
                     </div>
 
                     <button type="submit" class="submit-btn" id="submit-btn">
@@ -568,14 +569,15 @@
                             <i class="fas fa-list-ol"></i>
                             {{ result|length }}件見つかりました
                         </span>
-                        {% if similar_tags %}
-                        <span class="info-badge">
-                            <i class="fas fa-tags"></i>
-                            類似タグ: 
-                            {% for tag in similar_tags %}
-                                <span class="similar-tag">{{ tag }}</span>
-                                {% if not loop.last %}, {% endif %}
-                            {% endfor %}
+                        {% if selected_tags %}
+                        <span class="info-badge" style="display:flex; align-items:center; gap:.375rem; flex-wrap:wrap;">
+                            <i class="fas fa-check"></i>
+                            <span>選択タグ:</span>
+                            <span>
+                              {% for tag in selected_tags %}
+                                <span class="tag" style="margin-right:.25rem;">{{ tag }}</span>
+                              {% endfor %}
+                            </span>
                         </span>
                         {% endif %}
                     </div>
@@ -638,6 +640,19 @@
                 </div>
             </section>
             {% endif %}
+
+            <script>
+              // 最大5チェックに制限（クライアント側）
+              document.addEventListener('change', function(e){
+                if (e.target && e.target.name === 'selected_tags' && e.target.type === 'checkbox') {
+                  var boxes = document.querySelectorAll('input[name="selected_tags"]:checked');
+                  if (boxes.length > 5) {
+                    e.target.checked = false;
+                    alert('タグは最大5つまで選べます。');
+                  }
+                }
+              });
+            </script>
         </div>
     </main>
 
@@ -678,19 +693,7 @@
             submitBtn.disabled = true;
         });
 
-        // Auto-resize textarea
-        function autoResize(textarea) {
-            textarea.style.height = 'auto';
-            textarea.style.height = Math.max(120, textarea.scrollHeight) + 'px';
-        }
-
-        const textarea = document.getElementById('queries');
-        textarea.addEventListener('input', function() {
-            autoResize(this);
-        });
-
-        // Initialize textarea height
-        autoResize(textarea);
+        // queries テキストエリアは廃止（チェックボックスのみ利用）
     </script>
 </body>
 </html>
