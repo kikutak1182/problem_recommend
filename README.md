@@ -1,36 +1,36 @@
-Atcoderのユーザーネームと学びたいアルゴリズムを入力すると、関連した自分のレートに近いdifficultyの問題を提案してくれます。
+Atcoderのユーザーネームと学びたいアルゴリズムから、関連した自分のレートに近いdifficultyの問題を提案してくれます。
+その過程でAtcoderの問題のタグ付けと、URLの結びつけを行なったので、個人開発などご自由にお使いください。
 
-現在修正中... developブランチにて作業中　こんな感じのものが出来上がる予定
-<img width="1904" height="1064" alt="スクリーンショット 2025-09-02 0 28 09" src="https://github.com/user-attachments/assets/61fb7afa-ac6b-45ea-a40a-77a37011dfed" />
-<img width="1907" height="1069" alt="スクリーンショット 2025-09-02 0 28 58" src="https://github.com/user-attachments/assets/4c975f0b-8101-4226-8964-dbeec18a1448" />
+アプリURL:　https://problem-recommend-150123537389.asia-northeast1.run.app/
+
+下図：アプリのイメージ
+<img width="1400" height="875" alt="image" src="https://github.com/user-attachments/assets/a5e12bc7-1cb1-463b-8226-147a1c1b3a34" />
+
+<img width="1400" height="873" alt="image" src="https://github.com/user-attachments/assets/960df563-e88a-4b73-897e-70d5175f83e9" />
 
 
-sentencetransformerで入力アルゴリズムとタグとのコサイン類似度を計算し、類似度の高いタグを抽出、関連する問題を検索してユーザーのレートに近い問題を推薦します。
-複数のアルゴリズム/単語を組み合わせた検索が可能です。
-またapp/data/problems_data.jsonに問題urlとタグデータが入っています。
+
+AI、自然言語処理、ルールベースからタグを自作しました。
+関連する問題を検索してユーザーのレートに近い問題を推薦します。複数のアルゴリズム/単語を組み合わせた検索が可能です。
+Google Cloud Runでデプロイしています。
+
+
+ディレクトリ構成
+```
+  .
+  ├── .dockerignore
+  ├── .gitignore
+  ├── Dockerfile
+  ├── README.md                          # プロジェクト説明
+  ├── requirements.txt                   # Python依存関係
+  └── app
+      ├── main.py                        # アプリケーション本体
+      ├── templates
+      │   └── index.html                 # メインページHTML
+      └── data
+          ├── editorial_mappings.json    # 解説URLデータ
+          ├── problems_data.json         # 問題タグデータ
+          └── tag_definitions.json       # タグ定義データ
 
 ```
-  ├── README.md                     # プロジェクト説明
-  ├── requirements.txt              # Python依存関係
-  ├── render.yaml                   # デプロイ設定
-  ├── server.log                    # サーバーログ
-  └── app/                          # メインアプリケーション
-      ├── main.py                   # FastAPIアプリケーション本体
-      ├── data/                     # データファイル
-      │   ├── problems_data.json    # 問題データ
-      │   └── tag_definitions.json  # タグ定義データ
-      └── templates/                # HTMLテンプレート
-          └── index.html            # メインページ
-```
 
-
-以前までのアプリのイメージ
-
-![スクリーンショット 2025-06-25 23 17 13](https://github.com/user-attachments/assets/730f19f4-c732-4229-918e-4d740d567440)
-
-
-
-
-
-~~https://atcoder-problem-recommend.onrender.com/~~
-（立ち上げに恐ろしく時間がかかります。）
