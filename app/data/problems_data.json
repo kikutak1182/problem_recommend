@@ -96,9 +96,9 @@
       "problem_url": "https://atcoder.jp/contests/abc175/tasks/abc175_e",
       "editorial_url": "https://atcoder.jp/contests/abc175/editorial/54",
       "tags": [
-        "動的計画法 (DP)",
-        "区間スケジューリング (SCH)",
-        "尺取り法 (2PT)"
+        "動的計画法",
+        "区間スケジューリング",
+        "尺取り法"
       ],
       "tag_ids": [
         "DP",
@@ -170,9 +170,9 @@
       "problem_url": "https://atcoder.jp/contests/abc176/tasks/abc176_d",
       "editorial_url": "https://atcoder.jp/contests/abc176/editorial/65",
       "tags": [
-        "幅優先探索 (BFS)",
-        "0-1 BFS (01B)",
-        "ダイクストラ法 (DJK)"
+        "幅優先探索",
+        "0-1 BFS",
+        "ダイクストラ法"
       ],
       "tag_ids": [
         "BFS",
@@ -244,9 +244,9 @@
       "problem_url": "https://atcoder.jp/contests/abc176/tasks/abc176_f",
       "editorial_url": "https://atcoder.jp/contests/abc176/editorial/67",
       "tags": [
-        "動的計画法 (DP)",
-        "桁DP (KDP)",
-        "メモ化再帰 (MEM)"
+        "動的計画法",
+        "桁DP",
+        "メモ化再帰"
       ],
       "tag_ids": [
         "DP",
@@ -503,9 +503,9 @@
       "problem_url": "https://atcoder.jp/contests/abc179/tasks/abc179_d",
       "editorial_url": "https://atcoder.jp/contests/abc179/editorial/121",
       "tags": [
-        "動的計画法 (DP)",
-        "いもす法 (IMO)",
-        "桁DP (KDP)"
+        "動的計画法",
+        "いもす法",
+        "桁DP"
       ],
       "tag_ids": [
         "DP",
@@ -651,9 +651,9 @@
       "problem_url": "https://atcoder.jp/contests/abc180/tasks/abc180_e",
       "editorial_url": "https://atcoder.jp/contests/abc180/editorial/154",
       "tags": [
-        "動的計画法 (DP)",
-        "bitDP (BDP)",
-        "巡回セールスマン問題 (TSP)"
+        "動的計画法",
+        "bitDP",
+        "巡回セールスマン問題"
       ],
       "tag_ids": [
         "DP",
@@ -910,9 +910,9 @@
       "problem_url": "https://atcoder.jp/contests/abc182/tasks/abc182_f",
       "editorial_url": "https://atcoder.jp/contests/abc182/editorial/293",
       "tags": [
-        "動的計画法 (DP)",
-        "組み合わせ論 (CMB)",
-        "桁DP (KDP)"
+        "動的計画法",
+        "組み合わせ論",
+        "桁DP"
       ],
       "tag_ids": [
         "DP",
@@ -984,9 +984,9 @@
       "problem_url": "https://atcoder.jp/contests/abc183/tasks/abc183_e",
       "editorial_url": "https://atcoder.jp/contests/abc183/editorial/179",
       "tags": [
-        "動的計画法 (DP)",
-        "累積和 (CUM)",
-        "幾何 (GEO)"
+        "動的計画法",
+        "累積和",
+        "幾何"
       ],
       "tag_ids": [
         "DP",
@@ -1132,9 +1132,9 @@
       "problem_url": "https://atcoder.jp/contests/abc184/tasks/abc184_e",
       "editorial_url": "https://atcoder.jp/contests/abc184/editorial/352",
       "tags": [
-        "幅優先探索 (BFS)",
-        "0-1 BFS (01B)",
-        "動的計画法 (DP)"
+        "幅優先探索",
+        "0-1 BFS",
+        "動的計画法"
       ],
       "tag_ids": [
         "BFS",
@@ -1243,9 +1243,9 @@
       "problem_url": "https://atcoder.jp/contests/abc185/tasks/abc185_e",
       "editorial_url": "https://atcoder.jp/contests/abc185/editorial/356",
       "tags": [
-        "動的計画法 (DP)",
-        "編集距離 (EDT)",
-        "累積和 (CUM)"
+        "動的計画法",
+        "編集距離",
+        "累積和"
       ],
       "tag_ids": [
         "DP",
@@ -1282,7 +1282,7 @@
       "tags": [
         "XOR演算",
         "セグメント木",
-        "Fenwick Tree (BIT)"
+        "Fenwick Tree"
       ],
       "tag_ids": [
         "XOR",
@@ -1354,9 +1354,9 @@
       "problem_url": "https://atcoder.jp/contests/abc186/tasks/abc186_e",
       "editorial_url": "https://atcoder.jp/contests/abc186/editorial/401",
       "tags": [
-        "最大公約数 (GCD)",
-        "ユークリッドの互除法 (EUC)",
-        "中国剰余定理 (CRT)"
+        "最大公約数",
+        "ユークリッドの互除法",
+        "中国剰余定理"
       ],
       "tag_ids": [
         "GCD",
@@ -1577,13 +1577,13 @@
       "editorial_url": "https://atcoder.jp/contests/abc188/editorial/477",
       "tags": [
         "DAG",
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)"
+        "動的計画法",
+        "最適化問題"
       ],
       "tag_ids": [
         "DAG",
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)"
+        "DP",
+        "OPT"
       ],
       "confidence_scores": [
         1.855,
@@ -1596,12 +1596,12 @@
           "embedding_similarity": 0.76,
           "rule_based_score": 1.0
         },
-        "動的計画法 (DP)": {
+        "DP": {
           "self_confidence": 0.9,
           "embedding_similarity": 0.7200000000000001,
           "rule_based_score": 0.0
         },
-        "最適化問題 (OPT)": {
+        "OPT": {
           "self_confidence": 0.8,
           "embedding_similarity": 0.6400000000000001,
           "rule_based_score": 0.0
@@ -1909,9 +1909,9 @@
       "problem_url": "https://atcoder.jp/contests/abc190/tasks/abc190_f",
       "editorial_url": "https://atcoder.jp/contests/abc190/editorial/631",
       "tags": [
-        "Fenwick Tree (BIT)",
-        "組み合わせ論 (CMB)",
-        "最長増加部分列 (LIS)"
+        "Fenwick Tree",
+        "組み合わせ論",
+        "最長増加部分列"
       ],
       "tag_ids": [
         "BIT",
@@ -2057,9 +2057,9 @@
       "problem_url": "https://atcoder.jp/contests/abc191/tasks/abc191_f",
       "editorial_url": "https://atcoder.jp/contests/abc191/editorial/586",
       "tags": [
-        "最大公約数 (GCD)",
-        "約数列挙 (DIV)",
-        "ユークリッドの互除法 (EUC)"
+        "最大公約数",
+        "約数列挙",
+        "ユークリッドの互除法"
       ],
       "tag_ids": [
         "GCD",
@@ -2168,9 +2168,9 @@
       "problem_url": "https://atcoder.jp/contests/abc192/tasks/abc192_f",
       "editorial_url": "https://atcoder.jp/contests/abc192/editorial/705",
       "tags": [
-        "動的計画法 (DP)",
-        "全探索 (BRT)",
-        "桁DP (KDP)"
+        "動的計画法",
+        "全探索",
+        "桁DP"
       ],
       "tag_ids": [
         "DP",
@@ -2538,9 +2538,9 @@
       "problem_url": "https://atcoder.jp/contests/abc195/tasks/abc195_f",
       "editorial_url": "https://atcoder.jp/contests/abc195/editorial/858",
       "tags": [
-        "最大公約数 (GCD)",
-        "素数 (PRM)",
-        "bitDP (BDP)"
+        "最大公約数",
+        "素数",
+        "bitDP"
       ],
       "tag_ids": [
         "GCD",
@@ -2760,9 +2760,9 @@
       "problem_url": "https://atcoder.jp/contests/abc197/tasks/abc197_e",
       "editorial_url": "https://atcoder.jp/contests/abc197/editorial/995",
       "tags": [
-        "動的計画法 (DP)",
-        "最長増加部分列 (LIS)",
-        "二分探索 (BIN)"
+        "動的計画法",
+        "最長増加部分列",
+        "二分探索"
       ],
       "tag_ids": [
         "DP",
@@ -3056,9 +3056,9 @@
       "problem_url": "https://atcoder.jp/contests/abc199/tasks/abc199_e",
       "editorial_url": "https://atcoder.jp/contests/abc199/editorial/1164",
       "tags": [
-        "動的計画法 (DP)",
-        "bitDP (BDP)",
-        "組み合わせ論 (CMB)"
+        "動的計画法",
+        "bitDP",
+        "組み合わせ論"
       ],
       "tag_ids": [
         "DP",
@@ -3167,9 +3167,9 @@
       "problem_url": "https://atcoder.jp/contests/abc200/tasks/abc200_e",
       "editorial_url": "https://atcoder.jp/contests/abc200/editorial/1247",
       "tags": [
-        "動的計画法 (DP)",
-        "累積和 (CUM)",
-        "桁DP (KDP)"
+        "動的計画法",
+        "累積和",
+        "桁DP"
       ],
       "tag_ids": [
         "DP",
@@ -3352,9 +3352,9 @@
       "problem_url": "https://atcoder.jp/contests/abc201/tasks/abc201_f",
       "editorial_url": "https://atcoder.jp/contests/abc201/editorial/1829",
       "tags": [
-        "動的計画法 (DP)",
-        "累積和 (CUM)",
-        "セグメント木 (SEG)"
+        "動的計画法",
+        "累積和",
+        "セグメント木"
       ],
       "tag_ids": [
         "DP",
@@ -3426,9 +3426,9 @@
       "problem_url": "https://atcoder.jp/contests/abc202/tasks/abc202_e",
       "editorial_url": "https://atcoder.jp/contests/abc202/editorial/1864",
       "tags": [
-        "最小共通祖先 (LCA)",
-        "深さ優先探索 (DFS)",
-        "二分探索 (BIN)"
+        "最小共通祖先",
+        "深さ優先探索",
+        "二分探索"
       ],
       "tag_ids": [
         "LCA",
@@ -3574,9 +3574,9 @@
       "problem_url": "https://atcoder.jp/contests/abc203/tasks/abc203_f",
       "editorial_url": "https://atcoder.jp/contests/abc203/editorial/1964",
       "tags": [
-        "動的計画法 (DP)",
-        "二分探索 (BIN)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "二分探索",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -3611,9 +3611,9 @@
       "problem_url": "https://atcoder.jp/contests/abc204/tasks/abc204_c",
       "editorial_url": "https://atcoder.jp/contests/abc204/editorial/1991",
       "tags": [
-        "深さ優先探索 (DFS)",
-        "組み合わせ論 (CMB)",
-        "幅優先探索 (BFS)"
+        "深さ優先探索",
+        "組み合わせ論",
+        "幅優先探索"
       ],
       "tag_ids": [
         "DFS",
@@ -3648,9 +3648,9 @@
       "problem_url": "https://atcoder.jp/contests/abc204/tasks/abc204_d",
       "editorial_url": "https://atcoder.jp/contests/abc204/editorial/2013",
       "tags": [
-        "動的計画法 (DP)",
-        "半分全列挙 (MIT)",
-        "二分探索 (BIN)"
+        "動的計画法",
+        "半分全列挙",
+        "二分探索"
       ],
       "tag_ids": [
         "DP",
@@ -3722,8 +3722,8 @@
       "problem_url": "https://atcoder.jp/contests/abc204/tasks/abc204_f",
       "editorial_url": "https://atcoder.jp/contests/abc204/editorial/2004",
       "tags": [
-        "動的計画法 (DP)",
-        "全探索 (BRT)",
+        "動的計画法",
+        "全探索",
         "bitDP"
       ],
       "tag_ids": [
@@ -3907,9 +3907,9 @@
       "problem_url": "https://atcoder.jp/contests/abc206/tasks/abc206_e",
       "editorial_url": "https://atcoder.jp/contests/abc206/editorial/2099",
       "tags": [
-        "最大公約数 (GCD)",
-        "包除原理 (PIE)",
-        "素数 (PRM)"
+        "最大公約数",
+        "包除原理",
+        "素数"
       ],
       "tag_ids": [
         "GCD",
@@ -4018,9 +4018,9 @@
       "problem_url": "https://atcoder.jp/contests/abc207/tasks/abc207_e",
       "editorial_url": "https://atcoder.jp/contests/abc207/editorial/2154",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "桁DP",
-        "約数列挙 (DIV)"
+        "約数列挙"
       ],
       "tag_ids": [
         "DP",
@@ -4166,9 +4166,9 @@
       "problem_url": "https://atcoder.jp/contests/abc208/tasks/abc208_f",
       "editorial_url": "https://atcoder.jp/contests/abc208/editorial/2195",
       "tags": [
-        "動的計画法 (DP)",
-        "累積和 (CUM)",
-        "いもす法 (IMO)"
+        "動的計画法",
+        "累積和",
+        "いもす法"
       ],
       "tag_ids": [
         "DP",
@@ -4203,9 +4203,9 @@
       "problem_url": "https://atcoder.jp/contests/abc209/tasks/abc209_d",
       "editorial_url": "https://atcoder.jp/contests/abc209/editorial/2229",
       "tags": [
-        "幅優先探索 (BFS)",
-        "木構造 (TRE)",
-        "グラフ (GRP)"
+        "幅優先探索",
+        "木構造",
+        "グラフ"
       ],
       "tag_ids": [
         "BFS",
@@ -4277,9 +4277,9 @@
       "problem_url": "https://atcoder.jp/contests/abc209/tasks/abc209_f",
       "editorial_url": "https://atcoder.jp/contests/abc209/editorial/2233",
       "tags": [
-        "動的計画法 (DP)",
-        "組み合わせ論 (CMB)",
-        "主客転倒 (REV)"
+        "動的計画法",
+        "組み合わせ論",
+        "主客転倒"
       ],
       "tag_ids": [
         "DP",
@@ -4314,9 +4314,9 @@
       "problem_url": "https://atcoder.jp/contests/abc210/tasks/abc210_d",
       "editorial_url": "https://atcoder.jp/contests/abc210/editorial/2298",
       "tags": [
-        "動的計画法 (DP)",
-        "木構造 (TRE)",
-        "ダイクストラ法 (DJK)"
+        "動的計画法",
+        "木構造",
+        "ダイクストラ法"
       ],
       "tag_ids": [
         "DP",
@@ -4425,9 +4425,9 @@
       "problem_url": "https://atcoder.jp/contests/abc211/tasks/abc211_c",
       "editorial_url": "https://atcoder.jp/contests/abc211/editorial/2287",
       "tags": [
-        "動的計画法 (DP)",
-        "編集距離 (EDT)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "編集距離",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -4462,9 +4462,9 @@
       "problem_url": "https://atcoder.jp/contests/abc211/tasks/abc211_d",
       "editorial_url": "https://atcoder.jp/contests/abc211/editorial/2003",
       "tags": [
-        "幅優先探索 (BFS)",
-        "ダイクストラ法 (DJK)",
-        "0-1 BFS (01B)"
+        "幅優先探索",
+        "ダイクストラ法",
+        "0-1 BFS"
       ],
       "tag_ids": [
         "BFS",
@@ -4610,9 +4610,9 @@
       "problem_url": "https://atcoder.jp/contests/abc212/tasks/abc212_e",
       "editorial_url": "https://atcoder.jp/contests/abc212/editorial/2357",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "グラフ理論",
-        "半分全列挙 (MIT)"
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -4832,9 +4832,9 @@
       "problem_url": "https://atcoder.jp/contests/abc213/tasks/abc213_e",
       "editorial_url": "https://atcoder.jp/contests/abc213/editorial/2397",
       "tags": [
-        "0-1 BFS (01B)",
-        "幅優先探索 (BFS)",
-        "動的計画法 (DP)"
+        "0-1 BFS",
+        "幅優先探索",
+        "動的計画法"
       ],
       "tag_ids": [
         "0-1 BFS",
@@ -4869,9 +4869,9 @@
       "problem_url": "https://atcoder.jp/contests/abc213/tasks/abc213_f",
       "editorial_url": "https://atcoder.jp/contests/abc213/editorial/2391",
       "tags": [
-        "最長共通接頭辞 (LCP)",
-        "接尾辞配列 (SA)",
-        "編集距離 (EDT)"
+        "最長共通接頭辞",
+        "接尾辞配列",
+        "編集距離"
       ],
       "tag_ids": [
         "LCP",
@@ -5054,9 +5054,9 @@
       "problem_url": "https://atcoder.jp/contests/abc214/tasks/abc214_f",
       "editorial_url": "https://atcoder.jp/contests/abc214/editorial/2440",
       "tags": [
-        "動的計画法 (DP)",
-        "累積和 (CUM)",
-        "桁DP (KDP)"
+        "動的計画法",
+        "累積和",
+        "桁DP"
       ],
       "tag_ids": [
         "DP",
@@ -5165,9 +5165,9 @@
       "problem_url": "https://atcoder.jp/contests/abc215/tasks/abc215_d",
       "editorial_url": "https://atcoder.jp/contests/abc215/editorial/2482",
       "tags": [
-        "最大公約数 (GCD)",
-        "素因数分解 (PFT)",
-        "約数列挙 (DIV)"
+        "最大公約数",
+        "素因数分解",
+        "約数列挙"
       ],
       "tag_ids": [
         "GCD",
@@ -5424,9 +5424,9 @@
       "problem_url": "https://atcoder.jp/contests/abc216/tasks/abc216_f",
       "editorial_url": "https://atcoder.jp/contests/abc216/editorial/2560",
       "tags": [
-        "動的計画法 (DP)",
-        "包除原理 (PIE)",
-        "ビット全探索 (BBF)"
+        "動的計画法",
+        "包除原理",
+        "ビット全探索"
       ],
       "tag_ids": [
         "DP",
@@ -5499,8 +5499,8 @@
       "editorial_url": "https://atcoder.jp/contests/abc216/editorial/2561",
       "tags": [
         "期待値",
-        "動的計画法 (DP)",
-        "bitDP (BDP)"
+        "動的計画法",
+        "bitDP"
       ],
       "tag_ids": [
         "EXP",
@@ -5609,9 +5609,9 @@
       "problem_url": "https://atcoder.jp/contests/abc217/tasks/abc217_f",
       "editorial_url": "https://atcoder.jp/contests/abc217/editorial/2584",
       "tags": [
-        "動的計画法 (DP)",
-        "半分全列挙 (MIT)",
-        "二部マッチング (BPM)"
+        "動的計画法",
+        "半分全列挙",
+        "二部マッチング"
       ],
       "tag_ids": [
         "DP",
@@ -5646,9 +5646,9 @@
       "problem_url": "https://atcoder.jp/contests/abc217/tasks/abc217_g",
       "editorial_url": "https://atcoder.jp/contests/abc217/editorial/2390",
       "tags": [
-        "動的計画法 (DP)",
-        "写像12相 (MAP)",
-        "約数列挙 (DIV)"
+        "動的計画法",
+        "写像12相",
+        "約数列挙"
       ],
       "tag_ids": [
         "DP",
@@ -5683,9 +5683,9 @@
       "problem_url": "https://atcoder.jp/contests/abc217/tasks/abc217_h",
       "editorial_url": "https://atcoder.jp/contests/abc217/editorial/2581",
       "tags": [
-        "動的計画法 (DP)",
-        "Alien DP (ADP)",
-        "優先度付きキュー (PQ)"
+        "動的計画法",
+        "Alien DP",
+        "優先度付きキュー"
       ],
       "tag_ids": [
         "DP",
@@ -5905,9 +5905,9 @@
       "problem_url": "https://atcoder.jp/contests/abc218/tasks/abc218_h",
       "editorial_url": "https://atcoder.jp/contests/abc218/editorial/2602",
       "tags": [
-        "動的計画法 (DP)",
-        "貪欲法 (GRD)",
-        "最適化問題 (OPT)"
+        "動的計画法",
+        "貪欲法",
+        "最適化問題"
       ],
       "tag_ids": [
         "DP",
@@ -5942,9 +5942,9 @@
       "problem_url": "https://atcoder.jp/contests/abc219/tasks/abc219_d",
       "editorial_url": "https://atcoder.jp/contests/abc219/editorial/2651",
       "tags": [
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)",
-        "桁DP (KDP)"
+        "動的計画法",
+        "最適化問題",
+        "桁DP"
       ],
       "tag_ids": [
         "DP",
@@ -6090,9 +6090,9 @@
       "problem_url": "https://atcoder.jp/contests/abc219/tasks/abc219_h",
       "editorial_url": "https://atcoder.jp/contests/abc219/editorial/2601",
       "tags": [
-        "動的計画法 (DP)",
-        "半分全列挙 (MIT)",
-        "尺取り法 (2PT)"
+        "動的計画法",
+        "半分全列挙",
+        "尺取り法"
       ],
       "tag_ids": [
         "DP",
@@ -6127,9 +6127,9 @@
       "problem_url": "https://atcoder.jp/contests/abc220/tasks/abc220_d",
       "editorial_url": "https://atcoder.jp/contests/abc220/editorial/2682",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "桁DP",
-        "半分全列挙 (MIT)"
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -6164,7 +6164,7 @@
       "problem_url": "https://atcoder.jp/contests/abc220/tasks/abc220_e",
       "editorial_url": "https://atcoder.jp/contests/abc220/editorial/2679",
       "tags": [
-        "最小共通祖先 (LCA)",
+        "最小共通祖先",
         "木構造",
         "木DP"
       ],
@@ -6349,9 +6349,9 @@
       "problem_url": "https://atcoder.jp/contests/abc221/tasks/abc221_e",
       "editorial_url": "https://atcoder.jp/contests/abc221/editorial/2718",
       "tags": [
-        "Fenwick Tree (BIT)",
-        "座標圧縮 (CMP)",
-        "包除原理 (PIE)"
+        "Fenwick Tree",
+        "座標圧縮",
+        "包除原理"
       ],
       "tag_ids": [
         "BIT",
@@ -6423,8 +6423,8 @@
       "problem_url": "https://atcoder.jp/contests/abc221/tasks/abc221_g",
       "editorial_url": "https://atcoder.jp/contests/abc221/editorial/2724",
       "tags": [
-        "動的計画法 (DP)",
-        "Bitset (BS)",
+        "動的計画法",
+        "Bitset",
         "bitDP"
       ],
       "tag_ids": [
@@ -6460,9 +6460,9 @@
       "problem_url": "https://atcoder.jp/contests/abc221/tasks/abc221_h",
       "editorial_url": "https://atcoder.jp/contests/abc221/editorial/2719",
       "tags": [
-        "動的計画法 (DP)",
-        "累積和 (CUM)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "累積和",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -6497,9 +6497,9 @@
       "problem_url": "https://atcoder.jp/contests/abc222/tasks/abc222_d",
       "editorial_url": "https://atcoder.jp/contests/abc222/editorial/2747",
       "tags": [
-        "動的計画法 (DP)",
-        "累積和 (CUM)",
-        "Fenwick Tree (BIT)"
+        "動的計画法",
+        "累積和",
+        "Fenwick Tree"
       ],
       "tag_ids": [
         "DP",
@@ -6534,9 +6534,9 @@
       "problem_url": "https://atcoder.jp/contests/abc222/tasks/abc222_e",
       "editorial_url": "https://atcoder.jp/contests/abc222/editorial/2751",
       "tags": [
-        "動的計画法 (DP)",
-        "グラフ (GRP)",
-        "木DP (TDP)"
+        "動的計画法",
+        "グラフ",
+        "木DP"
       ],
       "tag_ids": [
         "DP",
@@ -6608,9 +6608,9 @@
       "problem_url": "https://atcoder.jp/contests/abc222/tasks/abc222_g",
       "editorial_url": "https://atcoder.jp/contests/abc222/editorial/2750",
       "tags": [
-        "最大公約数 (GCD)",
-        "約数列挙 (DIV)",
-        "ユークリッドの互除法 (EUC)"
+        "最大公約数",
+        "約数列挙",
+        "ユークリッドの互除法"
       ],
       "tag_ids": [
         "GCD",
@@ -6867,9 +6867,9 @@
       "problem_url": "https://atcoder.jp/contests/abc224/tasks/abc224_d",
       "editorial_url": "https://atcoder.jp/contests/abc224/editorial/2813",
       "tags": [
-        "幅優先探索 (BFS)",
-        "グラフ (GRP)",
-        "編集距離 (EDT)"
+        "幅優先探索",
+        "グラフ",
+        "編集距離"
       ],
       "tag_ids": [
         "BFS",
@@ -6904,9 +6904,9 @@
       "problem_url": "https://atcoder.jp/contests/abc224/tasks/abc224_e",
       "editorial_url": "https://atcoder.jp/contests/abc224/editorial/2814",
       "tags": [
-        "動的計画法 (DP)",
-        "最長増加部分列 (LIS)",
-        "木DP (TDP)"
+        "動的計画法",
+        "最長増加部分列",
+        "木DP"
       ],
       "tag_ids": [
         "DP",
@@ -7238,7 +7238,7 @@
       "editorial_url": "https://atcoder.jp/contests/abc226/editorial/2887",
       "tags": [
         "グラフ",
-        "深さ優先探索 (DFS)",
+        "深さ優先探索",
         "動的計画法"
       ],
       "tag_ids": [
@@ -7274,9 +7274,9 @@
       "problem_url": "https://atcoder.jp/contests/abc226/tasks/abc226_d",
       "editorial_url": "https://atcoder.jp/contests/abc226/editorial/2880",
       "tags": [
-        "最大公約数 (GCD)",
-        "組み合わせ論 (CMB)",
-        "動的計画法 (DP)"
+        "最大公約数",
+        "組み合わせ論",
+        "動的計画法"
       ],
       "tag_ids": [
         "GCD",
@@ -7348,9 +7348,9 @@
       "problem_url": "https://atcoder.jp/contests/abc226/tasks/abc226_f",
       "editorial_url": "https://atcoder.jp/contests/abc226/editorial/2878",
       "tags": [
-        "動的計画法 (DP)",
-        "組み合わせ論 (CMB)",
-        "最小公倍数 (LCM)"
+        "動的計画法",
+        "組み合わせ論",
+        "最小公倍数"
       ],
       "tag_ids": [
         "DP",
@@ -7533,9 +7533,9 @@
       "problem_url": "https://atcoder.jp/contests/abc227/tasks/abc227_e",
       "editorial_url": "https://atcoder.jp/contests/abc227/editorial/2908",
       "tags": [
-        "動的計画法 (DP)",
-        "貪欲法 (GRD)",
-        "編集距離 (EDT)"
+        "動的計画法",
+        "貪欲法",
+        "編集距離"
       ],
       "tag_ids": [
         "DP",
@@ -7570,9 +7570,9 @@
       "problem_url": "https://atcoder.jp/contests/abc227/tasks/abc227_f",
       "editorial_url": "https://atcoder.jp/contests/abc227/editorial/2914",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "bitDP",
-        "半分全列挙 (MIT)"
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -7646,7 +7646,7 @@
       "tags": [
         "グラフ",
         "フロー問題",
-        "深さ優先探索 (DFS)"
+        "深さ優先探索"
       ],
       "tag_ids": [
         "GRP",
@@ -7792,8 +7792,8 @@
       "problem_url": "https://atcoder.jp/contests/abc228/tasks/abc228_g",
       "editorial_url": "https://atcoder.jp/contests/abc228/editorial/2942",
       "tags": [
-        "動的計画法 (DP)",
-        "グラフ (GRP)",
+        "動的計画法",
+        "グラフ",
         "桁DP"
       ],
       "tag_ids": [
@@ -8162,9 +8162,9 @@
       "problem_url": "https://atcoder.jp/contests/abc230/tasks/abc230_f",
       "editorial_url": "https://atcoder.jp/contests/abc230/editorial/91",
       "tags": [
-        "動的計画法 (DP)",
-        "累積和 (CUM)",
-        "貪欲法 (GRD)"
+        "動的計画法",
+        "累積和",
+        "貪欲法"
       ],
       "tag_ids": [
         "DP",
@@ -8199,9 +8199,9 @@
       "problem_url": "https://atcoder.jp/contests/abc230/tasks/abc230_g",
       "editorial_url": "https://atcoder.jp/contests/abc230/editorial/3020",
       "tags": [
-        "最大公約数 (GCD)",
-        "組み合わせ論 (CMB)",
-        "包除原理 (PIE)"
+        "最大公約数",
+        "組み合わせ論",
+        "包除原理"
       ],
       "tag_ids": [
         "GCD",
@@ -8532,9 +8532,9 @@
       "problem_url": "https://atcoder.jp/contests/abc232/tasks/abc232_e",
       "editorial_url": "https://atcoder.jp/contests/abc232/editorial/3148",
       "tags": [
-        "動的計画法 (DP)",
-        "行列 (MAT)",
-        "ダブリング (DBL)"
+        "動的計画法",
+        "行列",
+        "ダブリング"
       ],
       "tag_ids": [
         "DP",
@@ -8569,9 +8569,9 @@
       "problem_url": "https://atcoder.jp/contests/abc232/tasks/abc232_f",
       "editorial_url": "https://atcoder.jp/contests/abc232/editorial/3144",
       "tags": [
-        "動的計画法 (DP)",
-        "ビット演算 (BOP)",
-        "bitDP (BDP)"
+        "動的計画法",
+        "ビット演算",
+        "bitDP"
       ],
       "tag_ids": [
         "DP",
@@ -8793,7 +8793,7 @@
       "tags": [
         "マンハッタン距離",
         "二分探索",
-        "Fenwick Tree (BIT)"
+        "Fenwick Tree"
       ],
       "tag_ids": [
         "MAN",
@@ -9050,9 +9050,9 @@
       "problem_url": "https://atcoder.jp/contests/abc234/tasks/abc234_g",
       "editorial_url": "https://atcoder.jp/contests/abc234/editorial/3227",
       "tags": [
-        "動的計画法 (DP)",
-        "累積和 (CUM)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "累積和",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -9087,9 +9087,9 @@
       "problem_url": "https://atcoder.jp/contests/abc235/tasks/abc235_d",
       "editorial_url": "https://atcoder.jp/contests/abc235/editorial/3255",
       "tags": [
-        "幅優先探索 (BFS)",
-        "グラフ (GRP)",
-        "桁DP (KDP)"
+        "幅優先探索",
+        "グラフ",
+        "桁DP"
       ],
       "tag_ids": [
         "BFS",
@@ -9420,9 +9420,9 @@
       "problem_url": "https://atcoder.jp/contests/abc236/tasks/abc236_g",
       "editorial_url": "https://atcoder.jp/contests/abc236/editorial/3286",
       "tags": [
-        "動的計画法 (DP)",
-        "グラフ (GRP)",
-        "行列 (MAT)"
+        "動的計画法",
+        "グラフ",
+        "行列"
       ],
       "tag_ids": [
         "DP",
@@ -9568,8 +9568,8 @@
       "problem_url": "https://atcoder.jp/contests/abc237/tasks/abc237_f",
       "editorial_url": "https://atcoder.jp/contests/abc237/editorial/3320",
       "tags": [
-        "最長増加部分列 (LIS)",
-        "動的計画法 (DP)",
+        "最長増加部分列",
+        "動的計画法",
         "桁DP"
       ],
       "tag_ids": [
@@ -9790,8 +9790,8 @@
       "problem_url": "https://atcoder.jp/contests/abc238/tasks/abc238_f",
       "editorial_url": "https://atcoder.jp/contests/abc238/editorial/3354",
       "tags": [
-        "動的計画法 (DP)",
-        "組み合わせ論 (CMB)",
+        "動的計画法",
+        "組み合わせ論",
         "bitDP"
       ],
       "tag_ids": [
@@ -10012,9 +10012,9 @@
       "problem_url": "https://atcoder.jp/contests/abc240/tasks/abc240_c",
       "editorial_url": "https://atcoder.jp/contests/abc240/editorial/3421",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "bitDP",
-        "座標圧縮 (CMP)"
+        "座標圧縮"
       ],
       "tag_ids": [
         "DP",
@@ -10123,9 +10123,9 @@
       "problem_url": "https://atcoder.jp/contests/abc240/tasks/abc240_h",
       "editorial_url": "https://atcoder.jp/contests/abc240/editorial/3428",
       "tags": [
-        "最長増加部分列 (LIS)",
-        "辞書順 (LEX)",
-        "動的計画法 (DP)"
+        "最長増加部分列",
+        "辞書順",
+        "動的計画法"
       ],
       "tag_ids": [
         "LIS",
@@ -10456,8 +10456,8 @@
       "problem_url": "https://atcoder.jp/contests/abc242/tasks/abc242_c",
       "editorial_url": "https://atcoder.jp/contests/abc242/editorial/3515",
       "tags": [
-        "動的計画法 (DP)",
-        "全列挙 (ENM)",
+        "動的計画法",
+        "全列挙",
         "桁DP"
       ],
       "tag_ids": [
@@ -10604,9 +10604,9 @@
       "problem_url": "https://atcoder.jp/contests/abc242/tasks/abc242_f",
       "editorial_url": "https://atcoder.jp/contests/abc242/editorial/3522",
       "tags": [
-        "包除原理 (PIE)",
-        "動的計画法 (DP)",
-        "組み合わせ論 (CMB)"
+        "包除原理",
+        "動的計画法",
+        "組み合わせ論"
       ],
       "tag_ids": [
         "PIE",
@@ -10863,9 +10863,9 @@
       "problem_url": "https://atcoder.jp/contests/abc243/tasks/abc243_g",
       "editorial_url": "https://atcoder.jp/contests/abc243/editorial/3510",
       "tags": [
-        "動的計画法 (DP)",
-        "累積和 (CUM)",
-        "約数列挙 (DIV)"
+        "動的計画法",
+        "累積和",
+        "約数列挙"
       ],
       "tag_ids": [
         "DP",
@@ -10900,9 +10900,9 @@
       "problem_url": "https://atcoder.jp/contests/abc244/tasks/abc244_e",
       "editorial_url": "https://atcoder.jp/contests/abc244/editorial/3601",
       "tags": [
-        "動的計画法 (DP)",
-        "グラフ (GRP)",
-        "ビット演算 (BOP)"
+        "動的計画法",
+        "グラフ",
+        "ビット演算"
       ],
       "tag_ids": [
         "DP",
@@ -11048,9 +11048,9 @@
       "problem_url": "https://atcoder.jp/contests/abc245/tasks/abc245_c",
       "editorial_url": "https://atcoder.jp/contests/abc245/editorial/3634",
       "tags": [
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)",
-        "尺取り法 (2PT)"
+        "動的計画法",
+        "最適化問題",
+        "尺取り法"
       ],
       "tag_ids": [
         "DP",
@@ -11307,8 +11307,8 @@
       "problem_url": "https://atcoder.jp/contests/abc246/tasks/abc246_e",
       "editorial_url": "https://atcoder.jp/contests/abc246/editorial/3702",
       "tags": [
-        "幅優先探索 (BFS)",
-        "グラフ (GRP)",
+        "幅優先探索",
+        "グラフ",
         "0-1 BFS"
       ],
       "tag_ids": [
@@ -11344,9 +11344,9 @@
       "problem_url": "https://atcoder.jp/contests/abc246/tasks/abc246_h",
       "editorial_url": "https://atcoder.jp/contests/abc246/editorial/3705",
       "tags": [
-        "動的計画法 (DP)",
-        "セグメント木 (SEG)",
-        "二分探索 (BIN)"
+        "動的計画法",
+        "セグメント木",
+        "二分探索"
       ],
       "tag_ids": [
         "DP",
@@ -11529,9 +11529,9 @@
       "problem_url": "https://atcoder.jp/contests/abc247/tasks/abc247_h",
       "editorial_url": "https://atcoder.jp/contests/abc247/editorial/3737",
       "tags": [
-        "動的計画法 (DP)",
-        "組み合わせ論 (CMB)",
-        "写像12相 (MAP)"
+        "動的計画法",
+        "組み合わせ論",
+        "写像12相"
       ],
       "tag_ids": [
         "DP",
@@ -11640,9 +11640,9 @@
       "problem_url": "https://atcoder.jp/contests/abc248/tasks/abc248_c",
       "editorial_url": "https://atcoder.jp/contests/abc248/editorial/3745",
       "tags": [
-        "動的計画法 (DP)",
-        "累積和 (CUM)",
-        "桁DP (KDP)"
+        "動的計画法",
+        "累積和",
+        "桁DP"
       ],
       "tag_ids": [
         "DP",
@@ -11788,9 +11788,9 @@
       "problem_url": "https://atcoder.jp/contests/abc248/tasks/abc248_f",
       "editorial_url": "https://atcoder.jp/contests/abc248/editorial/3794",
       "tags": [
-        "動的計画法 (DP)",
-        "グラフ (GRP)",
-        "素数 (PRM)"
+        "動的計画法",
+        "グラフ",
+        "素数"
       ],
       "tag_ids": [
         "DP",
@@ -11936,9 +11936,9 @@
       "problem_url": "https://atcoder.jp/contests/abc249/tasks/abc249_e",
       "editorial_url": "https://atcoder.jp/contests/abc249/editorial/3840",
       "tags": [
-        "動的計画法 (DP)",
-        "累積和 (CUM)",
-        "素数 (PRM)"
+        "動的計画法",
+        "累積和",
+        "素数"
       ],
       "tag_ids": [
         "DP",
@@ -12269,9 +12269,9 @@
       "problem_url": "https://atcoder.jp/contests/abc250/tasks/abc250_g",
       "editorial_url": "https://atcoder.jp/contests/abc250/editorial/3929",
       "tags": [
-        "動的計画法 (DP)",
-        "確率・期待値DP (EDP)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "確率・期待値DP",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -12343,9 +12343,9 @@
       "problem_url": "https://atcoder.jp/contests/abc251/tasks/abc251_e",
       "editorial_url": "https://atcoder.jp/contests/abc251/editorial/3960",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "bitDP",
-        "半分全列挙 (MIT)"
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -12787,9 +12787,9 @@
       "problem_url": "https://atcoder.jp/contests/abc253/tasks/abc253_e",
       "editorial_url": "https://atcoder.jp/contests/abc253/editorial/4018",
       "tags": [
-        "動的計画法 (DP)",
-        "累積和 (CUM)",
-        "桁DP (KDP)"
+        "動的計画法",
+        "累積和",
+        "桁DP"
       ],
       "tag_ids": [
         "DP",
@@ -12861,9 +12861,9 @@
       "problem_url": "https://atcoder.jp/contests/abc253/tasks/abc253_f",
       "editorial_url": "https://atcoder.jp/contests/abc253/editorial/4025",
       "tags": [
-        "Fenwick Tree (BIT)",
-        "いもす法 (IMO)",
-        "行列 (MAT)"
+        "Fenwick Tree",
+        "いもす法",
+        "行列"
       ],
       "tag_ids": [
         "BIT",
@@ -13083,9 +13083,9 @@
       "problem_url": "https://atcoder.jp/contests/abc254/tasks/abc254_f",
       "editorial_url": "https://atcoder.jp/contests/abc254/editorial/4067",
       "tags": [
-        "最大公約数 (GCD)",
-        "セグメント木 (SEG)",
-        "ユークリッドの互除法 (EUC)"
+        "最大公約数",
+        "セグメント木",
+        "ユークリッドの互除法"
       ],
       "tag_ids": [
         "GCD",
@@ -13120,9 +13120,9 @@
       "problem_url": "https://atcoder.jp/contests/abc254/tasks/abc254_g",
       "editorial_url": "https://atcoder.jp/contests/abc254/editorial/4066",
       "tags": [
-        "動的計画法 (DP)",
-        "ダブリング (DBL)",
-        "平方分割 (SQD)"
+        "動的計画法",
+        "ダブリング",
+        "平方分割"
       ],
       "tag_ids": [
         "DP",
@@ -13305,7 +13305,7 @@
       "problem_url": "https://atcoder.jp/contests/abc255/tasks/abc255_f",
       "editorial_url": "https://atcoder.jp/contests/abc255/editorial/4105",
       "tags": [
-        "深さ優先探索 (DFS)",
+        "深さ優先探索",
         "木構造",
         "木DP"
       ],
@@ -13564,9 +13564,9 @@
       "problem_url": "https://atcoder.jp/contests/abc256/tasks/abc256_g",
       "editorial_url": "https://atcoder.jp/contests/abc256/editorial/4130",
       "tags": [
-        "動的計画法 (DP)",
-        "約数列挙 (DIV)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "約数列挙",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -13971,9 +13971,9 @@
       "problem_url": "https://atcoder.jp/contests/abc258/tasks/abc258_h",
       "editorial_url": "https://atcoder.jp/contests/abc258/editorial/4214",
       "tags": [
-        "動的計画法 (DP)",
-        "累積和 (CUM)",
-        "全列挙 (ENM)"
+        "動的計画法",
+        "累積和",
+        "全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -14156,9 +14156,9 @@
       "problem_url": "https://atcoder.jp/contests/abc259/tasks/abc259_e",
       "editorial_url": "https://atcoder.jp/contests/abc259/editorial/4271",
       "tags": [
-        "最小公倍数 (LCM)",
-        "素因数分解 (PFT)",
-        "最大公約数 (GCD)"
+        "最小公倍数",
+        "素因数分解",
+        "最大公約数"
       ],
       "tag_ids": [
         "LCM",
@@ -14193,9 +14193,9 @@
       "problem_url": "https://atcoder.jp/contests/abc259/tasks/abc259_h",
       "editorial_url": "https://atcoder.jp/contests/abc259/editorial/4269",
       "tags": [
-        "動的計画法 (DP)",
-        "全探索 (BRT)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "全探索",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -14638,12 +14638,12 @@
       "editorial_url": "https://atcoder.jp/contests/abc261/editorial/4484",
       "tags": [
         "最長増加部分列",
-        "Fenwick Tree (BIT)",
+        "Fenwick Tree",
         "動的計画法"
       ],
       "tag_ids": [
         "LIS",
-        "Fenwick Tree (BIT)",
+        "BIT",
         "DP"
       ],
       "confidence_scores": [
@@ -14657,7 +14657,7 @@
           "embedding_similarity": 0.7200000000000001,
           "rule_based_score": 0.0
         },
-        "Fenwick Tree (BIT)": {
+        "BIT": {
           "self_confidence": 0.85,
           "embedding_similarity": 0.68,
           "rule_based_score": 0.0
@@ -14674,9 +14674,9 @@
       "problem_url": "https://atcoder.jp/contests/abc261/tasks/abc261_g",
       "editorial_url": "https://atcoder.jp/contests/abc261/editorial/4485",
       "tags": [
-        "動的計画法 (DP)",
-        "ダイクストラ法 (DJK)",
-        "編集距離 (EDT)"
+        "動的計画法",
+        "ダイクストラ法",
+        "編集距離"
       ],
       "tag_ids": [
         "DP",
@@ -14711,9 +14711,9 @@
       "problem_url": "https://atcoder.jp/contests/abc262/tasks/abc262_d",
       "editorial_url": "https://atcoder.jp/contests/abc262/editorial/4503",
       "tags": [
-        "動的計画法 (DP)",
-        "ビット演算 (BOP)",
-        "包除原理 (PIE)"
+        "動的計画法",
+        "ビット演算",
+        "包除原理"
       ],
       "tag_ids": [
         "DP",
@@ -14785,9 +14785,9 @@
       "problem_url": "https://atcoder.jp/contests/abc262/tasks/abc262_h",
       "editorial_url": "https://atcoder.jp/contests/abc262/editorial/4481",
       "tags": [
-        "動的計画法 (DP)",
-        "座標圧縮 (CMP)",
-        "セグメント木 (SEG)"
+        "動的計画法",
+        "座標圧縮",
+        "セグメント木"
       ],
       "tag_ids": [
         "DP",
@@ -14859,9 +14859,9 @@
       "problem_url": "https://atcoder.jp/contests/abc262/tasks/abc262_g",
       "editorial_url": "https://atcoder.jp/contests/abc262/editorial/4505",
       "tags": [
-        "動的計画法 (DP)",
-        "最長増加部分列 (LIS)",
-        "座標圧縮 (CMP)"
+        "動的計画法",
+        "最長増加部分列",
+        "座標圧縮"
       ],
       "tag_ids": [
         "DP",
@@ -14933,9 +14933,9 @@
       "problem_url": "https://atcoder.jp/contests/abc263/tasks/abc263_e",
       "editorial_url": "https://atcoder.jp/contests/abc263/editorial/4546",
       "tags": [
-        "動的計画法 (DP)",
-        "期待値 (EXP)",
-        "累積和 (CUM)"
+        "動的計画法",
+        "期待値",
+        "累積和"
       ],
       "tag_ids": [
         "DP",
@@ -15007,9 +15007,9 @@
       "problem_url": "https://atcoder.jp/contests/abc263/tasks/abc263_f",
       "editorial_url": "https://atcoder.jp/contests/abc263/editorial/4550",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "bitDP",
-        "ゲーム理論 (GAM)"
+        "ゲーム理論"
       ],
       "tag_ids": [
         "DP",
@@ -15229,9 +15229,9 @@
       "problem_url": "https://atcoder.jp/contests/abc264/tasks/abc264_f",
       "editorial_url": "https://atcoder.jp/contests/abc264/editorial/4588",
       "tags": [
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)",
-        "bitDP (BDP)"
+        "動的計画法",
+        "最適化問題",
+        "bitDP"
       ],
       "tag_ids": [
         "DP",
@@ -15340,9 +15340,9 @@
       "problem_url": "https://atcoder.jp/contests/abc265/tasks/abc265_e",
       "editorial_url": "https://atcoder.jp/contests/abc265/editorial/4587",
       "tags": [
-        "動的計画法 (DP)",
-        "幾何 (GEO)",
-        "バックトラック (BCK)"
+        "動的計画法",
+        "幾何",
+        "バックトラック"
       ],
       "tag_ids": [
         "DP",
@@ -15379,7 +15379,7 @@
       "tags": [
         "ゲーム理論",
         "動的計画法",
-        "高速フーリエ変換 (FFT)"
+        "高速フーリエ変換"
       ],
       "tag_ids": [
         "GAM",
@@ -15414,9 +15414,9 @@
       "problem_url": "https://atcoder.jp/contests/abc265/tasks/abc265_f",
       "editorial_url": "https://atcoder.jp/contests/abc265/editorial/4680",
       "tags": [
-        "動的計画法 (DP)",
-        "マンハッタン距離 (MAN)",
-        "累積和 (CUM)"
+        "動的計画法",
+        "マンハッタン距離",
+        "累積和"
       ],
       "tag_ids": [
         "DP",
@@ -15525,9 +15525,9 @@
       "problem_url": "https://atcoder.jp/contests/abc266/tasks/abc266_d",
       "editorial_url": "https://atcoder.jp/contests/abc266/editorial/4661",
       "tags": [
-        "動的計画法 (DP)",
-        "区間スケジューリング (SCH)",
-        "尺取り法 (2PT)"
+        "動的計画法",
+        "区間スケジューリング",
+        "尺取り法"
       ],
       "tag_ids": [
         "DP",
@@ -15599,9 +15599,9 @@
       "problem_url": "https://atcoder.jp/contests/abc266/tasks/abc266_h",
       "editorial_url": "https://atcoder.jp/contests/abc266/editorial/4664",
       "tags": [
-        "動的計画法 (DP)",
-        "座標圧縮 (CMP)",
-        "セグメント木 (SEG)"
+        "動的計画法",
+        "座標圧縮",
+        "セグメント木"
       ],
       "tag_ids": [
         "DP",
@@ -15747,8 +15747,8 @@
       "problem_url": "https://atcoder.jp/contests/abc267/tasks/abc267_d",
       "editorial_url": "https://atcoder.jp/contests/abc267/editorial/4728",
       "tags": [
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)",
+        "動的計画法",
+        "最適化問題",
         "bitDP"
       ],
       "tag_ids": [
@@ -15821,8 +15821,8 @@
       "problem_url": "https://atcoder.jp/contests/abc267/tasks/abc267_h",
       "editorial_url": "https://atcoder.jp/contests/abc267/editorial/4736",
       "tags": [
-        "動的計画法 (DP)",
-        "半分全列挙 (MIT)",
+        "動的計画法",
+        "半分全列挙",
         "bitDP"
       ],
       "tag_ids": [
@@ -15858,8 +15858,8 @@
       "problem_url": "https://atcoder.jp/contests/abc267/tasks/abc267_f",
       "editorial_url": "https://atcoder.jp/contests/abc267/editorial/4714",
       "tags": [
-        "最小共通祖先 (LCA)",
-        "幅優先探索 (BFS)",
+        "最小共通祖先",
+        "幅優先探索",
         "木構造"
       ],
       "tag_ids": [
@@ -15895,9 +15895,9 @@
       "problem_url": "https://atcoder.jp/contests/abc267/tasks/abc267_g",
       "editorial_url": "https://atcoder.jp/contests/abc267/editorial/4733",
       "tags": [
-        "動的計画法 (DP)",
-        "組み合わせ論 (CMB)",
-        "最長増加部分列 (LIS)"
+        "動的計画法",
+        "組み合わせ論",
+        "最長増加部分列"
       ],
       "tag_ids": [
         "DP",
@@ -16043,9 +16043,9 @@
       "problem_url": "https://atcoder.jp/contests/abc268/tasks/abc268_h",
       "editorial_url": "https://atcoder.jp/contests/abc268/editorial/4786",
       "tags": [
-        "最長共通接頭辞 (LCP)",
-        "接尾辞配列 (SA)",
-        "貪欲法 (GRD)"
+        "最長共通接頭辞",
+        "接尾辞配列",
+        "貪欲法"
       ],
       "tag_ids": [
         "LCP",
@@ -16228,9 +16228,9 @@
       "problem_url": "https://atcoder.jp/contests/abc269/tasks/abc269_h",
       "editorial_url": "https://atcoder.jp/contests/abc269/editorial/4838",
       "tags": [
-        "Heavy-Light分解 (HLD)",
-        "動的計画法 (DP)",
-        "木構造 (TRE)"
+        "Heavy-Light分解",
+        "動的計画法",
+        "木構造"
       ],
       "tag_ids": [
         "HLD",
@@ -16302,9 +16302,9 @@
       "problem_url": "https://atcoder.jp/contests/abc269/tasks/abc269_g",
       "editorial_url": "https://atcoder.jp/contests/abc269/editorial/4841",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "bitDP",
-        "メモ化再帰 (MEM)"
+        "メモ化再帰"
       ],
       "tag_ids": [
         "DP",
@@ -16598,9 +16598,9 @@
       "problem_url": "https://atcoder.jp/contests/abc271/tasks/abc271_d",
       "editorial_url": "https://atcoder.jp/contests/abc271/editorial/4922",
       "tags": [
-        "動的計画法 (DP)",
-        "半分全列挙 (MIT)",
-        "bitDP (BDP)"
+        "動的計画法",
+        "半分全列挙",
+        "bitDP"
       ],
       "tag_ids": [
         "DP",
@@ -16635,9 +16635,9 @@
       "problem_url": "https://atcoder.jp/contests/abc271/tasks/abc271_e",
       "editorial_url": "https://atcoder.jp/contests/abc271/editorial/4924",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "DAG",
-        "最適化問題 (OPT)"
+        "最適化問題"
       ],
       "tag_ids": [
         "DP",
@@ -16672,9 +16672,9 @@
       "problem_url": "https://atcoder.jp/contests/abc271/tasks/abc271_h",
       "editorial_url": "https://atcoder.jp/contests/abc271/editorial/4932",
       "tags": [
-        "動的計画法 (DP)",
-        "全探索 (BRT)",
-        "bitDP (BDP)"
+        "動的計画法",
+        "全探索",
+        "bitDP"
       ],
       "tag_ids": [
         "DP",
@@ -16747,8 +16747,8 @@
       "editorial_url": "https://atcoder.jp/contests/abc271/editorial/4931",
       "tags": [
         "期待値",
-        "動的計画法 (DP)",
-        "ダブリング (DBL)"
+        "動的計画法",
+        "ダブリング"
       ],
       "tag_ids": [
         "EXP",
@@ -16894,9 +16894,9 @@
       "problem_url": "https://atcoder.jp/contests/abc272/tasks/abc272_f",
       "editorial_url": "https://atcoder.jp/contests/abc272/editorial/4980",
       "tags": [
-        "接尾辞配列 (SA)",
-        "辞書順 (LEX)",
-        "編集距離 (EDT)"
+        "接尾辞配列",
+        "辞書順",
+        "編集距離"
       ],
       "tag_ids": [
         "SA",
@@ -17079,9 +17079,9 @@
       "problem_url": "https://atcoder.jp/contests/abc273/tasks/abc273_f",
       "editorial_url": "https://atcoder.jp/contests/abc273/editorial/5034",
       "tags": [
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)",
-        "バックトラック (BCK)"
+        "動的計画法",
+        "最適化問題",
+        "バックトラック"
       ],
       "tag_ids": [
         "DP",
@@ -17116,9 +17116,9 @@
       "problem_url": "https://atcoder.jp/contests/abc273/tasks/abc273_g",
       "editorial_url": "https://atcoder.jp/contests/abc273/editorial/5014",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "桁DP",
-        "半分全列挙 (MIT)"
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -17153,9 +17153,9 @@
       "problem_url": "https://atcoder.jp/contests/abc274/tasks/abc274_d",
       "editorial_url": "https://atcoder.jp/contests/abc274/editorial/5079",
       "tags": [
-        "動的計画法 (DP)",
-        "幾何 (GEO)",
-        "最適化問題 (OPT)"
+        "動的計画法",
+        "幾何",
+        "最適化問題"
       ],
       "tag_ids": [
         "DP",
@@ -17190,9 +17190,9 @@
       "problem_url": "https://atcoder.jp/contests/abc274/tasks/abc274_e",
       "editorial_url": "https://atcoder.jp/contests/abc274/editorial/5020",
       "tags": [
-        "巡回セールスマン問題 (TSP)",
-        "動的計画法 (DP)",
-        "bitDP (BDP)"
+        "巡回セールスマン問題",
+        "動的計画法",
+        "bitDP"
       ],
       "tag_ids": [
         "TSP",
@@ -17412,9 +17412,9 @@
       "problem_url": "https://atcoder.jp/contests/abc275/tasks/abc275_e",
       "editorial_url": "https://atcoder.jp/contests/abc275/editorial/5116",
       "tags": [
-        "動的計画法 (DP)",
-        "確率・期待値DP (EDP)",
-        "ゲーム理論 (GAM)"
+        "動的計画法",
+        "確率・期待値DP",
+        "ゲーム理論"
       ],
       "tag_ids": [
         "DP",
@@ -17449,9 +17449,9 @@
       "problem_url": "https://atcoder.jp/contests/abc275/tasks/abc275_h",
       "editorial_url": "https://atcoder.jp/contests/abc275/editorial/5128",
       "tags": [
-        "動的計画法 (DP)",
-        "木構造 (TRE)",
-        "いもす法 (IMO)"
+        "動的計画法",
+        "木構造",
+        "いもす法"
       ],
       "tag_ids": [
         "DP",
@@ -17486,9 +17486,9 @@
       "problem_url": "https://atcoder.jp/contests/abc275/tasks/abc275_f",
       "editorial_url": "https://atcoder.jp/contests/abc275/editorial/5140",
       "tags": [
-        "動的計画法 (DP)",
-        "半分全列挙 (MIT)",
-        "包除原理 (PIE)"
+        "動的計画法",
+        "半分全列挙",
+        "包除原理"
       ],
       "tag_ids": [
         "DP",
@@ -17597,9 +17597,9 @@
       "problem_url": "https://atcoder.jp/contests/abc276/tasks/abc276_e",
       "editorial_url": "https://atcoder.jp/contests/abc276/editorial/5162",
       "tags": [
-        "幅優先探索 (BFS)",
-        "バックトラック (BCK)",
-        "ハミルトン路 (HAM)"
+        "幅優先探索",
+        "バックトラック",
+        "ハミルトン路"
       ],
       "tag_ids": [
         "BFS",
@@ -17673,7 +17673,7 @@
       "tags": [
         "期待値",
         "座標圧縮",
-        "Fenwick Tree (BIT)"
+        "Fenwick Tree"
       ],
       "tag_ids": [
         "EXP",
@@ -17930,9 +17930,9 @@
       "problem_url": "https://atcoder.jp/contests/abc277/tasks/abc277_g",
       "editorial_url": "https://atcoder.jp/contests/abc277/editorial/5206",
       "tags": [
-        "動的計画法 (DP)",
-        "期待値 (EXP)",
-        "グラフ (GRP)"
+        "動的計画法",
+        "期待値",
+        "グラフ"
       ],
       "tag_ids": [
         "DP",
@@ -18300,9 +18300,9 @@
       "problem_url": "https://atcoder.jp/contests/abc279/tasks/abc279_g",
       "editorial_url": "https://atcoder.jp/contests/abc279/editorial/5285",
       "tags": [
-        "動的計画法 (DP)",
-        "累積和 (CUM)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "累積和",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -18411,9 +18411,9 @@
       "problem_url": "https://atcoder.jp/contests/abc280/tasks/abc280_h",
       "editorial_url": "https://atcoder.jp/contests/abc280/editorial/5332",
       "tags": [
-        "最長共通接頭辞 (LCP)",
-        "接尾辞配列 (SA)",
-        "辞書順 (LEX)"
+        "最長共通接頭辞",
+        "接尾辞配列",
+        "辞書順"
       ],
       "tag_ids": [
         "LCP",
@@ -18522,8 +18522,8 @@
       "problem_url": "https://atcoder.jp/contests/abc281/tasks/abc281_d",
       "editorial_url": "https://atcoder.jp/contests/abc281/editorial/5366",
       "tags": [
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)",
+        "動的計画法",
+        "最適化問題",
         "bitDP"
       ],
       "tag_ids": [
@@ -18855,9 +18855,9 @@
       "problem_url": "https://atcoder.jp/contests/abc282/tasks/abc282_g",
       "editorial_url": "https://atcoder.jp/contests/abc282/editorial/5393",
       "tags": [
-        "動的計画法 (DP)",
-        "組み合わせ論 (CMB)",
-        "いもす法 (IMO)"
+        "動的計画法",
+        "組み合わせ論",
+        "いもす法"
       ],
       "tag_ids": [
         "DP",
@@ -18929,9 +18929,9 @@
       "problem_url": "https://atcoder.jp/contests/abc283/tasks/abc283_e",
       "editorial_url": "https://atcoder.jp/contests/abc283/editorial/5433",
       "tags": [
-        "動的計画法 (DP)",
-        "行列 (MAT)",
-        "bitDP (BDP)"
+        "動的計画法",
+        "行列",
+        "bitDP"
       ],
       "tag_ids": [
         "DP",
@@ -19299,9 +19299,9 @@
       "problem_url": "https://atcoder.jp/contests/abc285/tasks/abc285_e",
       "editorial_url": "https://atcoder.jp/contests/abc285/editorial/5530",
       "tags": [
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "最適化問題",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -19484,9 +19484,9 @@
       "problem_url": "https://atcoder.jp/contests/abc286/tasks/abc286_d",
       "editorial_url": "https://atcoder.jp/contests/abc286/editorial/5567",
       "tags": [
-        "動的計画法 (DP)",
-        "組み合わせ論 (CMB)",
-        "最適化問題 (OPT)"
+        "動的計画法",
+        "組み合わせ論",
+        "最適化問題"
       ],
       "tag_ids": [
         "DP",
@@ -19595,9 +19595,9 @@
       "problem_url": "https://atcoder.jp/contests/abc286/tasks/abc286_f",
       "editorial_url": "https://atcoder.jp/contests/abc286/editorial/5588",
       "tags": [
-        "中国剰余定理 (CRT)",
-        "最小公倍数 (LCM)",
-        "グラフ (GRP)"
+        "中国剰余定理",
+        "最小公倍数",
+        "グラフ"
       ],
       "tag_ids": [
         "CRT",
@@ -19743,9 +19743,9 @@
       "problem_url": "https://atcoder.jp/contests/abc287/tasks/abc287_e",
       "editorial_url": "https://atcoder.jp/contests/abc287/editorial/5609",
       "tags": [
-        "最長共通接頭辞 (LCP)",
-        "接尾辞配列 (SA)",
-        "Z-algorithm (Z)"
+        "最長共通接頭辞",
+        "接尾辞配列",
+        "Z-algorithm"
       ],
       "tag_ids": [
         "LCP",
@@ -19965,9 +19965,9 @@
       "problem_url": "https://atcoder.jp/contests/abc288/tasks/abc288_e",
       "editorial_url": "https://atcoder.jp/contests/abc288/editorial/5659",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "bitDP",
-        "区間スケジューリング (SCH)"
+        "区間スケジューリング"
       ],
       "tag_ids": [
         "DP",
@@ -20039,7 +20039,7 @@
       "problem_url": "https://atcoder.jp/contests/abc288/tasks/abc288_f",
       "editorial_url": "https://atcoder.jp/contests/abc288/editorial/5667",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "桁DP",
         "bitDP"
       ],
@@ -20113,9 +20113,9 @@
       "problem_url": "https://atcoder.jp/contests/abc289/tasks/abc289_d",
       "editorial_url": "https://atcoder.jp/contests/abc289/editorial/5715",
       "tags": [
-        "動的計画法 (DP)",
-        "バックトラック (BCK)",
-        "二分探索 (BIN)"
+        "動的計画法",
+        "バックトラック",
+        "二分探索"
       ],
       "tag_ids": [
         "DP",
@@ -20298,9 +20298,9 @@
       "problem_url": "https://atcoder.jp/contests/abc290/tasks/abc290_d",
       "editorial_url": "https://atcoder.jp/contests/abc290/editorial/5767",
       "tags": [
-        "最大公約数 (GCD)",
-        "ユークリッドの互除法 (EUC)",
-        "約数列挙 (DIV)"
+        "最大公約数",
+        "ユークリッドの互除法",
+        "約数列挙"
       ],
       "tag_ids": [
         "GCD",
@@ -20372,9 +20372,9 @@
       "problem_url": "https://atcoder.jp/contests/abc290/tasks/abc290_h",
       "editorial_url": "https://atcoder.jp/contests/abc290/editorial/5769",
       "tags": [
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "最適化問題",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -20483,8 +20483,8 @@
       "problem_url": "https://atcoder.jp/contests/abc291/tasks/abc291_d",
       "editorial_url": "https://atcoder.jp/contests/abc291/editorial/5838",
       "tags": [
-        "動的計画法 (DP)",
-        "ビット演算 (BOP)",
+        "動的計画法",
+        "ビット演算",
         "bitDP"
       ],
       "tag_ids": [
@@ -20557,9 +20557,9 @@
       "problem_url": "https://atcoder.jp/contests/abc291/tasks/abc291_h",
       "editorial_url": "https://atcoder.jp/contests/abc291/editorial/5840",
       "tags": [
-        "最小共通祖先 (LCA)",
-        "木構造 (TRE)",
-        "木DP (TDP)"
+        "最小共通祖先",
+        "木構造",
+        "木DP"
       ],
       "tag_ids": [
         "LCA",
@@ -20594,9 +20594,9 @@
       "problem_url": "https://atcoder.jp/contests/abc291/tasks/abc291_f",
       "editorial_url": "https://atcoder.jp/contests/abc291/editorial/5846",
       "tags": [
-        "動的計画法 (DP)",
-        "グラフ (GRP)",
-        "編集距離 (EDT)"
+        "動的計画法",
+        "グラフ",
+        "編集距離"
       ],
       "tag_ids": [
         "DP",
@@ -21334,8 +21334,8 @@
       "problem_url": "https://atcoder.jp/contests/abc295/tasks/abc295_h",
       "editorial_url": "https://atcoder.jp/contests/abc295/editorial/6036",
       "tags": [
-        "動的計画法 (DP)",
-        "ゼータ変換 (ZT)",
+        "動的計画法",
+        "ゼータ変換",
         "bitDP"
       ],
       "tag_ids": [
@@ -21519,9 +21519,9 @@
       "problem_url": "https://atcoder.jp/contests/abc296/tasks/abc296_h",
       "editorial_url": "https://atcoder.jp/contests/abc296/editorial/6119",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "bitDP",
-        "バックトラック (BCK)"
+        "バックトラック"
       ],
       "tag_ids": [
         "DP",
@@ -21556,9 +21556,9 @@
       "problem_url": "https://atcoder.jp/contests/abc296/tasks/abc296_f",
       "editorial_url": "https://atcoder.jp/contests/abc296/editorial/6117",
       "tags": [
-        "Fenwick Tree (BIT)",
-        "包除原理 (PIE)",
-        "編集距離 (EDT)"
+        "Fenwick Tree",
+        "包除原理",
+        "編集距離"
       ],
       "tag_ids": [
         "BIT",
@@ -21852,9 +21852,9 @@
       "problem_url": "https://atcoder.jp/contests/abc298/tasks/abc298_e",
       "editorial_url": "https://atcoder.jp/contests/abc298/editorial/6216",
       "tags": [
-        "動的計画法 (DP)",
-        "確率・期待値DP (EDP)",
-        "ゲーム理論 (GAM)"
+        "動的計画法",
+        "確率・期待値DP",
+        "ゲーム理論"
       ],
       "tag_ids": [
         "DP",
@@ -21889,7 +21889,7 @@
       "problem_url": "https://atcoder.jp/contests/abc298/tasks/abc298_h",
       "editorial_url": "https://atcoder.jp/contests/abc298/editorial/6218",
       "tags": [
-        "最小共通祖先 (LCA)",
+        "最小共通祖先",
         "木構造",
         "木DP"
       ],
@@ -22444,9 +22444,9 @@
       "problem_url": "https://atcoder.jp/contests/abc301/tasks/abc301_e",
       "editorial_url": "https://atcoder.jp/contests/abc301/editorial/6343",
       "tags": [
-        "動的計画法 (DP)",
-        "bitDP (BDP)",
-        "巡回セールスマン問題 (TSP)"
+        "動的計画法",
+        "bitDP",
+        "巡回セールスマン問題"
       ],
       "tag_ids": [
         "DP",
@@ -22518,9 +22518,9 @@
       "problem_url": "https://atcoder.jp/contests/abc301/tasks/abc301_f",
       "editorial_url": "https://atcoder.jp/contests/abc301/editorial/6331",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "桁DP",
-        "ビット全探索 (BBF)"
+        "ビット全探索"
       ],
       "tag_ids": [
         "DP",
@@ -22999,9 +22999,9 @@
       "problem_url": "https://atcoder.jp/contests/abc303/tasks/abc303_g",
       "editorial_url": "https://atcoder.jp/contests/abc303/editorial/6444",
       "tags": [
-        "動的計画法 (DP)",
-        "セグメント木 (SEG)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "セグメント木",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -23369,9 +23369,9 @@
       "problem_url": "https://atcoder.jp/contests/abc305/tasks/abc305_g",
       "editorial_url": "https://atcoder.jp/contests/abc305/editorial/6540",
       "tags": [
-        "動的計画法 (DP)",
-        "ビット演算 (BOP)",
-        "桁DP (KDP)"
+        "動的計画法",
+        "ビット演算",
+        "桁DP"
       ],
       "tag_ids": [
         "DP",
@@ -23406,9 +23406,9 @@
       "problem_url": "https://atcoder.jp/contests/abc306/tasks/abc306_d",
       "editorial_url": "https://atcoder.jp/contests/abc306/editorial/6606",
       "tags": [
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)",
-        "確率・期待値DP (EDP)"
+        "動的計画法",
+        "最適化問題",
+        "確率・期待値DP"
       ],
       "tag_ids": [
         "DP",
@@ -23443,7 +23443,7 @@
       "problem_url": "https://atcoder.jp/contests/abc306/tasks/abc306_e",
       "editorial_url": "https://atcoder.jp/contests/abc306/editorial/6607",
       "tags": [
-        "Fenwick Tree (BIT)",
+        "Fenwick Tree",
         "優先度付きキュー",
         "いもす法"
       ],
@@ -23518,7 +23518,7 @@
       "editorial_url": "https://atcoder.jp/contests/abc306/editorial/6601",
       "tags": [
         "座標圧縮",
-        "Fenwick Tree (BIT)",
+        "Fenwick Tree",
         "累積和"
       ],
       "tag_ids": [
@@ -23665,9 +23665,9 @@
       "problem_url": "https://atcoder.jp/contests/abc307/tasks/abc307_e",
       "editorial_url": "https://atcoder.jp/contests/abc307/editorial/6643",
       "tags": [
-        "動的計画法 (DP)",
-        "包除原理 (PIE)",
-        "組み合わせ論 (CMB)"
+        "動的計画法",
+        "包除原理",
+        "組み合わせ論"
       ],
       "tag_ids": [
         "DP",
@@ -23776,9 +23776,9 @@
       "problem_url": "https://atcoder.jp/contests/abc307/tasks/abc307_g",
       "editorial_url": "https://atcoder.jp/contests/abc307/editorial/6660",
       "tags": [
-        "動的計画法 (DP)",
-        "いもす法 (IMO)",
-        "最長増加部分列 (LIS)"
+        "動的計画法",
+        "いもす法",
+        "最長増加部分列"
       ],
       "tag_ids": [
         "DP",
@@ -23850,9 +23850,9 @@
       "problem_url": "https://atcoder.jp/contests/abc308/tasks/abc308_d",
       "editorial_url": "https://atcoder.jp/contests/abc308/editorial/6705",
       "tags": [
-        "グラフ (GRP)",
-        "幅優先探索 (BFS)",
-        "深さ優先探索 (DFS)"
+        "グラフ",
+        "幅優先探索",
+        "深さ優先探索"
       ],
       "tag_ids": [
         "GRP",
@@ -24072,9 +24072,9 @@
       "problem_url": "https://atcoder.jp/contests/abc309/tasks/abc309_e",
       "editorial_url": "https://atcoder.jp/contests/abc309/editorial/6748",
       "tags": [
-        "動的計画法 (DP)",
-        "最小共通祖先 (LCA)",
-        "最適化問題 (OPT)"
+        "動的計画法",
+        "最小共通祖先",
+        "最適化問題"
       ],
       "tag_ids": [
         "DP",
@@ -24109,9 +24109,9 @@
       "problem_url": "https://atcoder.jp/contests/abc309/tasks/abc309_h",
       "editorial_url": "https://atcoder.jp/contests/abc309/editorial/6751",
       "tags": [
-        "動的計画法 (DP)",
-        "Monge性 (MON)",
-        "平方分割 (SQD)"
+        "動的計画法",
+        "Monge性",
+        "平方分割"
       ],
       "tag_ids": [
         "DP",
@@ -24183,9 +24183,9 @@
       "problem_url": "https://atcoder.jp/contests/abc309/tasks/abc309_g",
       "editorial_url": "https://atcoder.jp/contests/abc309/editorial/6745",
       "tags": [
-        "動的計画法 (DP)",
-        "組み合わせ論 (CMB)",
-        "包除原理 (PIE)"
+        "動的計画法",
+        "組み合わせ論",
+        "包除原理"
       ],
       "tag_ids": [
         "DP",
@@ -24220,8 +24220,8 @@
       "problem_url": "https://atcoder.jp/contests/abc310/tasks/abc310_d",
       "editorial_url": "https://atcoder.jp/contests/abc310/editorial/6783",
       "tags": [
-        "動的計画法 (DP)",
-        "ビット演算 (BOP)",
+        "動的計画法",
+        "ビット演算",
         "bitDP"
       ],
       "tag_ids": [
@@ -24294,9 +24294,9 @@
       "problem_url": "https://atcoder.jp/contests/abc310/tasks/abc310_h",
       "editorial_url": "https://atcoder.jp/contests/abc310/editorial/6794",
       "tags": [
-        "動的計画法 (DP)",
-        "鳩の巣原理 (PHP)",
-        "最適化問題 (OPT)"
+        "動的計画法",
+        "鳩の巣原理",
+        "最適化問題"
       ],
       "tag_ids": [
         "DP",
@@ -24442,9 +24442,9 @@
       "problem_url": "https://atcoder.jp/contests/abc311/tasks/abc311_d",
       "editorial_url": "https://atcoder.jp/contests/abc311/editorial/6821",
       "tags": [
-        "幅優先探索 (BFS)",
-        "幾何 (GEO)",
-        "動的計画法 (DP)"
+        "幅優先探索",
+        "幾何",
+        "動的計画法"
       ],
       "tag_ids": [
         "BFS",
@@ -24479,9 +24479,9 @@
       "problem_url": "https://atcoder.jp/contests/abc311/tasks/abc311_e",
       "editorial_url": "https://atcoder.jp/contests/abc311/editorial/6819",
       "tags": [
-        "動的計画法 (DP)",
-        "幾何 (GEO)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "幾何",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -24516,9 +24516,9 @@
       "problem_url": "https://atcoder.jp/contests/abc311/tasks/abc311_h",
       "editorial_url": "https://atcoder.jp/contests/abc311/editorial/6814",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "木DP",
-        "全方位木DP (RRT)"
+        "全方位木DP"
       ],
       "tag_ids": [
         "DP",
@@ -24553,9 +24553,9 @@
       "problem_url": "https://atcoder.jp/contests/abc311/tasks/abc311_f",
       "editorial_url": "https://atcoder.jp/contests/abc311/editorial/6822",
       "tags": [
-        "動的計画法 (DP)",
-        "累積和 (CUM)",
-        "桁DP (KDP)"
+        "動的計画法",
+        "累積和",
+        "桁DP"
       ],
       "tag_ids": [
         "DP",
@@ -24960,9 +24960,9 @@
       "problem_url": "https://atcoder.jp/contests/abc313/tasks/abc313_h",
       "editorial_url": "https://atcoder.jp/contests/abc313/editorial/6903",
       "tags": [
-        "動的計画法 (DP)",
-        "半分全列挙 (MIT)",
-        "最長増加部分列 (LIS)"
+        "動的計画法",
+        "半分全列挙",
+        "最長増加部分列"
       ],
       "tag_ids": [
         "DP",
@@ -25330,7 +25330,7 @@
       "problem_url": "https://atcoder.jp/contests/abc315/tasks/abc315_h",
       "editorial_url": "https://atcoder.jp/contests/abc315/editorial/6988",
       "tags": [
-        "高速フーリエ変換 (FFT)",
+        "高速フーリエ変換",
         "累積和",
         "形式的冪級数"
       ],
@@ -25367,9 +25367,9 @@
       "problem_url": "https://atcoder.jp/contests/abc315/tasks/abc315_f",
       "editorial_url": "https://atcoder.jp/contests/abc315/editorial/6993",
       "tags": [
-        "動的計画法 (DP)",
-        "幾何 (GEO)",
-        "bitDP (BDP)"
+        "動的計画法",
+        "幾何",
+        "bitDP"
       ],
       "tag_ids": [
         "DP",
@@ -25441,9 +25441,9 @@
       "problem_url": "https://atcoder.jp/contests/abc317/tasks/abc317_c",
       "editorial_url": "https://atcoder.jp/contests/abc317/editorial/7025",
       "tags": [
-        "深さ優先探索 (DFS)",
-        "巡回セールスマン問題 (TSP)",
-        "最適化問題 (OPT)"
+        "深さ優先探索",
+        "巡回セールスマン問題",
+        "最適化問題"
       ],
       "tag_ids": [
         "DFS",
@@ -25478,9 +25478,9 @@
       "problem_url": "https://atcoder.jp/contests/abc317/tasks/abc317_d",
       "editorial_url": "https://atcoder.jp/contests/abc317/editorial/7043",
       "tags": [
-        "動的計画法 (DP)",
-        "ビット演算 (BOP)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "ビット演算",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -25515,9 +25515,9 @@
       "problem_url": "https://atcoder.jp/contests/abc317/tasks/abc317_e",
       "editorial_url": "https://atcoder.jp/contests/abc317/editorial/7031",
       "tags": [
-        "幅優先探索 (BFS)",
-        "二分探索 (BIN)",
-        "幾何 (GEO)"
+        "幅優先探索",
+        "二分探索",
+        "幾何"
       ],
       "tag_ids": [
         "BFS",
@@ -25552,9 +25552,9 @@
       "problem_url": "https://atcoder.jp/contests/abc317/tasks/abc317_h",
       "editorial_url": "https://atcoder.jp/contests/abc317/editorial/7013",
       "tags": [
-        "動的計画法 (DP)",
-        "グラフ (GRP)",
-        "分割統治法 (DC)"
+        "動的計画法",
+        "グラフ",
+        "分割統治法"
       ],
       "tag_ids": [
         "DP",
@@ -25774,9 +25774,9 @@
       "problem_url": "https://atcoder.jp/contests/abc318/tasks/abc318_h",
       "editorial_url": "https://atcoder.jp/contests/abc318/editorial/7055",
       "tags": [
-        "形式的冪級数 (FPS)",
-        "組み合わせ論 (CMB)",
-        "グラフ (GRP)"
+        "形式的冪級数",
+        "組み合わせ論",
+        "グラフ"
       ],
       "tag_ids": [
         "FPS",
@@ -25959,9 +25959,9 @@
       "problem_url": "https://atcoder.jp/contests/abc319/tasks/abc319_e",
       "editorial_url": "https://atcoder.jp/contests/abc319/editorial/7100",
       "tags": [
-        "最小公倍数 (LCM)",
-        "動的計画法 (DP)",
-        "Mo's algorithm (MOS)"
+        "最小公倍数",
+        "動的計画法",
+        "Mo's algorithm"
       ],
       "tag_ids": [
         "LCM",
@@ -25996,7 +25996,7 @@
       "problem_url": "https://atcoder.jp/contests/abc319/tasks/abc319_f",
       "editorial_url": "https://atcoder.jp/contests/abc319/editorial/7116",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "bitDP",
         "木DP"
       ],
@@ -26181,9 +26181,9 @@
       "problem_url": "https://atcoder.jp/contests/abc320/tasks/abc320_f",
       "editorial_url": "https://atcoder.jp/contests/abc320/editorial/7167",
       "tags": [
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)",
-        "最小費用流 (MCF)"
+        "動的計画法",
+        "最適化問題",
+        "最小費用流"
       ],
       "tag_ids": [
         "DP",
@@ -26329,9 +26329,9 @@
       "problem_url": "https://atcoder.jp/contests/abc321/tasks/abc321_e",
       "editorial_url": "https://atcoder.jp/contests/abc321/editorial/7267",
       "tags": [
-        "最小共通祖先 (LCA)",
-        "木構造 (TRE)",
-        "ダブリング (DBL)"
+        "最小共通祖先",
+        "木構造",
+        "ダブリング"
       ],
       "tag_ids": [
         "LCA",
@@ -26366,8 +26366,8 @@
       "problem_url": "https://atcoder.jp/contests/abc321/tasks/abc321_f",
       "editorial_url": "https://atcoder.jp/contests/abc321/editorial/7262",
       "tags": [
-        "動的計画法 (DP)",
-        "半分全列挙 (MIT)",
+        "動的計画法",
+        "半分全列挙",
         "bitDP"
       ],
       "tag_ids": [
@@ -26477,8 +26477,8 @@
       "problem_url": "https://atcoder.jp/contests/abc322/tasks/abc322_e",
       "editorial_url": "https://atcoder.jp/contests/abc322/editorial/7305",
       "tags": [
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)",
+        "動的計画法",
+        "最適化問題",
         "bitDP"
       ],
       "tag_ids": [
@@ -26625,9 +26625,9 @@
       "problem_url": "https://atcoder.jp/contests/abc323/tasks/abc323_e",
       "editorial_url": "https://atcoder.jp/contests/abc323/editorial/7357",
       "tags": [
-        "動的計画法 (DP)",
-        "期待値 (EXP)",
-        "確率・期待値DP (EDP)"
+        "動的計画法",
+        "期待値",
+        "確率・期待値DP"
       ],
       "tag_ids": [
         "DP",
@@ -26810,9 +26810,9 @@
       "problem_url": "https://atcoder.jp/contests/abc324/tasks/abc324_e",
       "editorial_url": "https://atcoder.jp/contests/abc324/editorial/7407",
       "tags": [
-        "最長増加部分列 (LIS)",
-        "編集距離 (EDT)",
-        "Z-algorithm (Z)"
+        "最長増加部分列",
+        "編集距離",
+        "Z-algorithm"
       ],
       "tag_ids": [
         "LIS",
@@ -26847,9 +26847,9 @@
       "problem_url": "https://atcoder.jp/contests/abc324/tasks/abc324_f",
       "editorial_url": "https://atcoder.jp/contests/abc324/editorial/7405",
       "tags": [
-        "グラフ (GRP)",
-        "DAG (DAG)",
-        "最適化問題 (OPT)"
+        "グラフ",
+        "DAG",
+        "最適化問題"
       ],
       "tag_ids": [
         "GRP",
@@ -27032,9 +27032,9 @@
       "problem_url": "https://atcoder.jp/contests/abc325/tasks/abc325_f",
       "editorial_url": "https://atcoder.jp/contests/abc325/editorial/7449",
       "tags": [
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)",
-        "全探索 (BRT)"
+        "動的計画法",
+        "最適化問題",
+        "全探索"
       ],
       "tag_ids": [
         "DP",
@@ -27291,9 +27291,9 @@
       "problem_url": "https://atcoder.jp/contests/abc327/tasks/abc327_e",
       "editorial_url": "https://atcoder.jp/contests/abc327/editorial/7564",
       "tags": [
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "最適化問題",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -27365,9 +27365,9 @@
       "problem_url": "https://atcoder.jp/contests/abc327/tasks/abc327_g",
       "editorial_url": "https://atcoder.jp/contests/abc327/editorial/7557",
       "tags": [
-        "動的計画法 (DP)",
-        "写像12相 (MAP)",
-        "グラフ (GRP)"
+        "動的計画法",
+        "写像12相",
+        "グラフ"
       ],
       "tag_ids": [
         "DP",
@@ -27513,8 +27513,8 @@
       "problem_url": "https://atcoder.jp/contests/abc328/tasks/abc328_g",
       "editorial_url": "https://atcoder.jp/contests/abc328/editorial/7644",
       "tags": [
-        "動的計画法 (DP)",
-        "組み合わせ論 (CMB)",
+        "動的計画法",
+        "組み合わせ論",
         "bitDP"
       ],
       "tag_ids": [
@@ -27624,8 +27624,8 @@
       "problem_url": "https://atcoder.jp/contests/abc329/tasks/abc329_g",
       "editorial_url": "https://atcoder.jp/contests/abc329/editorial/7725",
       "tags": [
-        "動的計画法 (DP)",
-        "最小共通祖先 (LCA)",
+        "動的計画法",
+        "最小共通祖先",
         "木DP"
       ],
       "tag_ids": [
@@ -28031,8 +28031,8 @@
       "problem_url": "https://atcoder.jp/contests/abc332/tasks/abc332_e",
       "editorial_url": "https://atcoder.jp/contests/abc332/editorial/7904",
       "tags": [
-        "動的計画法 (DP)",
-        "ビット演算 (BOP)",
+        "動的計画法",
+        "ビット演算",
         "bitDP"
       ],
       "tag_ids": [
@@ -28216,9 +28216,9 @@
       "problem_url": "https://atcoder.jp/contests/abc333/tasks/abc333_f",
       "editorial_url": "https://atcoder.jp/contests/abc333/editorial/7948",
       "tags": [
-        "動的計画法 (DP)",
-        "期待値 (EXP)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "期待値",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -28253,9 +28253,9 @@
       "problem_url": "https://atcoder.jp/contests/abc333/tasks/abc333_g",
       "editorial_url": "https://atcoder.jp/contests/abc333/editorial/7937",
       "tags": [
-        "最大公約数 (GCD)",
-        "辞書順 (LEX)",
-        "ユークリッドの互除法 (EUC)"
+        "最大公約数",
+        "辞書順",
+        "ユークリッドの互除法"
       ],
       "tag_ids": [
         "GCD",
@@ -28438,9 +28438,9 @@
       "problem_url": "https://atcoder.jp/contests/abc334/tasks/abc334_f",
       "editorial_url": "https://atcoder.jp/contests/abc334/editorial/8982",
       "tags": [
-        "動的計画法 (DP)",
-        "セグメント木 (SEG)",
-        "巡回セールスマン問題 (TSP)"
+        "動的計画法",
+        "セグメント木",
+        "巡回セールスマン問題"
       ],
       "tag_ids": [
         "DP",
@@ -28587,8 +28587,8 @@
       "editorial_url": "https://atcoder.jp/contests/abc335/editorial/9037",
       "tags": [
         "DAG",
-        "動的計画法 (DP)",
-        "グラフ (GRP)"
+        "動的計画法",
+        "グラフ"
       ],
       "tag_ids": [
         "DAG",
@@ -28623,9 +28623,9 @@
       "problem_url": "https://atcoder.jp/contests/abc335/tasks/abc335_f",
       "editorial_url": "https://atcoder.jp/contests/abc335/editorial/9038",
       "tags": [
-        "動的計画法 (DP)",
-        "平方分割 (SQD)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "平方分割",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -28734,7 +28734,7 @@
       "problem_url": "https://atcoder.jp/contests/abc336/tasks/abc336_e",
       "editorial_url": "https://atcoder.jp/contests/abc336/editorial/9055",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "桁DP",
         "約数列挙"
       ],
@@ -29215,9 +29215,9 @@
       "problem_url": "https://atcoder.jp/contests/abc339/tasks/abc339_e",
       "editorial_url": "https://atcoder.jp/contests/abc339/editorial/9210",
       "tags": [
-        "動的計画法 (DP)",
-        "セグメント木 (SEG)",
-        "二分探索 (BIN)"
+        "動的計画法",
+        "セグメント木",
+        "二分探索"
       ],
       "tag_ids": [
         "DP",
@@ -29474,7 +29474,7 @@
       "problem_url": "https://atcoder.jp/contests/abc340/tasks/abc340_g",
       "editorial_url": "https://atcoder.jp/contests/abc340/editorial/9249",
       "tags": [
-        "最小共通祖先 (LCA)",
+        "最小共通祖先",
         "木構造",
         "木DP"
       ],
@@ -29548,9 +29548,9 @@
       "problem_url": "https://atcoder.jp/contests/abc341/tasks/abc341_d",
       "editorial_url": "https://atcoder.jp/contests/abc341/editorial/9324",
       "tags": [
-        "最大公約数 (GCD)",
-        "最小公倍数 (LCM)",
-        "二分探索 (BIN)"
+        "最大公約数",
+        "最小公倍数",
+        "二分探索"
       ],
       "tag_ids": [
         "GCD",
@@ -29622,9 +29622,9 @@
       "problem_url": "https://atcoder.jp/contests/abc341/tasks/abc341_f",
       "editorial_url": "https://atcoder.jp/contests/abc341/editorial/9319",
       "tags": [
-        "動的計画法 (DP)",
-        "グラフ (GRP)",
-        "二部マッチング (BPM)"
+        "動的計画法",
+        "グラフ",
+        "二部マッチング"
       ],
       "tag_ids": [
         "DP",
@@ -29845,7 +29845,7 @@
       "editorial_url": "https://atcoder.jp/contests/abc342/editorial/9373",
       "tags": [
         "セグメント木",
-        "優先度付きキュー (PQ)",
+        "優先度付きキュー",
         "いもす法"
       ],
       "tag_ids": [
@@ -30029,9 +30029,9 @@
       "problem_url": "https://atcoder.jp/contests/abc344/tasks/abc344_d",
       "editorial_url": "https://atcoder.jp/contests/abc344/editorial/9490",
       "tags": [
-        "動的計画法 (DP)",
-        "編集距離 (EDT)",
-        "最長共通接頭辞 (LCP)"
+        "動的計画法",
+        "編集距離",
+        "最長共通接頭辞"
       ],
       "tag_ids": [
         "DP",
@@ -30066,9 +30066,9 @@
       "problem_url": "https://atcoder.jp/contests/abc344/tasks/abc344_e",
       "editorial_url": "https://atcoder.jp/contests/abc344/editorial/9487",
       "tags": [
-        "双方向リスト (DLL)",
-        "二分探索 (BIN)",
-        "編集距離 (EDT)"
+        "双方向リスト",
+        "二分探索",
+        "編集距離"
       ],
       "tag_ids": [
         "DLL",
@@ -30103,9 +30103,9 @@
       "problem_url": "https://atcoder.jp/contests/abc344/tasks/abc344_f",
       "editorial_url": "https://atcoder.jp/contests/abc344/editorial/9473",
       "tags": [
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)",
-        "確率・期待値DP (EDP)"
+        "動的計画法",
+        "最適化問題",
+        "確率・期待値DP"
       ],
       "tag_ids": [
         "DP",
@@ -30251,9 +30251,9 @@
       "problem_url": "https://atcoder.jp/contests/abc345/tasks/abc345_e",
       "editorial_url": "https://atcoder.jp/contests/abc345/editorial/9580",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "bitDP",
-        "半分全列挙 (MIT)"
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -30289,7 +30289,7 @@
       "editorial_url": "https://atcoder.jp/contests/abc345/editorial/9558",
       "tags": [
         "グラフ",
-        "深さ優先探索 (DFS)",
+        "深さ優先探索",
         "ビット演算"
       ],
       "tag_ids": [
@@ -30325,9 +30325,9 @@
       "problem_url": "https://atcoder.jp/contests/abc345/tasks/abc345_g",
       "editorial_url": "https://atcoder.jp/contests/abc345/editorial/9549",
       "tags": [
-        "形式的冪級数 (FPS)",
-        "期待値 (EXP)",
-        "中国剰余定理 (CRT)"
+        "形式的冪級数",
+        "期待値",
+        "中国剰余定理"
       ],
       "tag_ids": [
         "FPS",
@@ -30362,9 +30362,9 @@
       "problem_url": "https://atcoder.jp/contests/abc346/tasks/abc346_d",
       "editorial_url": "https://atcoder.jp/contests/abc346/editorial/9639",
       "tags": [
-        "動的計画法 (DP)",
-        "編集距離 (EDT)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "編集距離",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -30399,7 +30399,7 @@
       "problem_url": "https://atcoder.jp/contests/abc346/tasks/abc346_e",
       "editorial_url": "https://atcoder.jp/contests/abc346/editorial/9637",
       "tags": [
-        "Fenwick Tree (BIT)",
+        "Fenwick Tree",
         "動的計画法",
         "全列挙"
       ],
@@ -30695,9 +30695,9 @@
       "problem_url": "https://atcoder.jp/contests/abc348/tasks/abc348_d",
       "editorial_url": "https://atcoder.jp/contests/abc348/editorial/9705",
       "tags": [
-        "幅優先探索 (BFS)",
-        "グラフ (GRP)",
-        "動的計画法 (DP)"
+        "幅優先探索",
+        "グラフ",
+        "動的計画法"
       ],
       "tag_ids": [
         "BFS",
@@ -31139,9 +31139,9 @@
       "problem_url": "https://atcoder.jp/contests/abc351/tasks/abc351_d",
       "editorial_url": "https://atcoder.jp/contests/abc351/editorial/9889",
       "tags": [
-        "深さ優先探索 (DFS)",
-        "グラフ (GRP)",
-        "幅優先探索 (BFS)"
+        "深さ優先探索",
+        "グラフ",
+        "幅優先探索"
       ],
       "tag_ids": [
         "DFS",
@@ -31177,7 +31177,7 @@
       "editorial_url": "https://atcoder.jp/contests/abc351/editorial/9890",
       "tags": [
         "マンハッタン距離",
-        "Fenwick Tree (BIT)",
+        "Fenwick Tree",
         "幾何"
       ],
       "tag_ids": [
@@ -31213,9 +31213,9 @@
       "problem_url": "https://atcoder.jp/contests/abc351/tasks/abc351_f",
       "editorial_url": "https://atcoder.jp/contests/abc351/editorial/9877",
       "tags": [
-        "Fenwick Tree (BIT)",
-        "座標圧縮 (CMP)",
-        "累積和 (CUM)"
+        "Fenwick Tree",
+        "座標圧縮",
+        "累積和"
       ],
       "tag_ids": [
         "BIT",
@@ -31509,9 +31509,9 @@
       "problem_url": "https://atcoder.jp/contests/abc353/tasks/abc353_e",
       "editorial_url": "https://atcoder.jp/contests/abc353/editorial/9969",
       "tags": [
-        "最長共通接頭辞 (LCP)",
-        "Trie木 (TRI)",
-        "接尾辞配列 (SA)"
+        "最長共通接頭辞",
+        "Trie木",
+        "接尾辞配列"
       ],
       "tag_ids": [
         "LCP",
@@ -31583,9 +31583,9 @@
       "problem_url": "https://atcoder.jp/contests/abc353/tasks/abc353_g",
       "editorial_url": "https://atcoder.jp/contests/abc353/editorial/9953",
       "tags": [
-        "動的計画法 (DP)",
-        "セグメント木 (SEG)",
-        "最適化問題 (OPT)"
+        "動的計画法",
+        "セグメント木",
+        "最適化問題"
       ],
       "tag_ids": [
         "DP",
@@ -31731,9 +31731,9 @@
       "problem_url": "https://atcoder.jp/contests/abc354/tasks/abc354_f",
       "editorial_url": "https://atcoder.jp/contests/abc354/editorial/10027",
       "tags": [
-        "最長増加部分列 (LIS)",
-        "動的計画法 (DP)",
-        "座標圧縮 (CMP)"
+        "最長増加部分列",
+        "動的計画法",
+        "座標圧縮"
       ],
       "tag_ids": [
         "LIS",
@@ -31916,9 +31916,9 @@
       "problem_url": "https://atcoder.jp/contests/abc355/tasks/abc355_g",
       "editorial_url": "https://atcoder.jp/contests/abc355/editorial/10078",
       "tags": [
-        "動的計画法 (DP)",
-        "Monge性 (MON)",
-        "Alien DP (ADP)"
+        "動的計画法",
+        "Monge性",
+        "Alien DP"
       ],
       "tag_ids": [
         "DP",
@@ -32249,9 +32249,9 @@
       "problem_url": "https://atcoder.jp/contests/abc357/tasks/abc357_g",
       "editorial_url": "https://atcoder.jp/contests/abc357/editorial/10179",
       "tags": [
-        "動的計画法 (DP)",
-        "包除原理 (PIE)",
-        "高速フーリエ変換 (FFT)"
+        "動的計画法",
+        "包除原理",
+        "高速フーリエ変換"
       ],
       "tag_ids": [
         "DP",
@@ -32360,9 +32360,9 @@
       "problem_url": "https://atcoder.jp/contests/abc358/tasks/abc358_g",
       "editorial_url": "https://atcoder.jp/contests/abc358/editorial/10226",
       "tags": [
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)",
-        "尺取り法 (2PT)"
+        "動的計画法",
+        "最適化問題",
+        "尺取り法"
       ],
       "tag_ids": [
         "DP",
@@ -32656,9 +32656,9 @@
       "problem_url": "https://atcoder.jp/contests/abc360/tasks/abc360_g",
       "editorial_url": "https://atcoder.jp/contests/abc360/editorial/10311",
       "tags": [
-        "最長増加部分列 (LIS)",
-        "動的計画法 (DP)",
-        "座標圧縮 (CMP)"
+        "最長増加部分列",
+        "動的計画法",
+        "座標圧縮"
       ],
       "tag_ids": [
         "LIS",
@@ -32767,9 +32767,9 @@
       "problem_url": "https://atcoder.jp/contests/abc361/tasks/abc361_f",
       "editorial_url": "https://atcoder.jp/contests/abc361/editorial/10358",
       "tags": [
-        "素因数分解 (PFT)",
-        "最大公約数 (GCD)",
-        "包除原理 (PIE)"
+        "素因数分解",
+        "最大公約数",
+        "包除原理"
       ],
       "tag_ids": [
         "PFT",
@@ -32915,9 +32915,9 @@
       "problem_url": "https://atcoder.jp/contests/abc362/tasks/abc362_e",
       "editorial_url": "https://atcoder.jp/contests/abc362/editorial/10399",
       "tags": [
-        "動的計画法 (DP)",
-        "座標圧縮 (CMP)",
-        "全探索 (BRT)"
+        "動的計画法",
+        "座標圧縮",
+        "全探索"
       ],
       "tag_ids": [
         "DP",
@@ -33248,9 +33248,9 @@
       "problem_url": "https://atcoder.jp/contests/abc364/tasks/abc364_e",
       "editorial_url": "https://atcoder.jp/contests/abc364/editorial/10550",
       "tags": [
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "最適化問題",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -33359,9 +33359,9 @@
       "problem_url": "https://atcoder.jp/contests/abc365/tasks/abc365_d",
       "editorial_url": "https://atcoder.jp/contests/abc365/editorial/10598",
       "tags": [
-        "動的計画法 (DP)",
-        "ゲーム理論 (GAM)",
-        "バックトラック (BCK)"
+        "動的計画法",
+        "ゲーム理論",
+        "バックトラック"
       ],
       "tag_ids": [
         "DP",
@@ -33508,7 +33508,7 @@
       "editorial_url": "https://atcoder.jp/contests/abc366/editorial/10643",
       "tags": [
         "累積和",
-        "Fenwick Tree (BIT)",
+        "Fenwick Tree",
         "いもす法"
       ],
       "tag_ids": [
@@ -33581,8 +33581,8 @@
       "problem_url": "https://atcoder.jp/contests/abc366/tasks/abc366_f",
       "editorial_url": "https://atcoder.jp/contests/abc366/editorial/10646",
       "tags": [
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)",
+        "動的計画法",
+        "最適化問題",
         "bitDP"
       ],
       "tag_ids": [
@@ -33951,9 +33951,9 @@
       "problem_url": "https://atcoder.jp/contests/abc369/tasks/abc369_d",
       "editorial_url": "https://atcoder.jp/contests/abc369/editorial/10841",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "bitDP",
-        "半分全列挙 (MIT)"
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -33989,7 +33989,7 @@
       "editorial_url": "https://atcoder.jp/contests/abc369/editorial/10842",
       "tags": [
         "ワーシャルフロイド法",
-        "動的計画法 (DP)",
+        "動的計画法",
         "ダイクストラ法"
       ],
       "tag_ids": [
@@ -34025,9 +34025,9 @@
       "problem_url": "https://atcoder.jp/contests/abc369/tasks/abc369_f",
       "editorial_url": "https://atcoder.jp/contests/abc369/editorial/10835",
       "tags": [
-        "最長増加部分列 (LIS)",
-        "動的計画法 (DP)",
-        "二分探索 (BIN)"
+        "最長増加部分列",
+        "動的計画法",
+        "二分探索"
       ],
       "tag_ids": [
         "LIS",
@@ -34136,9 +34136,9 @@
       "problem_url": "https://atcoder.jp/contests/abc370/tasks/abc370_e",
       "editorial_url": "https://atcoder.jp/contests/abc370/editorial/10858",
       "tags": [
-        "動的計画法 (DP)",
-        "累積和 (CUM)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "累積和",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -34432,9 +34432,9 @@
       "problem_url": "https://atcoder.jp/contests/abc372/tasks/abc372_d",
       "editorial_url": "https://atcoder.jp/contests/abc372/editorial/10975",
       "tags": [
-        "最長増加部分列 (LIS)",
-        "動的計画法 (DP)",
-        "構築問題 (CON)"
+        "最長増加部分列",
+        "動的計画法",
+        "構築問題"
       ],
       "tag_ids": [
         "LIS",
@@ -34506,9 +34506,9 @@
       "problem_url": "https://atcoder.jp/contests/abc372/tasks/abc372_f",
       "editorial_url": "https://atcoder.jp/contests/abc372/editorial/10969",
       "tags": [
-        "動的計画法 (DP)",
-        "グラフ (GRP)",
-        "bitDP (BDP)"
+        "動的計画法",
+        "グラフ",
+        "bitDP"
       ],
       "tag_ids": [
         "DP",
@@ -34654,9 +34654,9 @@
       "problem_url": "https://atcoder.jp/contests/abc373/tasks/abc373_f",
       "editorial_url": "https://atcoder.jp/contests/abc373/editorial/11027",
       "tags": [
-        "動的計画法 (DP)",
-        "貪欲法 (GRD)",
-        "最適化問題 (OPT)"
+        "動的計画法",
+        "貪欲法",
+        "最適化問題"
       ],
       "tag_ids": [
         "DP",
@@ -34802,8 +34802,8 @@
       "problem_url": "https://atcoder.jp/contests/abc374/tasks/abc374_f",
       "editorial_url": "https://atcoder.jp/contests/abc374/editorial/11095",
       "tags": [
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)",
+        "動的計画法",
+        "最適化問題",
         "bitDP"
       ],
       "tag_ids": [
@@ -34950,9 +34950,9 @@
       "problem_url": "https://atcoder.jp/contests/abc375/tasks/abc375_e",
       "editorial_url": "https://atcoder.jp/contests/abc375/editorial/11140",
       "tags": [
-        "動的計画法 (DP)",
-        "半分全列挙 (MIT)",
-        "bitDP (BDP)"
+        "動的計画法",
+        "半分全列挙",
+        "bitDP"
       ],
       "tag_ids": [
         "DP",
@@ -35135,9 +35135,9 @@
       "problem_url": "https://atcoder.jp/contests/abc376/tasks/abc376_f",
       "editorial_url": "https://atcoder.jp/contests/abc376/editorial/11195",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "bitDP",
-        "尺取り法 (2PT)"
+        "尺取り法"
       ],
       "tag_ids": [
         "DP",
@@ -35357,9 +35357,9 @@
       "problem_url": "https://atcoder.jp/contests/abc378/tasks/abc378_d",
       "editorial_url": "https://atcoder.jp/contests/abc378/editorial/11288",
       "tags": [
-        "深さ優先探索 (DFS)",
-        "バックトラック (BCK)",
-        "全探索 (BRT)"
+        "深さ優先探索",
+        "バックトラック",
+        "全探索"
       ],
       "tag_ids": [
         "DFS",
@@ -35468,9 +35468,9 @@
       "problem_url": "https://atcoder.jp/contests/abc378/tasks/abc378_g",
       "editorial_url": "https://atcoder.jp/contests/abc378/editorial/11283",
       "tags": [
-        "最長増加部分列 (LIS)",
-        "組み合わせ論 (CMB)",
-        "動的計画法 (DP)"
+        "最長増加部分列",
+        "組み合わせ論",
+        "動的計画法"
       ],
       "tag_ids": [
         "LIS",
@@ -35616,9 +35616,9 @@
       "problem_url": "https://atcoder.jp/contests/abc379/tasks/abc379_f",
       "editorial_url": "https://atcoder.jp/contests/abc379/editorial/11309",
       "tags": [
-        "Fenwick Tree (BIT)",
-        "二分探索 (BIN)",
-        "構築問題 (CON)"
+        "Fenwick Tree",
+        "二分探索",
+        "構築問題"
       ],
       "tag_ids": [
         "BIT",
@@ -35653,7 +35653,7 @@
       "problem_url": "https://atcoder.jp/contests/abc379/tasks/abc379_g",
       "editorial_url": "https://atcoder.jp/contests/abc379/editorial/11331",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "桁DP",
         "bitDP"
       ],
@@ -35727,9 +35727,9 @@
       "problem_url": "https://atcoder.jp/contests/abc380/tasks/abc380_e",
       "editorial_url": "https://atcoder.jp/contests/abc380/editorial/11356",
       "tags": [
-        "Union-Find (UF)",
-        "Mo's algorithm (MOS)",
-        "動的計画法 (DP)"
+        "Union-Find",
+        "Mo's algorithm",
+        "動的計画法"
       ],
       "tag_ids": [
         "UF",
@@ -35912,9 +35912,9 @@
       "problem_url": "https://atcoder.jp/contests/abc381/tasks/abc381_f",
       "editorial_url": "https://atcoder.jp/contests/abc381/editorial/11408",
       "tags": [
-        "動的計画法 (DP)",
-        "bitDP (BDP)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "bitDP",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -36134,9 +36134,9 @@
       "problem_url": "https://atcoder.jp/contests/abc382/tasks/abc382_g",
       "editorial_url": "https://atcoder.jp/contests/abc382/editorial/11484",
       "tags": [
-        "幅優先探索 (BFS)",
-        "幾何 (GEO)",
-        "動的計画法 (DP)"
+        "幅優先探索",
+        "幾何",
+        "動的計画法"
       ],
       "tag_ids": [
         "BFS",
@@ -36171,9 +36171,9 @@
       "problem_url": "https://atcoder.jp/contests/abc383/tasks/abc383_c",
       "editorial_url": "https://atcoder.jp/contests/abc383/editorial/11544",
       "tags": [
-        "幅優先探索 (BFS)",
-        "0-1 BFS (01B)",
-        "木構造 (TRE)"
+        "幅優先探索",
+        "0-1 BFS",
+        "木構造"
       ],
       "tag_ids": [
         "BFS",
@@ -36282,9 +36282,9 @@
       "problem_url": "https://atcoder.jp/contests/abc383/tasks/abc383_f",
       "editorial_url": "https://atcoder.jp/contests/abc383/editorial/11543",
       "tags": [
-        "動的計画法 (DP)",
-        "最適化問題 (OPT)",
-        "bitDP (BDP)"
+        "動的計画法",
+        "最適化問題",
+        "bitDP"
       ],
       "tag_ids": [
         "DP",
@@ -36319,9 +36319,9 @@
       "problem_url": "https://atcoder.jp/contests/abc383/tasks/abc383_g",
       "editorial_url": "https://atcoder.jp/contests/abc383/editorial/11500",
       "tags": [
-        "動的計画法 (DP)",
-        "分割統治法 (DC)",
-        "累積和 (CUM)"
+        "動的計画法",
+        "分割統治法",
+        "累積和"
       ],
       "tag_ids": [
         "DP",
@@ -36468,7 +36468,7 @@
       "editorial_url": "https://atcoder.jp/contests/abc384/editorial/11548",
       "tags": [
         "座標圧縮",
-        "Fenwick Tree (BIT)",
+        "Fenwick Tree",
         "Mo's algorithm"
       ],
       "tag_ids": [
@@ -36652,9 +36652,9 @@
       "problem_url": "https://atcoder.jp/contests/abc385/tasks/abc385_g",
       "editorial_url": "https://atcoder.jp/contests/abc385/editorial/11656",
       "tags": [
-        "動的計画法 (DP)",
-        "組み合わせ論 (CMB)",
-        "形式的冪級数 (FPS)"
+        "動的計画法",
+        "組み合わせ論",
+        "形式的冪級数"
       ],
       "tag_ids": [
         "DP",
@@ -36874,9 +36874,9 @@
       "problem_url": "https://atcoder.jp/contests/abc387/tasks/abc387_d",
       "editorial_url": "https://atcoder.jp/contests/abc387/editorial/11833",
       "tags": [
-        "幅優先探索 (BFS)",
-        "グラフ (GRP)",
-        "0-1 BFS (01B)"
+        "幅優先探索",
+        "グラフ",
+        "0-1 BFS"
       ],
       "tag_ids": [
         "BFS",
@@ -36948,9 +36948,9 @@
       "problem_url": "https://atcoder.jp/contests/abc387/tasks/abc387_f",
       "editorial_url": "https://atcoder.jp/contests/abc387/editorial/11834",
       "tags": [
-        "動的計画法 (DP)",
-        "グラフ (GRP)",
-        "Union-Find (UF)"
+        "動的計画法",
+        "グラフ",
+        "Union-Find"
       ],
       "tag_ids": [
         "DP",
@@ -37096,9 +37096,9 @@
       "problem_url": "https://atcoder.jp/contests/abc388/tasks/abc388_f",
       "editorial_url": "https://atcoder.jp/contests/abc388/editorial/11910",
       "tags": [
-        "動的計画法 (DP)",
-        "平方分割 (SQD)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "平方分割",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -37281,9 +37281,9 @@
       "problem_url": "https://atcoder.jp/contests/abc389/tasks/abc389_g",
       "editorial_url": "https://atcoder.jp/contests/abc389/editorial/11929",
       "tags": [
-        "動的計画法 (DP)",
-        "グラフ (GRP)",
-        "素数 (PRM)"
+        "動的計画法",
+        "グラフ",
+        "素数"
       ],
       "tag_ids": [
         "DP",
@@ -37355,9 +37355,9 @@
       "problem_url": "https://atcoder.jp/contests/abc390/tasks/abc390_e",
       "editorial_url": "https://atcoder.jp/contests/abc390/editorial/12052",
       "tags": [
-        "動的計画法 (DP)",
-        "貪欲法 (GRD)",
-        "最適化問題 (OPT)"
+        "動的計画法",
+        "貪欲法",
+        "最適化問題"
       ],
       "tag_ids": [
         "DP",
@@ -37503,9 +37503,9 @@
       "problem_url": "https://atcoder.jp/contests/abc391/tasks/abc391_e",
       "editorial_url": "https://atcoder.jp/contests/abc391/editorial/12103",
       "tags": [
-        "動的計画法 (DP)",
-        "再帰関数 (REC)",
-        "編集距離 (EDT)"
+        "動的計画法",
+        "再帰関数",
+        "編集距離"
       ],
       "tag_ids": [
         "DP",
@@ -37688,14 +37688,14 @@
       "problem_url": "https://atcoder.jp/contests/abc392/tasks/abc392_f",
       "editorial_url": "https://atcoder.jp/contests/abc392/editorial/12145",
       "tags": [
-        "Fenwick Tree (BIT)",
-        "セグメント木 (SEG)",
-        "二分探索 (BIN)"
+        "Fenwick Tree",
+        "セグメント木",
+        "二分探索"
       ],
       "tag_ids": [
-        "Fenwick Tree (BIT)",
-        "セグメント木 (SEG)",
-        "二分探索 (BIN)"
+        "BIT",
+        "SEG",
+        "BIN"
       ],
       "confidence_scores": [
         0.81,
@@ -37703,17 +37703,17 @@
         0.6299999999999999
       ],
       "detailed_scores": {
-        "Fenwick Tree (BIT)": {
+        "BIT": {
           "self_confidence": 0.9,
           "embedding_similarity": 0.7200000000000001,
           "rule_based_score": 0.0
         },
-        "セグメント木 (SEG)": {
+        "SEG": {
           "self_confidence": 0.8,
           "embedding_similarity": 0.6400000000000001,
           "rule_based_score": 0.0
         },
-        "二分探索 (BIN)": {
+        "BIN": {
           "self_confidence": 0.7,
           "embedding_similarity": 0.5599999999999999,
           "rule_based_score": 0.0
@@ -37725,9 +37725,9 @@
       "problem_url": "https://atcoder.jp/contests/abc392/tasks/abc392_g",
       "editorial_url": "https://atcoder.jp/contests/abc392/editorial/12175",
       "tags": [
-        "高速フーリエ変換 (FFT)",
-        "組み合わせ論 (CMB)",
-        "形式的冪級数 (FPS)"
+        "高速フーリエ変換",
+        "組み合わせ論",
+        "形式的冪級数"
       ],
       "tag_ids": [
         "FFT",
@@ -37762,7 +37762,7 @@
       "problem_url": "https://atcoder.jp/contests/abc393/tasks/abc393_d",
       "editorial_url": "https://atcoder.jp/contests/abc393/editorial/12251",
       "tags": [
-        "Fenwick Tree (BIT)",
+        "Fenwick Tree",
         "ビット演算",
         "編集距離"
       ],
@@ -37799,9 +37799,9 @@
       "problem_url": "https://atcoder.jp/contests/abc393/tasks/abc393_e",
       "editorial_url": "https://atcoder.jp/contests/abc393/editorial/12243",
       "tags": [
-        "最大公約数 (GCD)",
-        "動的計画法 (DP)",
-        "約数列挙 (DIV)"
+        "最大公約数",
+        "動的計画法",
+        "約数列挙"
       ],
       "tag_ids": [
         "GCD",
@@ -37836,9 +37836,9 @@
       "problem_url": "https://atcoder.jp/contests/abc393/tasks/abc393_f",
       "editorial_url": "https://atcoder.jp/contests/abc393/editorial/12252",
       "tags": [
-        "最長増加部分列 (LIS)",
-        "動的計画法 (DP)",
-        "二分探索 (BIN)"
+        "最長増加部分列",
+        "動的計画法",
+        "二分探索"
       ],
       "tag_ids": [
         "LIS",
@@ -38244,7 +38244,7 @@
       "editorial_url": "https://atcoder.jp/contests/abc396/editorial/12374",
       "tags": [
         "いもす法",
-        "Fenwick Tree (BIT)",
+        "Fenwick Tree",
         "最長増加部分列"
       ],
       "tag_ids": [
@@ -38391,9 +38391,9 @@
       "problem_url": "https://atcoder.jp/contests/abc397/tasks/abc397_f",
       "editorial_url": "https://atcoder.jp/contests/abc397/editorial/12457",
       "tags": [
-        "動的計画法 (DP)",
-        "セグメント木 (SEG)",
-        "いもす法 (IMO)"
+        "動的計画法",
+        "セグメント木",
+        "いもす法"
       ],
       "tag_ids": [
         "DP",
@@ -38465,7 +38465,7 @@
       "problem_url": "https://atcoder.jp/contests/abc398/tasks/abc398_d",
       "editorial_url": "https://atcoder.jp/contests/abc398/editorial/12500",
       "tags": [
-        "Fenwick Tree (BIT)",
+        "Fenwick Tree",
         "動的計画法",
         "尺取り法"
       ],
@@ -38687,9 +38687,9 @@
       "problem_url": "https://atcoder.jp/contests/abc399/tasks/abc399_f",
       "editorial_url": "https://atcoder.jp/contests/abc399/editorial/12565",
       "tags": [
-        "動的計画法 (DP)",
-        "いもす法 (IMO)",
-        "桁DP (KDP)"
+        "動的計画法",
+        "いもす法",
+        "桁DP"
       ],
       "tag_ids": [
         "DP",
@@ -38872,9 +38872,9 @@
       "problem_url": "https://atcoder.jp/contests/abc400/tasks/abc400_f",
       "editorial_url": "https://atcoder.jp/contests/abc400/editorial/12625",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "bitDP",
-        "いもす法 (IMO)"
+        "いもす法"
       ],
       "tag_ids": [
         "DP",
@@ -38911,7 +38911,7 @@
       "tags": [
         "Alien DP",
         "二分探索",
-        "動的計画法 (DP)"
+        "動的計画法"
       ],
       "tag_ids": [
         "ADP",
@@ -39242,9 +39242,9 @@
       "problem_url": "https://atcoder.jp/contests/abc403/tasks/abc403_d",
       "editorial_url": "https://atcoder.jp/contests/abc403/editorial/12823",
       "tags": [
-        "動的計画法 (DP)",
-        "編集距離 (EDT)",
-        "最長増加部分列 (LIS)"
+        "動的計画法",
+        "編集距離",
+        "最長増加部分列"
       ],
       "tag_ids": [
         "DP",
@@ -39316,9 +39316,9 @@
       "problem_url": "https://atcoder.jp/contests/abc403/tasks/abc403_f",
       "editorial_url": "https://atcoder.jp/contests/abc403/editorial/12771",
       "tags": [
-        "動的計画法 (DP)",
+        "動的計画法",
         "桁DP",
-        "編集距離 (EDT)"
+        "編集距離"
       ],
       "tag_ids": [
         "DP",
@@ -39464,9 +39464,9 @@
       "problem_url": "https://atcoder.jp/contests/abc404/tasks/abc404_f",
       "editorial_url": "https://atcoder.jp/contests/abc404/editorial/12846",
       "tags": [
-        "動的計画法 (DP)",
-        "期待値 (EXP)",
-        "ゲーム理論 (GAM)"
+        "動的計画法",
+        "期待値",
+        "ゲーム理論"
       ],
       "tag_ids": [
         "DP",
@@ -39538,9 +39538,9 @@
       "problem_url": "https://atcoder.jp/contests/abc405/tasks/abc405_d",
       "editorial_url": "https://atcoder.jp/contests/abc405/editorial/13003",
       "tags": [
-        "幅優先探索 (BFS)",
-        "ダイクストラ法 (DJK)",
-        "動的計画法 (DP)"
+        "幅優先探索",
+        "ダイクストラ法",
+        "動的計画法"
       ],
       "tag_ids": [
         "BFS",
@@ -39612,9 +39612,9 @@
       "problem_url": "https://atcoder.jp/contests/abc405/tasks/abc405_f",
       "editorial_url": "https://atcoder.jp/contests/abc405/editorial/13009",
       "tags": [
-        "最小共通祖先 (LCA)",
-        "グラフ (GRP)",
-        "幾何 (GEO)"
+        "最小共通祖先",
+        "グラフ",
+        "幾何"
       ],
       "tag_ids": [
         "LCA",
@@ -39760,9 +39760,9 @@
       "problem_url": "https://atcoder.jp/contests/abc406/tasks/abc406_e",
       "editorial_url": "https://atcoder.jp/contests/abc406/editorial/13044",
       "tags": [
-        "動的計画法 (DP)",
-        "ビット演算 (BOP)",
-        "組み合わせ論 (CMB)"
+        "動的計画法",
+        "ビット演算",
+        "組み合わせ論"
       ],
       "tag_ids": [
         "DP",
@@ -39834,9 +39834,9 @@
       "problem_url": "https://atcoder.jp/contests/abc406/tasks/abc406_g",
       "editorial_url": "https://atcoder.jp/contests/abc406/editorial/13048",
       "tags": [
-        "動的計画法 (DP)",
-        "Alien DP (ADP)",
-        "二分探索 (BIN)"
+        "動的計画法",
+        "Alien DP",
+        "二分探索"
       ],
       "tag_ids": [
         "DP",
@@ -40093,9 +40093,9 @@
       "problem_url": "https://atcoder.jp/contests/abc408/tasks/abc408_f",
       "editorial_url": "https://atcoder.jp/contests/abc408/editorial/13195",
       "tags": [
-        "動的計画法 (DP)",
-        "セグメント木 (SEG)",
-        "全列挙 (ENM)"
+        "動的計画法",
+        "セグメント木",
+        "全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -40130,9 +40130,9 @@
       "problem_url": "https://atcoder.jp/contests/abc408/tasks/abc408_g",
       "editorial_url": "https://atcoder.jp/contests/abc408/editorial/13194",
       "tags": [
-        "最大公約数 (GCD)",
-        "ユークリッドの互除法 (EUC)",
-        "最適化問題 (OPT)"
+        "最大公約数",
+        "ユークリッドの互除法",
+        "最適化問題"
       ],
       "tag_ids": [
         "GCD",
@@ -40352,9 +40352,9 @@
       "problem_url": "https://atcoder.jp/contests/abc410/tasks/abc410_e",
       "editorial_url": "https://atcoder.jp/contests/abc410/editorial/13306",
       "tags": [
-        "動的計画法 (DP)",
-        "ゲーム理論 (GAM)",
-        "最適化問題 (OPT)"
+        "動的計画法",
+        "ゲーム理論",
+        "最適化問題"
       ],
       "tag_ids": [
         "DP",
@@ -40389,7 +40389,7 @@
       "problem_url": "https://atcoder.jp/contests/abc410/tasks/abc410_f",
       "editorial_url": "https://atcoder.jp/contests/abc410/editorial/13305",
       "tags": [
-        "Fenwick Tree (BIT)",
+        "Fenwick Tree",
         "累積和",
         "尺取り法"
       ],
@@ -41314,9 +41314,9 @@
       "problem_url": "https://atcoder.jp/contests/abc417/tasks/abc417_d",
       "editorial_url": "https://atcoder.jp/contests/abc417/editorial/13585",
       "tags": [
-        "動的計画法 (DP)",
-        "累積和 (CUM)",
-        "半分全列挙 (MIT)"
+        "動的計画法",
+        "累積和",
+        "半分全列挙"
       ],
       "tag_ids": [
         "DP",
@@ -41499,9 +41499,9 @@
       "problem_url": "https://atcoder.jp/contests/abc418/tasks/abc418_d",
       "editorial_url": "https://atcoder.jp/contests/abc418/editorial/13722",
       "tags": [
-        "動的計画法 (DP)",
-        "桁DP (KDP)",
-        "ビット全探索 (BBF)"
+        "動的計画法",
+        "桁DP",
+        "ビット全探索"
       ],
       "tag_ids": [
         "DP",
@@ -41647,9 +41647,9 @@
       "problem_url": "https://atcoder.jp/contests/abc419/tasks/abc419_e",
       "editorial_url": "https://atcoder.jp/contests/abc419/editorial/13672",
       "tags": [
-        "動的計画法 (DP)",
-        "最大公約数 (GCD)",
-        "最小公倍数 (LCM)"
+        "動的計画法",
+        "最大公約数",
+        "最小公倍数"
       ],
       "tag_ids": [
         "DP",
@@ -41758,9 +41758,9 @@
       "problem_url": "https://atcoder.jp/contests/abc420/tasks/abc420_d",
       "editorial_url": "https://atcoder.jp/contests/abc420/editorial/13751",
       "tags": [
-        "幅優先探索 (BFS)",
-        "ビット演算 (BOP)",
-        "0-1 BFS (01B)"
+        "幅優先探索",
+        "ビット演算",
+        "0-1 BFS"
       ],
       "tag_ids": [
         "BFS",

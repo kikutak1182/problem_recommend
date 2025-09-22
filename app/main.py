@@ -4,11 +4,9 @@ from fastapi.templating import Jinja2Templates
 import requests
 import uvicorn
 import os
-import pickle
-from sentence_transformers import SentenceTransformer
-import numpy as np
 import json
 import re
+from typing import List
 
 app = FastAPI()
 templates = Jinja2Templates(directory="app/templates")
@@ -16,7 +14,6 @@ templates = Jinja2Templates(directory="app/templates")
 import sys
 import re
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# Remove tag directory dependency - use app/data instead
 
 
 """
@@ -29,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 """
 
 # Define paths within app directory
-tag_vectors_path = os.path.join(BASE_DIR, "app/data/tag_vectors.pkl")
+tag_definitions_path = os.path.join(BASE_DIR, "app/data/tag_definitions.json")
 
 # Resolve data path from env or fallback
 default_data_path = os.path.join(
@@ -51,33 +48,21 @@ elif env_basename:
 else:
     unified_results_path = default_data_path
 
-sentence_transformer_model = "intfloat/multilingual-e5-base"
 top_k_tags = 10
 
-# Load tag vectors and data
+# Load tag definitions and collect canonical tag names
 try:
-    with open(tag_vectors_path, "rb") as f:
-        data = pickle.load(f)
-    tags = data["tags"]
-    tag_vectors = np.array(data["vectors"])
+    with open(tag_definitions_path, "r", encoding="utf-8") as f:
+        defs = json.load(f)
+    tags = [entry.get("name") for entry in defs.get("tags", []) if entry.get("name")]
+    if not tags:
+        raise RuntimeError("No tags found in tag_definitions.json")
 except FileNotFoundError:
     raise FileNotFoundError(
-        f"Tag vectors not found: {tag_vectors_path}. Ensure 'app/data/tag_vectors.pkl' exists."
+        f"Tag vectors not found: {tag_definitions_path}. Ensure 'tag/vectors/tag_vectors.pkl' exists."
     )
 
-# Load sentence transformer model
-model = SentenceTransformer(sentence_transformer_model)
 
-# Load pre-computed tag embeddings
-all_tag_embeddings_path = os.path.join(BASE_DIR, "app/data/all_tag_embeddings.pkl")
-try:
-    with open(all_tag_embeddings_path, "rb") as f:
-        tag_embedding_data = pickle.load(f)
-    all_tag_embeddings = tag_embedding_data["tag_embeddings"]
-    print(f"Loaded {len(all_tag_embeddings)} pre-computed tag embeddings")
-except FileNotFoundError:
-    print(f"Warning: Pre-computed embeddings not found at {all_tag_embeddings_path}")
-    all_tag_embeddings = {}
 
 # Load problem data (supports both unified and standard formats)
 try:
@@ -127,13 +112,44 @@ def format_problem_title(problem_id: str, original_title: str) -> str:
 
 @app.get("/", response_class=HTMLResponse)
 def index(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request, "result": None})
+    return templates.TemplateResponse(
+        "index.html",
+        {
+            "request": request,
+            "result": None,
+            "all_tags": sorted(tags),
+            "selected_tags": [],
+            "similar_tags": [],
+            "username": "",
+            "rate": None,
+        },
+    )
 
 @app.post("/", response_class=HTMLResponse)
+def recommend(
+    request: Request,
+    username: str = Form(""),
+    selected_tags: List[str] = Form(default=None),
+):
 
-def recommend(request: Request, username: str = Form(""), queries: str = Form("")):
+    selected_tags = selected_tags or []
+    # Server-side validation: max 5 tags
+    if len(selected_tags) > 5:
+        return templates.TemplateResponse(
+            "index.html",
+            {
+                "request": request,
+                "error": "タグは最大5つまで選べます。",
+                "result": None,
+                "username": username,
+                "rate": None,
+                "all_tags": sorted(tags),
+                "selected_tags": selected_tags,
+                "similar_tags": [],
+            },
+        )
 
- 
+    
     # レート取得
     current_rate = None
     if username.strip():
@@ -144,29 +160,41 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
             if user_info:
                 current_rate = user_info[-1]['NewRating']
             else:
-                return templates.TemplateResponse("index.html", {"request": request, "error": "ユーザー情報が取得できませんでした。", "result": None, "username": username, "queries": queries})
+                return templates.TemplateResponse(
+                    "index.html",
+                    {
+                        "request": request,
+                        "error": "ユーザー情報が取得できませんでした。",
+                        "result": None,
+                        "username": username,
+                        "rate": current_rate,
+                        "all_tags": sorted(tags),
+                        "selected_tags": selected_tags,
+                        "similar_tags": [],
+                    },
+                )
         except Exception as e:
-            return templates.TemplateResponse("index.html", {"request": request, "error": "ユーザー情報の取得中にエラーが発生しました。", "result": None, "username": username, "queries": queries})
+            return templates.TemplateResponse(
+                "index.html",
+                {
+                    "request": request,
+                    "error": "ユーザー情報の取得中にエラーが発生しました。",
+                    "result": None,
+                    "username": username,
+                    "rate": current_rate,
+                    "all_tags": sorted(tags),
+                    "selected_tags": selected_tags,
+                    "similar_tags": [],
+                },
+            )
     
     # ユーザー名が未入力の場合は current_rate = None のまま（レート制限なし）
 
 
-    # Check if queries are provided for tag-based recommendation
-    if queries.strip():
+    # タグ選択が必須（チェックボックスのみ依存）
+    if selected_tags:
         # Tag-based recommendation
-        # 文字化け対応：UTF-8でデコード
-        try:
-            if isinstance(queries, bytes):
-                queries = queries.decode('utf-8')
-            else:
-                # 既に文字列の場合、Latin-1でエンコードしてUTF-8でデコード
-                queries = queries.encode('latin-1').decode('utf-8')
-        except:
-            pass  # デコードできない場合はそのまま
-            
-        query_list = [q.strip() for q in queries.splitlines() if q.strip()]
-        if not query_list:
-            return templates.TemplateResponse("index.html", {"request": request, "error": "単語・フレーズを入力してください", "result": None, "username": username, "queries": queries})
+        # queries は参照しない（UIチェックボックスのみ）
 
         # タグエイリアス辞書（表記揺れ対応）
         # BEGIN_TAG_ALIASES (auto-generated; do not edit by hand)
@@ -282,28 +310,7 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
         # END_TAG_ALIASES
 
         # 外部ファイルからの読込は行わず、別スクリプトで上記辞書を自動更新します。
-        # 逆引き（エイリアス→正規名）も含めた展開
-        alias_to_keys = {}
-        for key, vals in tag_aliases.items():
-            for v in vals:
-                alias_to_keys.setdefault(v, set()).add(key)
-        
-        # エイリアスを考慮したクエリ拡張
-        expanded_queries = []
-        for q in query_list:
-            expanded_queries.append(q)
-            # 正引き（キーに一致）
-            if q in tag_aliases:
-                expanded_queries.extend(tag_aliases[q])
-            # 逆引き（別名に一致）
-            if q in alias_to_keys:
-                expanded_queries.extend(list(alias_to_keys[q]))
-        
-        # 重複除去
-        expanded_queries = list(dict.fromkeys(expanded_queries))
-        
-        # クエリベクトル化（最適化済みシステムで使用）
-        query_vecs = model.encode(expanded_queries)
+        # クエリ拡張や埋め込みは不要（チェックボックスのみ）
 
         # 問題抽出（改良版タグマッチング）
         recommend = []
@@ -318,51 +325,17 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
             problem_models = {}
             print("Warning: Could not fetch external data, using fallback")
         
-        # Step 1: Find top 5 similar tags using pre-computed embeddings
-        similar_tags = []
+        # Step 1: Use user-selected tags; pad up to 5 with existing tags
         weights = [1.0, 0.8, 0.6, 0.4, 0.2]
-        
-        if all_tag_embeddings:
-            # Calculate similarities with all available tags
-            tag_similarities = []
-            for tag, tag_embedding in all_tag_embeddings.items():
-                max_sim = 0.0
-                
-                # Check similarity with each query
-                for query_vec in query_vecs:
-                    sim = np.dot(tag_embedding, query_vec) / (
-                        np.linalg.norm(tag_embedding) * np.linalg.norm(query_vec) + 1e-8
-                    )
-                    max_sim = max(max_sim, sim)
-                
-                # Check exact matches with aliases (boost score for exact matches)
-                for original_query in query_list:
-                    if tag == original_query:
-                        max_sim = max(max_sim, 1.0)  # Exact match gets highest score
-                    elif original_query in tag_aliases and tag in tag_aliases[original_query]:
-                        max_sim = max(max_sim, 0.95)  # Alias match gets very high score
-                    elif original_query in alias_to_keys and tag in alias_to_keys[original_query]:
-                        max_sim = max(max_sim, 0.95)
-                
-                tag_similarities.append((tag, max_sim))
-            
-            # Sort by similarity and take top 5
-            tag_similarities.sort(key=lambda x: x[1], reverse=True)
-            similar_tags = [tag for tag, _ in tag_similarities[:5]]
-        
-        # Fallback to available tags if no pre-computed embeddings
-        available_tags = list(all_tag_embeddings.keys()) if all_tag_embeddings else []
-        if not similar_tags and available_tags:
-            similar_tags = available_tags[:5]
-        
-        # Ensure we have exactly 5 tags, pad with available tags if needed
-        while len(similar_tags) < 5 and len(available_tags) > len(similar_tags):
-            for tag in available_tags:
-                if tag not in similar_tags:
-                    similar_tags.append(tag)
-                    break
-        
-        similar_tags = similar_tags[:5]  # Ensure exactly 5
+        similar_tags = selected_tags[:5]
+        # パディング（安定のため全タグのソート順を利用）
+        available_tags = sorted(tags)
+        i = 0
+        while len(similar_tags) < 5 and i < len(available_tags):
+            t = available_tags[i]
+            if t not in similar_tags:
+                similar_tags.append(t)
+            i += 1
         
         # Step 2: Calculate problem relevance scores efficiently
         problem_scores = []
@@ -439,43 +412,36 @@ def recommend(request: Request, username: str = Form(""), queries: str = Form(""
             }
             for direct_count, diff, relevance, title, url, tag_info in recommend
         ]
-        return templates.TemplateResponse("index.html", {"request": request, "result": result, "username": username, "rate": current_rate, "queries": queries})
+        return templates.TemplateResponse(
+            "index.html",
+            {
+                "request": request,
+                "result": result,
+                "username": username,
+                "rate": current_rate,
+                "all_tags": sorted(tags),
+                "selected_tags": selected_tags,
+                "similar_tags": similar_tags,
+            },
+        )
 
     
     else:
-        # Rate-based recommendation (fallback)
-        problems = requests.get('https://kenkoooo.com/atcoder/resources/problems.json').json()
-        problem_models = requests.get('https://kenkoooo.com/atcoder/resources/problem-models.json').json()
-
-        # レートとdiffが近い問題を抽出
-        recommend = []
-        for p in problems:
-            pid = p['id']
-            title = p['title']
-            contest_id = p['contest_id']
-            diff = problem_models.get(pid, {}).get('difficulty')
-            if diff is not None:
-                if current_rate is not None:
-                    diff_gap = abs(diff - current_rate)
-                    recommend.append((diff_gap, contest_id, title, diff, pid))
-                else:
-                    # ユーザー名未入力の場合はランダムソート
-                    import random
-                    diff_gap = random.random()
-                    recommend.append((diff_gap, contest_id, title, diff, pid))
-        recommend.sort()
-        result = [
+        # タグ未選択はエラー（チェックボックスのみの仕様）
+        return templates.TemplateResponse(
+            "index.html",
             {
-                "title": format_problem_title(pid, title),
+                "request": request,
+                "error": "タグを1つ以上選択してください。",
+                "result": None,
+                "username": username,
+                "rate": current_rate,
+                "all_tags": sorted(tags),
+                "selected_tags": selected_tags,
+                "similar_tags": [],
+            },
+        )
 
-                "url": f"https://atcoder.jp/contests/{contest_id}/tasks/{pid}",
-                "tags": [],
-                "diff": diff
-            }
-            for _, contest_id, title, diff, pid in recommend[:10]
-        ]
-
-        return templates.TemplateResponse("index.html", {"request": request, "result": result, "username": username, "rate": current_rate, "queries": queries})
 
 
 if __name__ == "__main__":

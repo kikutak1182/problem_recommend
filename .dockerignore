@@ -10,6 +10,7 @@ __pycache__/
 
 # Virtual environment
 venv/
+venv_light/
 env/
 
 # IDE/Editor files
@@ -37,10 +38,26 @@ rebuild_tag_vectors.py
 AGENTS.md
 Procfile
 runtime.txt
+install_requirements.sh
 
 # Documentation and config
 README.md
 .claude/
+app_start.md
 
-# Render deployment config (not needed in container)
+# Deployment configs (not needed in container)
 render.yaml
+
+# Backup and temporary data files
+app/data/problems_data_backup.json
+app/data/*.tmp
+app/data/*.bak
+
+# Large model files (not needed for lightweight implementation)
+*.bin
+app/data/cc.ja.300.bin
+cc.ja.300.bin
+
+# Local testing files
+test_*.py
+*_test.py
