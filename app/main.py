@@ -4,7 +4,6 @@ from fastapi.templating import Jinja2Templates
 import requests
 import uvicorn
 import os
-# pickle not needed after removing vector/embedding loads
 import json
 import re
 from typing import List
@@ -15,7 +14,6 @@ templates = Jinja2Templates(directory="app/templates")
 import sys
 import re
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# Remove tag directory dependency - use app/data instead
 
 
 """
@@ -61,7 +59,7 @@ try:
         raise RuntimeError("No tags found in tag_definitions.json")
 except FileNotFoundError:
     raise FileNotFoundError(
-        f"Tag definitions not found: {tag_definitions_path}. Ensure 'app/data/tag_definitions.json' exists."
+        f"Tag vectors not found: {tag_definitions_path}. Ensure 'tag/vectors/tag_vectors.pkl' exists."
     )
 
 
@@ -443,6 +441,7 @@ def recommend(
                 "similar_tags": [],
             },
         )
+
 
 
 if __name__ == "__main__":
